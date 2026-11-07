@@ -1,0 +1,111 @@
+{
+  "method": "Union of the eigenvalues of the strongly connected diagonal blocks (numpy.linalg.eigvals per block), cross-checked against numpy.linalg.eigvals on the full matrix.",
+  "matrix": "W (eigenvalues of W and W^T are identical)",
+  "eigenvalues": [
+    {
+      "block": [
+        "D4",
+        "D6"
+      ],
+      "real": 0.9114378278,
+      "imag": 0.0,
+      "modulus": 0.9114378278
+    },
+    {
+      "block": [
+        "D4",
+        "D6"
+      ],
+      "real": -0.4114378278,
+      "imag": 0.0,
+      "modulus": 0.4114378278
+    },
+    {
+      "block": [
+        "D2",
+        "D3"
+      ],
+      "real": 0.25,
+      "imag": 0.0,
+      "modulus": 0.25
+    },
+    {
+      "block": [
+        "D2",
+        "D3"
+      ],
+      "real": -0.25,
+      "imag": 0.0,
+      "modulus": 0.25
+    },
+    {
+      "block": [
+        "D1"
+      ],
+      "real": 0.0,
+      "imag": 0.0,
+      "modulus": 0.0
+    },
+    {
+      "block": [
+        "D5"
+      ],
+      "real": 0.0,
+      "imag": 0.0,
+      "modulus": 0.0
+    },
+    {
+      "block": [
+        "D7"
+      ],
+      "real": 0.0,
+      "imag": 0.0,
+      "modulus": 0.0
+    },
+    {
+      "block": [
+        "D8"
+      ],
+      "real": 0.0,
+      "imag": 0.0,
+      "modulus": 0.0
+    }
+  ],
+  "full_matrix_eigenvalues": [
+    {
+      "real": 0.9114378278,
+      "imag": 0.0
+    },
+    {
+      "real": -0.4114378278,
+      "imag": 0.0
+    },
+    {
+      "real": 0.25,
+      "imag": 0.0
+    },
+    {
+      "real": -0.25,
+      "imag": 0.0
+    },
+    {
+      "real": 0.0,
+      "imag": 0.0
+    },
+    {
+      "real": 0.0,
+      "imag": 0.0
+    },
+    {
+      "real": 0.0,
+      "imag": 0.0
+    },
+    {
+      "real": 0.0,
+      "imag": 0.0
+    }
+  ],
+  "max_block_vs_full_modulus_gap": 0.0,
+  "spectral_radius": 0.9114378278,
+  "dominant_eigenvalue": 0.9114378278
+}

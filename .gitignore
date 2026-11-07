@@ -1,0 +1,73 @@
+# --- Secrets / credentials / provider files ---
+.env
+.env.*
+!.env.example
+secrets/
+credentials*.json
+*.pem
+*.key
+.openai/
+*.token
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python cache / build artifacts ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+*.log
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Local vector database files (rebuildable from the corpus) ---
+chroma/
+chroma_db/
+*.chroma/
+*.sqlite3
+*.sqlite
+*.db
+*.faiss
+*.index
+
+# --- Raw source documents (not distributed; authoritative copy lives outside the repo) ---
+data/raw/**
+!data/raw/**/
+!data/raw/**/.gitkeep
+
+# --- PDF safety rule: no source PDFs anywhere, except intentional samples ---
+*.pdf
+!data/sample/*.pdf
+
+# --- Processed corpus data (regenerable from the source documents; large) ---
+data/processed/**
+!data/processed/.gitkeep
+
+# --- Local-only records (kept on disk, not published) ---
+data/metadata/corpus_decisions.csv
+data/metadata/corpus_inventory.csv
+data/metadata/corpus_summary.md
+my_notes.docx
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# outputs/ is published: it holds the frozen analytical results, traces, evaluations and figures
+# that the tests, hash pins and documentation depend on.

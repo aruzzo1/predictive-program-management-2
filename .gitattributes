@@ -1,0 +1,4 @@
+# Store and check out every file byte-for-byte (no line-ending conversion).
+# The frozen analytical artifacts are SHA-256 pinned and verified by tests; converting LF to CRLF on checkout
+# (for example with core.autocrlf=true on Windows) would change their bytes and break that verification.
+* -text

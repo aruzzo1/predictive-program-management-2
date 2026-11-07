@@ -1,0 +1,33 @@
+{
+  "name": "RAG_EXPANDED_V2",
+  "frozen_at": "2026-10-25T17:29:05+00:00",
+  "purpose": "Immutable comparison baseline for RAG_RANKING_V2_1. Rebuild with: python scripts/ingest_corpus.py --manifest data/metadata/expanded_corpus_v2.json",
+  "settings": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": "220",
+    "chunk_overlap": "35",
+    "top_k": "5",
+    "candidate_k": "15",
+    "dedup_min_shared_words": "12",
+    "collection_name": "jsf_corpus"
+  },
+  "chroma": {
+    "collection": "jsf_corpus",
+    "count": 848,
+    "metadata": {
+      "hnsw:space": "cosine"
+    },
+    "content_sha256_of_sorted_id_text_pairs": "d08a459ca2fb65aa52dfc751d4b7f0fd3bd39100f3b43e78442ff38a3cb79c00"
+  },
+  "file_sha256": {
+    "data/metadata/expanded_corpus_v2.json": "fde1280d8e2b3c210464b48e2ecce001cb8988d676efcdf0619a256fdafe28f6",
+    "data/metadata/corpus_decisions.csv": "87b7973366816f8b17008df6bb17f290e510d9a4c4dafaa03bcb8ec3b379af11",
+    "data/metadata/expanded_v2_ingestion_report.json": "edb28093a92a51a6405fc95459d4e3b6a3999cad8a7cb9fabcb42f0e5ecd5572",
+    "data/processed/expanded_v2_chunks.jsonl": "e6e7d8cc406d9b1a9279b5e8b73b8f78a717970359f989ce806a93ef6e3289c6",
+    "data/metadata/rag_evaluation_questions.json": "432da28d3bed1ba919b3bed98376fef539c569ed2434ef6dedcc31dacf548991",
+    "outputs/evaluation/rag_expanded_v2.json": "644009e63f773bd78420d4daa874c0de0c4dfc75c821f3f771fca9cd7508c276",
+    "outputs/evaluation/rag_expanded_v2.md": "5708626eed237ebc56c721e282508fa371383e2f1156ebdaf5d60065b51312cf",
+    "outputs/evaluation/rag_v1_v2_comparison.md": "c51277987e32f9bd9bca6974d163cf4d544a406b025848e9fb4091930f76c0fa"
+  },
+  "artifact_copies": "data/processed/rag_expanded_v2/"
+}

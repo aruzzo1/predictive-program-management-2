@@ -1,0 +1,10 @@
+"# row = source / upstream node; column = target / downstream node; cell (Di, Dj) means Di influences / contributes to Dj"
+source \ target,D1 Requirements / KPP Definition,D2 Air Vehicle Design Maturity,D3 Weight / Structural Maturity,D4 Mission-System Software Maturity,D5 Test-Aircraft Availability,D6 Flight-Test Execution,D7 Development / Test Maturity,D8 Production Commitment / Rework Exposure
+D1 Requirements / KPP Definition,0,1,1,1,0,1,0,0
+D2 Air Vehicle Design Maturity,0,0,1,0,1,0,0,1
+D3 Weight / Structural Maturity,0,1,0,0,0,0,0,1
+D4 Mission-System Software Maturity,0,0,0,0,0,1,0,0
+D5 Test-Aircraft Availability,0,0,0,0,0,1,0,0
+D6 Flight-Test Execution,0,0,0,1,0,1,1,1
+D7 Development / Test Maturity,0,0,0,0,0,0,0,1
+D8 Production Commitment / Rework Exposure,0,0,0,0,0,0,0,0

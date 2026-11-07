@@ -1,0 +1,130 @@
+{
+  "version": "eval_v1",
+  "created": "2026-10-25",
+  "description": "Retrieval-evaluation questions for Predictive Program Management 2.0. Each question targets evidence the later methodology needs (dependencies, rework, information flow, propagation). Expectations for the current five-document corpus are prior estimates only, based on document titles, dates and inventory topic notes; they are not verified answers and name no expected pages. See docs/rag_evaluation_plan.md.",
+  "expectation_values": {
+    "YES": "The corpus very likely contains directly relevant evidence.",
+    "PARTIAL": "Some relevant evidence likely exists, but incomplete, indirect, or partly held in tables and figures that are not indexed.",
+    "NO": "The corpus very likely lacks this evidence (e.g., outside its time span).",
+    "UNKNOWN": "No reliable prior basis for an expectation."
+  },
+  "questions": [
+    {
+      "question_id": "Q01",
+      "category": "software_integration",
+      "question": "What evidence indicates that mission-system software maturity affected F-35 flight-test execution?",
+      "why_it_matters": "Benchmark dependency (Software Maturity -> Flight-Test Execution). It is the candidate dependency already used by the grounded prompt and verifier.",
+      "expected_evidence_type": "Statements linking software delivery or maturity to flight-test points, sorties, re-flights, or test-schedule changes.",
+      "current_corpus_answer_expected": "YES",
+      "expectation_basis": "Prototype benchmark query; earlier traces returned DOT&E FY2010 passages that discuss software and flight test together."
+    },
+    {
+      "question_id": "Q02",
+      "category": "requirements",
+      "question": "What evidence shows that F-35 warfighter requirements or key performance parameters were deferred, relaxed, or at risk of not being met because of development problems?",
+      "why_it_matters": "Requirements volatility is an upstream driver in the DSM; change to requirements propagates into design and test rework.",
+      "expected_evidence_type": "Statements on capability deferral, requirement changes or relaxations, or capability shortfalls tied to cost, schedule, or technical problems.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "The GAO-10-382 title refers to risk of not meeting warfighter requirements on time; the depth of requirement-level detail is unverified."
+    },
+    {
+      "question_id": "Q03",
+      "category": "design_engineering_activities",
+      "question": "What evidence describes design-maturity measures, such as engineering drawing releases or design reviews, used to judge whether the F-35 design was stable enough for production?",
+      "why_it_matters": "Design-maturity measures are observable engineering-activity states. They supply DSM activity definitions and readiness criteria.",
+      "expected_evidence_type": "Percentages or counts of released drawings, design-review outcomes, and statements about design stability at production decisions.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "GAO JSF reports from this period assess knowledge-based readiness for production; specific measures may be in tables that are not indexed."
+    },
+    {
+      "question_id": "Q04",
+      "category": "test_sequencing",
+      "question": "What evidence describes how late delivery or limited availability of F-35 test aircraft constrained the sequence or pace of flight testing?",
+      "why_it_matters": "Test-asset availability gates the test sequence. It is a resource dependency for the simulation layer.",
+      "expected_evidence_type": "Statements on test-aircraft delivery dates, aircraft available vs. planned, flight rates, and their effect on test progress.",
+      "current_corpus_answer_expected": "YES",
+      "expectation_basis": "Inventory topic notes for GAO-10-382 cite late test aircraft and slow flight testing; the DOT&E FY2010 chapter covers 2010 flight-test progress."
+    },
+    {
+      "question_id": "Q05",
+      "category": "schedule_dependencies",
+      "question": "What evidence describes the planned sequence of F-35 software blocks and how delays in one block affected the content or timing of later blocks?",
+      "why_it_matters": "Block-to-block precedence and deferral is a schedule dependency chain and a source of capability migration (rework).",
+      "expected_evidence_type": "Block definitions (e.g., Block 1, 2, 3), planned vs. actual release dates, and capability moved from one block to a later one.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "The DOT&E FY2010 chapter mentions Block 2 and Block 3 software and deferrals to later increments; complete block sequencing is unverified."
+    },
+    {
+      "question_id": "Q06",
+      "category": "technical_deficiencies",
+      "question": "What evidence identifies technical deficiencies discovered during F-35 development or testing that required redesign, retrofit, or retesting?",
+      "why_it_matters": "Discovered deficiencies drive rework loops. They are central to the WTM and system-dynamics rework structure.",
+      "expected_evidence_type": "Named deficiencies (e.g., structural, propulsion, STOVL, helmet) with the corrective action and any retest or retrofit.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "Inventory topic notes mention STOVL design changes and test-discovered problems (DOT&E FY2010, GAO-11-325); whether corrective actions are described is unverified."
+    },
+    {
+      "question_id": "Q07",
+      "category": "rework_redesign",
+      "question": "What evidence shows that F-35 aircraft weight growth caused redesign or schedule consequences?",
+      "why_it_matters": "Weight growth is a classic design-rework driver with cross-subsystem propagation.",
+      "expected_evidence_type": "Statements on weight margins, weight-reduction redesign efforts, and the resulting schedule or cost impact.",
+      "current_corpus_answer_expected": "UNKNOWN",
+      "expectation_basis": "The weight-driven redesign predates GAO-06-356, so later reports may refer back to it; whether the indexed text discusses it is unverified."
+    },
+    {
+      "question_id": "Q08",
+      "category": "concurrency",
+      "question": "What evidence describes dependencies between F-35 development testing and production decisions (development-test-production concurrency)?",
+      "why_it_matters": "Concurrency is the central dependency theme for the DSM. Production committed before test knowledge creates downstream rework.",
+      "expected_evidence_type": "Statements on low-rate initial production quantities committed before testing, the overlap of test and production schedules, and the risks of that overlap.",
+      "current_corpus_answer_expected": "YES",
+      "expectation_basis": "The GAO-06-356 title states that production would start before testing demonstrates acceptable performance; GAO-09-303 covers accelerated procurement."
+    },
+    {
+      "question_id": "Q09",
+      "category": "milestone_effects",
+      "question": "What evidence shows that development or test delays moved major F-35 program milestones, such as the end of development, the start of operational test, or full-rate production?",
+      "why_it_matters": "Milestone slips are the observable outputs the predictive layer must reproduce.",
+      "expected_evidence_type": "Original vs. revised milestone dates and the stated reason for each change.",
+      "current_corpus_answer_expected": "YES",
+      "expectation_basis": "GAO-11-325 covers the 2010 restructuring, and GAO-10-382 covers delays; milestone tables may not be indexed, but the prose likely states the slips."
+    },
+    {
+      "question_id": "Q10",
+      "category": "subsystem_dependencies",
+      "question": "What evidence describes dependencies between F-35 subsystems, such as the helmet-mounted display, mission-system sensors, propulsion, or the STOVL lift system, that affected integration or test progress?",
+      "why_it_matters": "Subsystem-to-subsystem coupling defines off-diagonal DSM entries.",
+      "expected_evidence_type": "Statements that a problem or delay in one subsystem blocked or delayed integration or testing of another.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "Earlier DOT&E FY2010 retrievals mention the helmet-mounted display gating Block 2 flight test; broader subsystem coupling is unverified."
+    },
+    {
+      "question_id": "Q11",
+      "category": "information_flow",
+      "question": "What evidence describes whether test results, technical data, or design knowledge were available in time to inform F-35 investment or production decisions?",
+      "why_it_matters": "Information-flow timing determines when rework is discovered. It underpins the information-dependency view of the DSM.",
+      "expected_evidence_type": "Statements that decisions were made before key knowledge (test data, design maturity) was available, or on knowledge gaps at decision points.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "GAO's knowledge-based acquisition framing in GAO-06-356 addresses knowledge at decision points; it may be framed as general principle rather than F-35-specific data flows."
+    },
+    {
+      "question_id": "Q12",
+      "category": "downstream_cost_schedule",
+      "question": "What evidence quantifies how F-35 development delays or problems propagated into cost growth or schedule slip in later phases, including retrofit costs for aircraft already produced?",
+      "why_it_matters": "Quantified propagation is needed to calibrate the system-dynamics layer.",
+      "expected_evidence_type": "Dollar or schedule figures linking a development or test problem to later cost or schedule growth, including retrofit or concurrency cost estimates.",
+      "current_corpus_answer_expected": "PARTIAL",
+      "expectation_basis": "These GAO reports address cost growth, but many quantitative values are in tables, which extraction drops."
+    },
+    {
+      "question_id": "Q13",
+      "category": "software_integration",
+      "question": "What evidence shows that Block 4 or Technology Refresh 3 (TR-3) hardware-software dependencies affected F-35 testing or fielding?",
+      "why_it_matters": "Temporal-gap probe. It checks whether retrieval returns topically similar but wrong-era evidence when the corpus lacks the period.",
+      "expected_evidence_type": "Statements on TR-3 hardware delivery, Block 4 software iterations, and the test or fielding consequences.",
+      "current_corpus_answer_expected": "NO",
+      "expectation_basis": "Block 4 and TR-3 postdate the newest prototype document (2011); only the non-indexed FY2022 and FY2024 DOT&E reports cover them."
+    }
+  ]
+}

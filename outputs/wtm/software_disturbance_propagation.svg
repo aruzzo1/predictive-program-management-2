@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760">
+<rect width="900" height="760" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Normalized D4 software disturbance: x(t+1) = W^T x(t), t0 to t6</text>
+<text x="24.0" y="58.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >x(0): D4 = 1.0, all others 0. Relative units of a normalized analytical disturbance; not a probability or a measurement.</text>
+<text x="90.0" y="96.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="600" >Total disturbance (sum of D1-D8 values)</text>
+<line x1="90" y1="300.0" x2="750" y2="300.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="304.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.00</text>
+<line x1="90" y1="236.7" x2="750" y2="236.7" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="240.7" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.50</text>
+<line x1="90" y1="173.3" x2="750" y2="173.3" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="177.3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1.00</text>
+<line x1="90" y1="110.0" x2="750" y2="110.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="114.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1.50</text>
+<text x="90.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t0</text>
+<text x="200.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t1</text>
+<text x="310.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t2</text>
+<text x="420.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t3</text>
+<text x="530.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t4</text>
+<text x="640.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t5</text>
+<text x="750.0" y="318.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t6</text>
+<polyline points="90.0,173.3 200.0,205.0 310.0,133.8 420.0,169.4 530.0,172.3 640.0,187.2 750.0,195.7" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>Total magnitude, t0: 1.0000</title><circle cx="90.0" cy="173.3" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t1: 0.7500</title><circle cx="200.0" cy="205.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t2: 1.3125</title><circle cx="310.0" cy="133.8" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t3: 1.0312</title><circle cx="420.0" cy="169.4" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t4: 1.0078</title><circle cx="530.0" cy="172.3" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t5: 0.8906</title><circle cx="640.0" cy="187.2" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>Total magnitude, t6: 0.8232</title><circle cx="750.0" cy="195.7" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<text x="90.0" y="161.3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">1.000</text>
+<text x="90.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >initial</text>
+<text x="200.0" y="193.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">0.750</text>
+<text x="200.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >decaying</text>
+<text x="310.0" y="121.8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">1.312</text>
+<text x="310.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >amplifying</text>
+<text x="420.0" y="157.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">1.031</text>
+<text x="420.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >decaying</text>
+<text x="530.0" y="160.3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">1.008</text>
+<text x="530.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >persistent</text>
+<text x="640.0" y="175.2" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">0.891</text>
+<text x="640.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >decaying</text>
+<text x="750.0" y="183.7" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">0.823</text>
+<text x="750.0" y="334.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" >decaying</text>
+<text x="90.0" y="396.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="600" >Disturbance at each reached node</text>
+<line x1="90" y1="630.0" x2="750" y2="630.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="634.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.00</text>
+<line x1="90" y1="575.0" x2="750" y2="575.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="579.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.25</text>
+<line x1="90" y1="520.0" x2="750" y2="520.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="524.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.50</text>
+<line x1="90" y1="465.0" x2="750" y2="465.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="469.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.75</text>
+<line x1="90" y1="410.0" x2="750" y2="410.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="82.0" y="414.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1.00</text>
+<text x="90.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t0</text>
+<text x="200.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t1</text>
+<text x="310.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t2</text>
+<text x="420.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t3</text>
+<text x="530.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t4</text>
+<text x="640.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t5</text>
+<text x="750.0" y="648.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t6</text>
+<polyline points="90.0,410.0 200.0,630.0 310.0,547.5 420.0,588.8 530.0,578.4 640.0,588.8 750.0,590.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>D4, t0: 1.0000</title><circle cx="90.0" cy="410.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t1: 0.0000</title><circle cx="200.0" cy="630.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t2: 0.3750</title><circle cx="310.0" cy="547.5" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t3: 0.1875</title><circle cx="420.0" cy="588.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t4: 0.2344</title><circle cx="530.0" cy="578.4" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t5: 0.1875</title><circle cx="640.0" cy="588.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D4, t6: 0.1816</title><circle cx="750.0" cy="590.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="90.0,630.0 200.0,465.0 310.0,547.5 420.0,526.9 530.0,547.5 640.0,550.1 750.0,559.1" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>D6, t0: 0.0000</title><rect x="85.0" y="625.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t1: 0.7500</title><rect x="195.0" y="460.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t2: 0.3750</title><rect x="305.0" y="542.5" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t3: 0.4688</title><rect x="415.0" y="521.9" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t4: 0.3750</title><rect x="525.0" y="542.5" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t5: 0.3633</title><rect x="635.0" y="545.1" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D6, t6: 0.3223</title><rect x="745.0" y="554.1" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="90.0,630.0 200.0,630.0 310.0,588.8 420.0,609.4 530.0,604.2 640.0,609.4 750.0,610.0" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>D7, t0: 0.0000</title><path d="M90.0,624.0 L96.0,635.0 L84.0,635.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t1: 0.0000</title><path d="M200.0,624.0 L206.0,635.0 L194.0,635.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t2: 0.1875</title><path d="M310.0,582.8 L316.0,593.8 L304.0,593.8 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t3: 0.0938</title><path d="M420.0,603.4 L426.0,614.4 L414.0,614.4 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t4: 0.1172</title><path d="M530.0,598.2 L536.0,609.2 L524.0,609.2 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t5: 0.0938</title><path d="M640.0,603.4 L646.0,614.4 L634.0,614.4 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D7, t6: 0.0908</title><path d="M750.0,604.0 L756.0,615.0 L744.0,615.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="90.0,630.0 200.0,630.0 310.0,547.5 420.0,568.1 530.0,568.1 640.0,575.9 750.0,579.7" fill="none" stroke="#eda100" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>D8, t0: 0.0000</title><path d="M90.0,624.0 L96.0,630.0 L90.0,636.0 L84.0,630.0 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t1: 0.0000</title><path d="M200.0,624.0 L206.0,630.0 L200.0,636.0 L194.0,630.0 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t2: 0.3750</title><path d="M310.0,541.5 L316.0,547.5 L310.0,553.5 L304.0,547.5 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t3: 0.2812</title><path d="M420.0,562.1 L426.0,568.1 L420.0,574.1 L414.0,568.1 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t4: 0.2812</title><path d="M530.0,562.1 L536.0,568.1 L530.0,574.1 L524.0,568.1 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t5: 0.2461</title><path d="M640.0,569.9 L646.0,575.9 L640.0,581.9 L634.0,575.9 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>D8, t6: 0.2285</title><path d="M750.0,573.7 L756.0,579.7 L750.0,585.7 L744.0,579.7 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/></g>
+<line x1="757.0" y1="559.1" x2="780.0" y2="446.0" stroke="#898781" stroke-width="1"/>
+<rect x="785.0" y="441.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="800.0" y="450.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >D6 0.322</text>
+<line x1="757.0" y1="579.7" x2="780.0" y2="490.0" stroke="#898781" stroke-width="1"/>
+<path d="M790.0,484.0 L796.0,490.0 L790.0,496.0 L784.0,490.0 Z" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<text x="800.0" y="494.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >D8 0.229</text>
+<line x1="757.0" y1="590.0" x2="780.0" y2="534.0" stroke="#898781" stroke-width="1"/>
+<circle cx="790.0" cy="534.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="800.0" y="538.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >D4 0.182</text>
+<line x1="757.0" y1="610.0" x2="780.0" y2="578.0" stroke="#898781" stroke-width="1"/>
+<path d="M790.0,572.0 L796.0,583.0 L784.0,583.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<text x="800.0" y="582.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >D7 0.091</text>
+<text x="24.0" y="690.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" >D4 Mission-System Software Maturity, D6 Flight-Test Execution, D7 Development / Test Maturity, D8 Production Commitment / Rework Exposure (sink: value = arrivals that step).</text>
+<text x="24.0" y="708.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" >D1, D2, D3 and D5 stay at 0 throughout: no path leads from D4 or D6 back upstream to them.</text>
+<text x="24.0" y="726.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" >Long-run decay rate = spectral radius 0.9114 per step; transient growth at t2 because D6&#x27;s out-strength is 1.75.</text>
+</svg>

@@ -1,0 +1,215 @@
+{
+  "statement": "The intervention comparison is an illustrative test-harness experiment. It evaluates how alternative management policies affect a synthetic, evidence-calibrated dependency model; it does not predict historical or actual F-35 outcomes.",
+  "computed_by": "ppm_agent.tools.trajectory_simulation (deterministic Python / numpy; no LLM; no composite score)",
+  "inputs_sha256": {
+    "outputs/dsm/weighted_dsm.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/wtm/wtm_matrix.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/simulation/scenario_mapping.json": "0b9ff5a324548940ab78dbb80c61277617585d424fc2d7d51b49fdba1b70759b",
+    "data/synthetic/synthetic_scenarios.json": "116bdd81ca5bc108486d5eeeb359d5789f69bb9c3c9e81790a2efd404f718c9d",
+    "data/synthetic/synthetic_ims.csv": "039cf917c642545b484694d99f03dea0ac48528f1ecdc48bffee9df850569127"
+  },
+  "equation": "x(t+1) = W^T x(t) (frozen WTM; row = source, column = target)",
+  "horizon": "t0..t12, identical for every case; no early stopping",
+  "common_initiating_disturbance": "DISTURBANCE_1: A210 +8 workdays, A230 float 4, exposed 4 workdays, normalized D4 = 1.0 (reference 4 workdays = 1.0)",
+  "intervention_2_rule": "Cumulative capacity of 1.0 normalized unit (4 workdays) over the whole trajectory. At each step, absorb min(D6 value, remaining capacity) from D6 before it propagates; track the cumulative amount; never reset. Once exhausted, D6 propagates normally. The A405 gate and W are unchanged. SYNTHETIC.",
+  "intervention_3_rule": "Upstream propagation unchanged. Each step's D8 value is split into 40% committed pre-maturity exposure and 60% gated / deferred until A430 maturity. NO ACTION (baseline concurrency) commits 100% pre-maturity. Fractions SYNTHETIC; not historical F-35 policy.",
+  "data_classification": "SYNTHETIC",
+  "cases": [
+    {
+      "case_id": "CASE_0",
+      "label": "NO ACTION (DISTURBANCE_1)",
+      "initial_state_from": "DISTURBANCE_1",
+      "policy": null,
+      "initial_state": {
+        "D1": 0.0,
+        "D2": 0.0,
+        "D3": 0.0,
+        "D4": 1.0,
+        "D5": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "D8": 0.0
+      },
+      "metrics": {
+        "peak_total": 1.3125,
+        "peak_step": 2,
+        "cumulative_total": 10.4140872956,
+        "final_total": 0.4699115753,
+        "cumulative_D4": 2.948070526,
+        "cumulative_D6": 4.0824508667,
+        "cumulative_D7": 0.974035263,
+        "cumulative_D8": 2.4095306398,
+        "cumulative_D6_arrived_before_absorption": 4.0824508667,
+        "intervention_capacity": null,
+        "intervention_used": null,
+        "intervention_unused": null
+      }
+    },
+    {
+      "case_id": "CASE_1",
+      "label": "INTERVENTION_1 software recovery",
+      "initial_state_from": "INTERVENTION_1",
+      "policy": null,
+      "initial_state": {
+        "D1": 0.0,
+        "D2": 0.0,
+        "D3": 0.0,
+        "D4": 0.0,
+        "D5": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "D8": 0.0
+      },
+      "metrics": {
+        "peak_total": 0.0,
+        "peak_step": null,
+        "cumulative_total": 0.0,
+        "final_total": 0.0,
+        "cumulative_D4": 0.0,
+        "cumulative_D6": 0.0,
+        "cumulative_D7": 0.0,
+        "cumulative_D8": 0.0,
+        "cumulative_D6_arrived_before_absorption": 0.0,
+        "intervention_capacity": null,
+        "intervention_used": null,
+        "intervention_unused": null
+      },
+      "change_vs_no_action": {
+        "peak_total": {
+          "absolute_reduction": 1.3125,
+          "percent_reduction": 100.0
+        },
+        "cumulative_total": {
+          "absolute_reduction": 10.4140872956,
+          "percent_reduction": 100.0
+        },
+        "cumulative_D6": {
+          "absolute_reduction": 4.0824508667,
+          "percent_reduction": 100.0
+        },
+        "cumulative_D8": {
+          "absolute_reduction": 2.4095306398,
+          "percent_reduction": 100.0
+        },
+        "cumulative_D8_committed_pre_maturity": {
+          "absolute_reduction": 2.4095306398,
+          "percent_reduction": 100.0
+        }
+      }
+    },
+    {
+      "case_id": "CASE_2",
+      "label": "INTERVENTION_2 flight-test resequencing",
+      "initial_state_from": "INTERVENTION_2",
+      "policy": "ABSORB_AT_D6",
+      "initial_state": {
+        "D1": 0.0,
+        "D2": 0.0,
+        "D3": 0.0,
+        "D4": 1.0,
+        "D5": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "D8": 0.0
+      },
+      "metrics": {
+        "peak_total": 1.0,
+        "peak_step": 0,
+        "cumulative_total": 1.0,
+        "final_total": 0.0,
+        "cumulative_D4": 1.0,
+        "cumulative_D6": 0.0,
+        "cumulative_D7": 0.0,
+        "cumulative_D8": 0.0,
+        "cumulative_D6_arrived_before_absorption": 0.75,
+        "intervention_capacity": 1.0,
+        "intervention_used": 0.75,
+        "intervention_unused": 0.25
+      },
+      "change_vs_no_action": {
+        "peak_total": {
+          "absolute_reduction": 0.3125,
+          "percent_reduction": 23.809524
+        },
+        "cumulative_total": {
+          "absolute_reduction": 9.4140872956,
+          "percent_reduction": 90.397622
+        },
+        "cumulative_D6": {
+          "absolute_reduction": 4.0824508667,
+          "percent_reduction": 100.0
+        },
+        "cumulative_D8": {
+          "absolute_reduction": 2.4095306398,
+          "percent_reduction": 100.0
+        },
+        "cumulative_D8_committed_pre_maturity": {
+          "absolute_reduction": 2.4095306398,
+          "percent_reduction": 100.0
+        }
+      }
+    },
+    {
+      "case_id": "CASE_3",
+      "label": "INTERVENTION_3 staged production commitment",
+      "initial_state_from": "DISTURBANCE_1",
+      "policy": "SPLIT_AT_D8",
+      "initial_state": {
+        "D1": 0.0,
+        "D2": 0.0,
+        "D3": 0.0,
+        "D4": 1.0,
+        "D5": 0.0,
+        "D6": 0.0,
+        "D7": 0.0,
+        "D8": 0.0
+      },
+      "metrics": {
+        "peak_total": 1.3125,
+        "peak_step": 2,
+        "cumulative_total": 10.4140872956,
+        "final_total": 0.4699115753,
+        "cumulative_D4": 2.948070526,
+        "cumulative_D6": 4.0824508667,
+        "cumulative_D7": 0.974035263,
+        "cumulative_D8": 2.4095306398,
+        "cumulative_D6_arrived_before_absorption": 4.0824508667,
+        "intervention_capacity": null,
+        "intervention_used": null,
+        "intervention_unused": null,
+        "cumulative_D8_committed_pre_maturity": 0.9638122559,
+        "cumulative_D8_gated_deferred": 1.4457183839
+      },
+      "change_vs_no_action": {
+        "peak_total": {
+          "absolute_reduction": 0.0,
+          "percent_reduction": 0.0
+        },
+        "cumulative_total": {
+          "absolute_reduction": 0.0,
+          "percent_reduction": 0.0
+        },
+        "cumulative_D6": {
+          "absolute_reduction": 0.0,
+          "percent_reduction": 0.0
+        },
+        "cumulative_D8": {
+          "absolute_reduction": 0.0,
+          "percent_reduction": 0.0
+        },
+        "cumulative_D8_committed_pre_maturity": {
+          "absolute_reduction": 1.4457183839,
+          "percent_reduction": 60.0
+        }
+      }
+    }
+  ],
+  "percent_reduction_note": "percent_reduction is null where the NO ACTION value is 0 (not meaningful).",
+  "intervention_3_note": "INTERVENTION_3 does not reduce the D8 disturbance entering the node (cumulative_D8 is unchanged); it reduces the share committed before maturity.",
+  "not_done": [
+    "composite ranking",
+    "agentic interpretation",
+    "DISTURBANCE_2 comparison",
+    "cost conversion"
+  ]
+}

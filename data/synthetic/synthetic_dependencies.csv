@@ -1,0 +1,44 @@
+dependency_id,source_activity,target_activity,relationship_type,lag_workdays,source_dsm_node,target_dsm_node,data_classification,implementation_classification,evidence_basis,source_case,confidence_or_support,synthetic_implementation_note
+DEP-001,A100,A105,FINISH_TO_START,0,D1,D1,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-002,A105,A110,FINISH_TO_START,0,D1,D1,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-003,A110,A115,FINISH_TO_START,0,D1,D1,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-004,A115,A120,FINISH_TO_START,0,D1,D2,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-005,A120,A125,FINISH_TO_START,0,D2,D3,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-006,A125,A130,FINISH_TO_START,0,D3,D3,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-007,A105,A130,FINISH_TO_START,0,D1,D3,DERIVED,SYNTHETIC,GAO-05-271 p.10: STOVL weight-driven design changes and their impact on key performance parameters.,Q07,FRAGMENTARY,"Concept DERIVED (KPP / performance requirements -> weight-margin evaluation); the specific A105 -> A130 link, its type and lag are SYNTHETIC."
+DEP-008,A130,A135,FINISH_TO_START,0,D3,D3,DERIVED,SYNTHETIC,GAO-08-388 p.34: redesign efforts to address weight growth.,Q07,EXPLICIT_PASSAGE,"Concept DERIVED (Weight growth -> redesign); the specific A130 -> A135 link, its type and lag are SYNTHETIC."
+DEP-009,A135,A140,FINISH_TO_START,0,D3,D2,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-010,A140,A145,FINISH_TO_START,0,D2,D2,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-011,A115,A200,FINISH_TO_START,0,D1,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-012,A200,A205,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-013,A205,A210,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-014,A210,A215,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-015,A215,A220,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-016,A220,A225,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-017,A225,A230,FINISH_TO_START,0,D4,D4,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-018,A120,A300,FINISH_TO_START,0,D2,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-019,A300,A305,FINISH_TO_START,0,D5,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-020,A145,A305,FINISH_TO_START,0,D2,D5,DERIVED,SYNTHETIC,GAO-06-356 p.14: first flight-test aircraft would not include the weight-reduction design changes.,Q07,FRAGMENTARY,"Concept DERIVED (Weight-driven redesign -> test-aircraft configuration); the specific A145 -> A305 link, its type and lag are SYNTHETIC."
+DEP-021,A305,A310,FINISH_TO_START,0,D5,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-022,A310,A315,FINISH_TO_START,0,D5,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-023,A315,A320,FINISH_TO_START,0,D5,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-024,A320,A325,FINISH_TO_START,0,D5,D5,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-025,A115,A400,FINISH_TO_START,0,D1,D6,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-026,A400,A405,FINISH_TO_START,0,D6,D6,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-027,A230,A405,FINISH_TO_START,0,D4,D6,DERIVED,SYNTHETIC,DOT&E FY2010 p.29: software delays that affected flight-test progress; GAO-10-382 p.31: software behind schedule may delay first mission-system flight test.,Q01,EXPLICIT_PASSAGE,"Concept DERIVED (Mission-system software maturity -> flight-test execution); the specific A230 -> A405 link, its type and lag are SYNTHETIC."
+DEP-028,A325,A405,FINISH_TO_START,0,D5,D6,DERIVED,SYNTHETIC,GAO-11-325 p.17: flight tests hampered by late delivery of test aircraft; GAO-11-325 p.31; GAO-09-303 p.11: test-aircraft delays expected to compress test schedules.,Q04,EXPLICIT_PASSAGE,"Concept DERIVED (Test-aircraft availability -> flight-test execution); the specific A325 -> A405 link, its type and lag are SYNTHETIC."
+DEP-029,A405,A410,FINISH_TO_START,0,D6,D6,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-030,A410,A415,FINISH_TO_START,0,D6,D6,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-031,A415,A420,FINISH_TO_START,0,D6,D6,DERIVED,SYNTHETIC,"DOT&E FY2010 p.33: extended development, discovery in flight test, deferrals to later increments.",Q01,FRAGMENTARY,"Concept DERIVED (Discovery in flight test -> corrective engineering / software changes); the specific A415 -> A420 link, its type and lag are SYNTHETIC."
+DEP-032,A420,A425,FINISH_TO_START,0,D6,D6,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-033,A425,A430,FINISH_TO_START,0,D6,D7,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-034,A145,A500,FINISH_TO_START,0,D2,D8,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-035,A500,A505,FINISH_TO_START,0,D8,D8,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-036,A505,A510,FINISH_TO_START,0,D8,D8,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-037,A430,A510,FINISH_TO_START,0,D7,D8,DERIVED,SYNTHETIC,GAO-07-360 p.7: at the LRIP decision less than 1 percent of the test program will have been completed; GAO-07-360 p.22: more concurrent than the F-22A.,Q08,EXPLICIT_PASSAGE,"Concept DERIVED (Development / test maturity -> production commitment); the specific A430 -> A510 link, its type and lag are SYNTHETIC."
+DEP-038,A510,A515,FINISH_TO_START,0,D8,D8,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-039,A420,A515,FINISH_TO_START,0,D6,D8,DERIVED,SYNTHETIC,"GAO-08-388 p.23: problems found may require redesign, production-line changes and retrofit for aircraft already built (qualitative; no quantified rework cost observed).",Q08,FRAGMENTARY,"Concept DERIVED (Late test discovery -> rework exposure for committed production); the specific A420 -> A515 link, its type and lag are SYNTHETIC."
+DEP-040,A135,A515,FINISH_TO_START,0,D3,D8,DERIVED,SYNTHETIC,GAO-08-388 p.34: weight redesign was the single largest factor in the $10 billion cost increase and 18-month development extension (GAO-11-325 p.40 gives $7 billion / 18 months; not reconciled).,Q07,EXPLICIT_PASSAGE,"Concept DERIVED (Weight / redesign -> downstream cost / schedule exposure); the specific A135 -> A515 link, its type and lag are SYNTHETIC."
+DEP-041,A515,A520,FINISH_TO_START,0,D8,D8,SYNTHETIC,SYNTHETIC,None claimed.,NONE,NOT_APPLICABLE,Generic synthetic sequencing.
+DEP-042,A425,A410,FEEDBACK_REWORK,0,D6,D6,DERIVED,SYNTHETIC,DOT&E FY2010 p.33: familiar pattern of discovery in flight test followed by further development.,Q01,FRAGMENTARY,"Concept DERIVED (Regression results -> further flight test (rework loop)); the specific A425 -> A410 link, its type and lag are SYNTHETIC. Feedback (rework return) path: not a scheduling predecessor, so the baseline network stays acyclic; rework iterations are left to the later simulation."
+DEP-043,A415,A225,FEEDBACK_REWORK,0,D6,D4,DERIVED,SYNTHETIC,"DOT&E FY2010 p.33: extended development, discovery in flight test, deferrals to later increments; DOT&E FY2010 p.29: software delays affected flight-test progress.",Q01,FRAGMENTARY,"Concept DERIVED (Test-discovered software / integration deficiencies -> corrective software / integration work); the specific A415 -> A225 link, its type and lag are SYNTHETIC. Feedback (rework return) path: not a scheduling predecessor, so the baseline network stays acyclic; rework iterations are left to the later simulation."

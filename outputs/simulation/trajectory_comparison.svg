@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="900" viewBox="0 0 980 900">
+<rect width="980" height="900" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Intervention comparison: common DISTURBANCE_1 (D4 = 1.0), t0 to t12</text>
+<text x="24.0" y="58.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >Normalized units of an illustrative, synthetic, evidence-calibrated model; not a prediction of F-35 outcomes, days or cost.</text>
+<text x="80.0" y="96.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="600" >A. Total disturbance per step (sum of D1-D8)</text>
+<line x1="80" y1="370.0" x2="720" y2="370.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="374.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0</text>
+<line x1="80" y1="283.3" x2="720" y2="283.3" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="287.3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.5</text>
+<line x1="80" y1="196.7" x2="720" y2="196.7" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="200.7" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1</text>
+<line x1="80" y1="110.0" x2="720" y2="110.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="114.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1.5</text>
+<text x="80.0" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t0</text>
+<text x="133.3" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t1</text>
+<text x="186.7" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t2</text>
+<text x="240.0" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t3</text>
+<text x="293.3" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t4</text>
+<text x="346.7" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t5</text>
+<text x="400.0" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t6</text>
+<text x="453.3" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t7</text>
+<text x="506.7" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t8</text>
+<text x="560.0" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t9</text>
+<text x="613.3" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t10</text>
+<text x="666.7" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t11</text>
+<text x="720.0" y="388.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t12</text>
+<polyline points="80.0,196.7 133.3,240.0 186.7,142.5 240.0,191.2 293.3,195.3 346.7,215.6 400.0,227.3 453.3,240.8 506.7,251.9 560.0,262.5 613.3,271.9 666.7,280.6 720.0,288.5" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>NO ACTION (DISTURBANCE_1), t0: 1.0000</title><circle cx="80.0" cy="196.7" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t1: 0.7500</title><circle cx="133.3" cy="240.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t2: 1.3125</title><circle cx="186.7" cy="142.5" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t3: 1.0312</title><circle cx="240.0" cy="191.2" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t4: 1.0078</title><circle cx="293.3" cy="195.3" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t5: 0.8906</title><circle cx="346.7" cy="215.6" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t6: 0.8232</title><circle cx="400.0" cy="227.3" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t7: 0.7456</title><circle cx="453.3" cy="240.8" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t8: 0.6815</title><circle cx="506.7" cy="251.9" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t9: 0.6204</title><circle cx="560.0" cy="262.5" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t10: 0.5658</title><circle cx="613.3" cy="271.9" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t11: 0.5155</title><circle cx="666.7" cy="280.6" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>NO ACTION (DISTURBANCE_1), t12: 0.4699</title><circle cx="720.0" cy="288.5" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="80.0,196.7 133.3,240.0 186.7,142.5 240.0,191.2 293.3,195.3 346.7,215.6 400.0,227.3 453.3,240.8 506.7,251.9 560.0,262.5 613.3,271.9 666.7,280.6 720.0,288.5" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<g><title>INTERVENTION_3 staged production commitment, t0: 1.0000</title><path d="M80.0,190.7 L86.0,196.7 L80.0,202.7 L74.0,196.7 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t1: 0.7500</title><path d="M133.3,234.0 L139.3,240.0 L133.3,246.0 L127.3,240.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t2: 1.3125</title><path d="M186.7,136.5 L192.7,142.5 L186.7,148.5 L180.7,142.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t3: 1.0312</title><path d="M240.0,185.2 L246.0,191.2 L240.0,197.2 L234.0,191.2 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t4: 1.0078</title><path d="M293.3,189.3 L299.3,195.3 L293.3,201.3 L287.3,195.3 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t5: 0.8906</title><path d="M346.7,209.6 L352.7,215.6 L346.7,221.6 L340.7,215.6 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t6: 0.8232</title><path d="M400.0,221.3 L406.0,227.3 L400.0,233.3 L394.0,227.3 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t7: 0.7456</title><path d="M453.3,234.8 L459.3,240.8 L453.3,246.8 L447.3,240.8 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t8: 0.6815</title><path d="M506.7,245.9 L512.7,251.9 L506.7,257.9 L500.7,251.9 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t9: 0.6204</title><path d="M560.0,256.5 L566.0,262.5 L560.0,268.5 L554.0,262.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t10: 0.5658</title><path d="M613.3,265.9 L619.3,271.9 L613.3,277.9 L607.3,271.9 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t11: 0.5155</title><path d="M666.7,274.6 L672.7,280.6 L666.7,286.6 L660.7,280.6 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_3 staged production commitment, t12: 0.4699</title><path d="M720.0,282.5 L726.0,288.5 L720.0,294.5 L714.0,288.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="80.0,196.7 133.3,370.0 186.7,370.0 240.0,370.0 293.3,370.0 346.7,370.0 400.0,370.0 453.3,370.0 506.7,370.0 560.0,370.0 613.3,370.0 666.7,370.0 720.0,370.0" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>INTERVENTION_2 flight-test resequencing, t0: 1.0000</title><path d="M80.0,190.7 L86.0,201.7 L74.0,201.7 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t1: 0.0000</title><path d="M133.3,364.0 L139.3,375.0 L127.3,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t2: 0.0000</title><path d="M186.7,364.0 L192.7,375.0 L180.7,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t3: 0.0000</title><path d="M240.0,364.0 L246.0,375.0 L234.0,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t4: 0.0000</title><path d="M293.3,364.0 L299.3,375.0 L287.3,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t5: 0.0000</title><path d="M346.7,364.0 L352.7,375.0 L340.7,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t6: 0.0000</title><path d="M400.0,364.0 L406.0,375.0 L394.0,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t7: 0.0000</title><path d="M453.3,364.0 L459.3,375.0 L447.3,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t8: 0.0000</title><path d="M506.7,364.0 L512.7,375.0 L500.7,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t9: 0.0000</title><path d="M560.0,364.0 L566.0,375.0 L554.0,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t10: 0.0000</title><path d="M613.3,364.0 L619.3,375.0 L607.3,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t11: 0.0000</title><path d="M666.7,364.0 L672.7,375.0 L660.7,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_2 flight-test resequencing, t12: 0.0000</title><path d="M720.0,364.0 L726.0,375.0 L714.0,375.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="80.0,370.0 133.3,370.0 186.7,370.0 240.0,370.0 293.3,370.0 346.7,370.0 400.0,370.0 453.3,370.0 506.7,370.0 560.0,370.0 613.3,370.0 666.7,370.0 720.0,370.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>INTERVENTION_1 software recovery, t0: 0.0000</title><rect x="75.0" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t1: 0.0000</title><rect x="128.3" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t2: 0.0000</title><rect x="181.7" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t3: 0.0000</title><rect x="235.0" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t4: 0.0000</title><rect x="288.3" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t5: 0.0000</title><rect x="341.7" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t6: 0.0000</title><rect x="395.0" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t7: 0.0000</title><rect x="448.3" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t8: 0.0000</title><rect x="501.7" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t9: 0.0000</title><rect x="555.0" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t10: 0.0000</title><rect x="608.3" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t11: 0.0000</title><rect x="661.7" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>INTERVENTION_1 software recovery, t12: 0.0000</title><rect x="715.0" y="365.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/></g>
+<text x="196.7" y="132.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">CASE_0 peak 1.3125 at t2; CASE_3 identical (dashed)</text>
+<text x="143.3" y="358.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" stroke="#fcfcfb" stroke-width="4" paint-order="stroke">CASE_2 absorbed at D6 (t1); CASE_1 zero throughout</text>
+<text x="80.0" y="456.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="600" >B. Cumulative D8 exposure (production)</text>
+<line x1="80" y1="710.0" x2="720" y2="710.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="714.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0</text>
+<line x1="80" y1="662.0" x2="720" y2="662.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="666.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >0.5</text>
+<line x1="80" y1="614.0" x2="720" y2="614.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="618.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1</text>
+<line x1="80" y1="566.0" x2="720" y2="566.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="570.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >1.5</text>
+<line x1="80" y1="518.0" x2="720" y2="518.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="522.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >2</text>
+<line x1="80" y1="470.0" x2="720" y2="470.0" stroke="#e6e5e0" stroke-width="1"/>
+<text x="72.0" y="474.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="end" font-weight="normal" >2.5</text>
+<text x="80.0" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t0</text>
+<text x="133.3" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t1</text>
+<text x="186.7" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t2</text>
+<text x="240.0" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t3</text>
+<text x="293.3" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t4</text>
+<text x="346.7" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t5</text>
+<text x="400.0" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t6</text>
+<text x="453.3" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t7</text>
+<text x="506.7" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t8</text>
+<text x="560.0" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t9</text>
+<text x="613.3" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t10</text>
+<text x="666.7" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t11</text>
+<text x="720.0" y="728.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" >t12</text>
+<polyline points="80.0,710.0 133.3,710.0 186.7,674.0 240.0,647.0 293.3,620.0 346.7,596.4 400.0,574.4 453.3,554.6 506.7,536.5 560.0,520.0 613.3,504.9 666.7,491.2 720.0,478.7" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t0: 0.0000</title><circle cx="80.0" cy="710.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t1: 0.0000</title><circle cx="133.3" cy="710.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t2: 0.3750</title><circle cx="186.7" cy="674.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t3: 0.6562</title><circle cx="240.0" cy="647.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t4: 0.9375</title><circle cx="293.3" cy="620.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t5: 1.1836</title><circle cx="346.7" cy="596.4" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t6: 1.4121</title><circle cx="400.0" cy="574.4" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t7: 1.6187</title><circle cx="453.3" cy="554.6" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t8: 1.8076</title><circle cx="506.7" cy="536.5" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t9: 1.9796</title><circle cx="560.0" cy="520.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t10: 2.1364</title><circle cx="613.3" cy="504.9" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t11: 2.2793</title><circle cx="666.7" cy="491.2" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_0 / CASE_3 D8 entering the node (CASE_0: all committed), t12: 2.4095</title><circle cx="720.0" cy="478.7" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="80.0,710.0 133.3,710.0 186.7,695.6 240.0,684.8 293.3,674.0 346.7,664.5 400.0,655.8 453.3,647.8 506.7,640.6 560.0,634.0 613.3,628.0 666.7,622.5 720.0,617.5" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<g><title>CASE_3 committed pre-maturity (40%), t0: 0.0000</title><path d="M80.0,704.0 L86.0,710.0 L80.0,716.0 L74.0,710.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t1: 0.0000</title><path d="M133.3,704.0 L139.3,710.0 L133.3,716.0 L127.3,710.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t2: 0.1500</title><path d="M186.7,689.6 L192.7,695.6 L186.7,701.6 L180.7,695.6 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t3: 0.2625</title><path d="M240.0,678.8 L246.0,684.8 L240.0,690.8 L234.0,684.8 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t4: 0.3750</title><path d="M293.3,668.0 L299.3,674.0 L293.3,680.0 L287.3,674.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t5: 0.4734</title><path d="M346.7,658.5 L352.7,664.5 L346.7,670.5 L340.7,664.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t6: 0.5648</title><path d="M400.0,649.8 L406.0,655.8 L400.0,661.8 L394.0,655.8 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t7: 0.6475</title><path d="M453.3,641.8 L459.3,647.8 L453.3,653.8 L447.3,647.8 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t8: 0.7230</title><path d="M506.7,634.6 L512.7,640.6 L506.7,646.6 L500.7,640.6 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t9: 0.7918</title><path d="M560.0,628.0 L566.0,634.0 L560.0,640.0 L554.0,634.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t10: 0.8546</title><path d="M613.3,622.0 L619.3,628.0 L613.3,634.0 L607.3,628.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t11: 0.9117</title><path d="M666.7,616.5 L672.7,622.5 L666.7,628.5 L660.7,622.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_3 committed pre-maturity (40%), t12: 0.9638</title><path d="M720.0,611.5 L726.0,617.5 L720.0,623.5 L714.0,617.5 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/></g>
+<polyline points="80.0,710.0 133.3,710.0 186.7,710.0 240.0,710.0 293.3,710.0 346.7,710.0 400.0,710.0 453.3,710.0 506.7,710.0 560.0,710.0 613.3,710.0 666.7,710.0 720.0,710.0" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<g><title>CASE_2 D8, t0: 0.0000</title><path d="M80.0,704.0 L86.0,715.0 L74.0,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t1: 0.0000</title><path d="M133.3,704.0 L139.3,715.0 L127.3,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t2: 0.0000</title><path d="M186.7,704.0 L192.7,715.0 L180.7,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t3: 0.0000</title><path d="M240.0,704.0 L246.0,715.0 L234.0,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t4: 0.0000</title><path d="M293.3,704.0 L299.3,715.0 L287.3,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t5: 0.0000</title><path d="M346.7,704.0 L352.7,715.0 L340.7,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t6: 0.0000</title><path d="M400.0,704.0 L406.0,715.0 L394.0,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t7: 0.0000</title><path d="M453.3,704.0 L459.3,715.0 L447.3,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t8: 0.0000</title><path d="M506.7,704.0 L512.7,715.0 L500.7,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t9: 0.0000</title><path d="M560.0,704.0 L566.0,715.0 L554.0,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t10: 0.0000</title><path d="M613.3,704.0 L619.3,715.0 L607.3,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t11: 0.0000</title><path d="M666.7,704.0 L672.7,715.0 L660.7,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<g><title>CASE_2 D8, t12: 0.0000</title><path d="M720.0,704.0 L726.0,715.0 L714.0,715.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/></g>
+<text x="732.0" y="482.7" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >entering D8 2.410</text>
+<text x="732.0" y="621.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >CASE_3 committed 0.964</text>
+<text x="732.0" y="714.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" >CASE_1, CASE_2: 0</text>
+<text x="24.0" y="780.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="600" >Cases</text>
+<line x1="24" y1="804" x2="54" y2="804" stroke="#0b0b0b" stroke-width="2"/>
+<circle cx="39.0" cy="804.0" r="5" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="64.0" y="808.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >CASE_0 NO ACTION (DISTURBANCE_1)</text>
+<line x1="494" y1="804" x2="524" y2="804" stroke="#2a78d6" stroke-width="2"/>
+<rect x="504.0" y="799.0" width="10" height="10" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="534.0" y="808.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >CASE_1 INTERVENTION_1 software recovery</text>
+<line x1="24" y1="828" x2="54" y2="828" stroke="#eb6834" stroke-width="2"/>
+<path d="M39.0,822.0 L45.0,833.0 L33.0,833.0 Z" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="64.0" y="832.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >CASE_2 INTERVENTION_2 flight-test resequencing</text>
+<line x1="494" y1="828" x2="524" y2="828" stroke="#1baf7a" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M509.0,822.0 L515.0,828.0 L509.0,834.0 L503.0,828.0 Z" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<text x="534.0" y="832.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" >CASE_3 INTERVENTION_3 staged production commitment</text>
+<text x="24.0" y="864.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" >Panel B: CASE_3 changes the committed share only (40%); the D8 disturbance entering the node equals CASE_0. Hover any point for its value.</text>
+</svg>

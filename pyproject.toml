@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppm-agent"
+version = "0.1.0"
+description = "Predictive Program Management 2.0: agentic RAG and analysis for complex engineering programs"
+readme = "README.md"
+# Developed and tested on Python 3.12 only (.venv); 3.14 is not supported by the ML stack used here.
+requires-python = ">=3.12,<3.13"
+# Dependencies are read from requirements.txt so the two cannot drift apart.
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

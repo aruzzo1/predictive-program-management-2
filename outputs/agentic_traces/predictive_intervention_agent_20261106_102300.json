@@ -1,0 +1,787 @@
+{
+  "meta": {
+    "agent": "Predictive Simulation and Intervention Agent (Module 5, Agent 2)",
+    "contract_version": 2,
+    "agent_mode": "REAL_LLM_MODE",
+    "model": "gpt-4o-mini",
+    "status": "COMPLETED_WITH_VALIDATION_ERRORS",
+    "usable_downstream": false,
+    "human_review_required": true,
+    "failure": null,
+    "llm": {
+      "provider": "openai-responses",
+      "model": "gpt-4o-mini",
+      "successful_responses": 1,
+      "input_tokens": 4958,
+      "output_tokens": 1780
+    },
+    "elapsed_seconds": 15.67,
+    "timestamp": "2026-11-06T10:23:00"
+  },
+  "input_catalogue": {
+    "statement": "The intervention comparison is an illustrative test-harness experiment. It evaluates how alternative management policies affect a synthetic, evidence-calibrated dependency model; it does not predict historical or actual F-35 outcomes.",
+    "common_initiating_disturbance": "DISTURBANCE_1: A210 +8 workdays, A230 float 4, exposed 4 workdays, normalized D4 = 1.0 (reference 4 workdays = 1.0)",
+    "equation": "x(t+1) = W^T x(t) (frozen WTM; row = source, column = target)",
+    "horizon": "t0..t12, identical for every case; no early stopping",
+    "intervention_2_rule": "Cumulative capacity of 1.0 normalized unit (4 workdays) over the whole trajectory. At each step, absorb min(D6 value, remaining capacity) from D6 before it propagates; track the cumulative amount; never reset. Once exhausted, D6 propagates normally. The A405 gate and W are unchanged. SYNTHETIC.",
+    "intervention_3_rule": "Upstream propagation unchanged. Each step's D8 value is split into 40% committed pre-maturity exposure and 60% gated / deferred until A430 maturity. NO ACTION (baseline concurrency) commits 100% pre-maturity. Fractions SYNTHETIC; not historical F-35 policy.",
+    "intervention_3_note": "INTERVENTION_3 does not reduce the D8 disturbance entering the node (cumulative_D8 is unchanged); it reduces the share committed before maturity.",
+    "cases": [
+      {
+        "case_id": "CASE_0",
+        "label": "NO ACTION (DISTURBANCE_1)",
+        "intervention_id": null,
+        "initial_state_from": "DISTURBANCE_1",
+        "policy": null
+      },
+      {
+        "case_id": "CASE_1",
+        "label": "INTERVENTION_1 software recovery",
+        "intervention_id": "INTERVENTION_1",
+        "initial_state_from": "INTERVENTION_1",
+        "policy": null
+      },
+      {
+        "case_id": "CASE_2",
+        "label": "INTERVENTION_2 flight-test resequencing",
+        "intervention_id": "INTERVENTION_2",
+        "initial_state_from": "INTERVENTION_2",
+        "policy": "ABSORB_AT_D6"
+      },
+      {
+        "case_id": "CASE_3",
+        "label": "INTERVENTION_3 staged production commitment",
+        "intervention_id": "INTERVENTION_3",
+        "initial_state_from": "DISTURBANCE_1",
+        "policy": "SPLIT_AT_D8"
+      }
+    ],
+    "facts": {
+      "CASE_0.cumulative_D4": 2.948070526,
+      "CASE_0.cumulative_D6": 4.0824508667,
+      "CASE_0.cumulative_D6_arrived_before_absorption": 4.0824508667,
+      "CASE_0.cumulative_D7": 0.974035263,
+      "CASE_0.cumulative_D8": 2.4095306398,
+      "CASE_0.cumulative_total": 10.4140872956,
+      "CASE_0.final_total": 0.4699115753,
+      "CASE_0.peak_step": 2.0,
+      "CASE_0.peak_total": 1.3125,
+      "CASE_1.change.cumulative_D6.absolute_reduction": 4.0824508667,
+      "CASE_1.change.cumulative_D6.percent_reduction": 100.0,
+      "CASE_1.change.cumulative_D8.absolute_reduction": 2.4095306398,
+      "CASE_1.change.cumulative_D8.percent_reduction": 100.0,
+      "CASE_1.change.cumulative_D8_committed_pre_maturity.absolute_reduction": 2.4095306398,
+      "CASE_1.change.cumulative_D8_committed_pre_maturity.percent_reduction": 100.0,
+      "CASE_1.change.cumulative_total.absolute_reduction": 10.4140872956,
+      "CASE_1.change.cumulative_total.percent_reduction": 100.0,
+      "CASE_1.change.peak_total.absolute_reduction": 1.3125,
+      "CASE_1.change.peak_total.percent_reduction": 100.0,
+      "CASE_1.cumulative_D4": 0.0,
+      "CASE_1.cumulative_D6": 0.0,
+      "CASE_1.cumulative_D6_arrived_before_absorption": 0.0,
+      "CASE_1.cumulative_D7": 0.0,
+      "CASE_1.cumulative_D8": 0.0,
+      "CASE_1.cumulative_total": 0.0,
+      "CASE_1.final_total": 0.0,
+      "CASE_1.peak_total": 0.0,
+      "CASE_2.D6_first_arrival": 0.75,
+      "CASE_2.D6_first_arrival_step": 1.0,
+      "CASE_2.change.cumulative_D6.absolute_reduction": 4.0824508667,
+      "CASE_2.change.cumulative_D6.percent_reduction": 100.0,
+      "CASE_2.change.cumulative_D8.absolute_reduction": 2.4095306398,
+      "CASE_2.change.cumulative_D8.percent_reduction": 100.0,
+      "CASE_2.change.cumulative_D8_committed_pre_maturity.absolute_reduction": 2.4095306398,
+      "CASE_2.change.cumulative_D8_committed_pre_maturity.percent_reduction": 100.0,
+      "CASE_2.change.cumulative_total.absolute_reduction": 9.4140872956,
+      "CASE_2.change.cumulative_total.percent_reduction": 90.397622,
+      "CASE_2.change.peak_total.absolute_reduction": 0.3125,
+      "CASE_2.change.peak_total.percent_reduction": 23.809524,
+      "CASE_2.cumulative_D4": 1.0,
+      "CASE_2.cumulative_D6": 0.0,
+      "CASE_2.cumulative_D6_arrived_before_absorption": 0.75,
+      "CASE_2.cumulative_D7": 0.0,
+      "CASE_2.cumulative_D8": 0.0,
+      "CASE_2.cumulative_total": 1.0,
+      "CASE_2.final_total": 0.0,
+      "CASE_2.intervention_capacity": 1.0,
+      "CASE_2.intervention_unused": 0.25,
+      "CASE_2.intervention_used": 0.75,
+      "CASE_2.peak_step": 0.0,
+      "CASE_2.peak_total": 1.0,
+      "CASE_3.change.cumulative_D6.absolute_reduction": 0.0,
+      "CASE_3.change.cumulative_D6.percent_reduction": 0.0,
+      "CASE_3.change.cumulative_D8.absolute_reduction": 0.0,
+      "CASE_3.change.cumulative_D8.percent_reduction": 0.0,
+      "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction": 1.4457183839,
+      "CASE_3.change.cumulative_D8_committed_pre_maturity.percent_reduction": 60.0,
+      "CASE_3.change.cumulative_total.absolute_reduction": 0.0,
+      "CASE_3.change.cumulative_total.percent_reduction": 0.0,
+      "CASE_3.change.peak_total.absolute_reduction": 0.0,
+      "CASE_3.change.peak_total.percent_reduction": 0.0,
+      "CASE_3.cumulative_D4": 2.948070526,
+      "CASE_3.cumulative_D6": 4.0824508667,
+      "CASE_3.cumulative_D6_arrived_before_absorption": 4.0824508667,
+      "CASE_3.cumulative_D7": 0.974035263,
+      "CASE_3.cumulative_D8": 2.4095306398,
+      "CASE_3.cumulative_D8_committed_pre_maturity": 0.9638122559,
+      "CASE_3.cumulative_D8_gated_deferred": 1.4457183839,
+      "CASE_3.cumulative_total": 10.4140872956,
+      "CASE_3.final_total": 0.4699115753,
+      "CASE_3.peak_step": 2.0,
+      "CASE_3.peak_total": 1.3125,
+      "DISTURBANCE_1.available_float_days": 4.0,
+      "DISTURBANCE_1.exposed_delay_days": 4.0,
+      "DISTURBANCE_1.gross_slip_days": 8.0,
+      "DISTURBANCE_1.initial_D4": 1.0,
+      "INTERVENTION_1.exposed_delay_days": 0.0,
+      "INTERVENTION_1.recovery_days": 4.0,
+      "INTERVENTION_2.capacity_days": 4.0,
+      "INTERVENTION_2.capacity_normalized": 1.0,
+      "INTERVENTION_3.post_maturity_commitment_fraction": 0.6,
+      "INTERVENTION_3.pre_maturity_commitment_fraction": 0.4,
+      "MAPPING.reference_exposed_delay_days": 4.0,
+      "SIMULATION.horizon_last_step": 12.0,
+      "WTM.spectral_radius": 0.9114378278
+    },
+    "assumptions": {
+      "ASSUMPTION.synthetic_baseline": "The IMP/IMS (v1.1) is a synthetic, evidence-calibrated schedule, not an actual or reconstructed F-35 contractor schedule. SYNTHETIC.",
+      "ASSUMPTION.provenance_model": "Public GAO / DOT&E passages are OBSERVED; dependency concepts inferred from them are DERIVED; every activity-level link, duration and scenario magnitude is SYNTHETIC. Agentic decisions set three weights (Q01 PARTIALLY_SUPPORTED, Q04 and Q08 UNRESOLVED).",
+      "ASSUMPTION.ordinal_weights_as_coefficients": "Ordinal DSM evidence tiers are used directly as multiplicative propagation coefficients in x(t+1) = W^T x(t).",
+      "ASSUMPTION.float_absorbs_first": "Schedule float absorbs a slip before it enters the propagation model (exposed delay = slip - recovery - float, floored at zero).",
+      "ASSUMPTION.normalization_4_days": "4 exposed workdays = 1.0 normalized unit (SYNTHETIC normalization constant).",
+      "ASSUMPTION.resequencing_cumulative_capacity": "INTERVENTION_2 absorbs D6 disturbance from a cumulative capacity of 1.0 normalized unit that never resets (SYNTHETIC).",
+      "ASSUMPTION.staged_commitment_split": "INTERVENTION_3 commits 40% of D8 exposure before maturity and gates 60% (SYNTHETIC; not historical policy). NO ACTION commits all of it before maturity."
+    },
+    "limitations": {
+      "LIMITATION.synthetic_imp_ims": "The IMP/IMS and all activity-level links are synthetic.",
+      "LIMITATION.ordinal_weights": "Weights are ordinal evidence tiers, not calibrated probabilities or rework fractions.",
+      "LIMITATION.normalization_4_day": "The 4-day normalization is a synthetic constant, not a calibration.",
+      "LIMITATION.single_deterministic_scenario": "One deterministic initiating scenario (DISTURBANCE_1); no stochastic variation or sensitivity analysis.",
+      "LIMITATION.synthetic_intervention_magnitudes": "Recovery days, resequencing capacity and commitment fractions are synthetic policy values.",
+      "LIMITATION.horizon_t12_truncation": "Cumulative metrics are truncated at t12; NO ACTION has not fully decayed by t12.",
+      "LIMITATION.no_intervention_combinations": "Interventions are evaluated one at a time, never in combination.",
+      "LIMITATION.no_historical_calibration": "Nothing is calibrated to historical F-35 outcomes; results do not predict them."
+    },
+    "inputs_sha256": {
+      "outputs/simulation/intervention_comparison.json": "ebf29876161530f65afd5ca34b15dc65099a8304f2d896256995bc831265ad5f",
+      "outputs/simulation/predictive_trajectories.csv": "26534f4166712d2d65a4959f3b38824ad1d1e79c1b6feb47a5ec574a74e9a3f3",
+      "outputs/simulation/scenario_mapping.json": "0b9ff5a324548940ab78dbb80c61277617585d424fc2d7d51b49fdba1b70759b",
+      "outputs/wtm/structural_analysis.json": "a7a1d63279db897a6eb2f51667b914b148b161e32ed4429c83b6dd231ea6b7f7"
+    }
+  },
+  "interpretation": {
+    "no_action_assessment": {
+      "statement": "The no-action scenario results in a cumulative total disturbance that is significant, with disturbances across various metrics remaining high.",
+      "cited_ids": [
+        "CASE_0.cumulative_total"
+      ]
+    },
+    "intervention_assessments": [
+      {
+        "case_id": "CASE_1",
+        "intervention_id": "INTERVENTION_1",
+        "effect_on_total_disturbance": "ELIMINATED",
+        "effect_on_D6_exposure": "ELIMINATED",
+        "effect_on_D8_entering": "ELIMINATED",
+        "effect_on_D8_committed": "ELIMINATED",
+        "disturbance_reaches_D8": false,
+        "alters_propagation_upstream_of_D8": false,
+        "management_objective": "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE",
+        "effect_on_trajectory": "The trajectory is completely cleared of disturbances.",
+        "what_it_does_not_change": "No disturbances propagate to D8.",
+        "cited_ids": [
+          "CASE_1.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "case_id": "CASE_2",
+        "intervention_id": "INTERVENTION_2",
+        "effect_on_total_disturbance": "REDUCED",
+        "effect_on_D6_exposure": "ELIMINATED",
+        "effect_on_D8_entering": "ELIMINATED",
+        "effect_on_D8_committed": "ELIMINATED",
+        "disturbance_reaches_D8": false,
+        "alters_propagation_upstream_of_D8": false,
+        "management_objective": "PROTECT_FLIGHT_TEST_EXECUTION",
+        "effect_on_trajectory": "The trajectory is improved with unused capacity remaining.",
+        "what_it_does_not_change": "The overall disturbance is still present but reduced significantly.",
+        "cited_ids": [
+          "CASE_2.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "case_id": "CASE_3",
+        "intervention_id": "INTERVENTION_3",
+        "effect_on_total_disturbance": "UNCHANGED",
+        "effect_on_D6_exposure": "UNCHANGED",
+        "effect_on_D8_entering": "UNCHANGED",
+        "effect_on_D8_committed": "REDUCED",
+        "disturbance_reaches_D8": true,
+        "alters_propagation_upstream_of_D8": false,
+        "management_objective": "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE",
+        "effect_on_trajectory": "The share of production exposure committed before maturity is limited.",
+        "what_it_does_not_change": "The disturbance entering D8 remains unchanged.",
+        "cited_ids": [
+          "CASE_3.change.cumulative_total.absolute_reduction"
+        ]
+      }
+    ],
+    "comparative_claims": [
+      {
+        "metric": "TOTAL_DISTURBANCE",
+        "left_case": "CASE_1",
+        "relation": "LOWER_THAN",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_1.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "TOTAL_DISTURBANCE",
+        "left_case": "CASE_2",
+        "relation": "LOWER_THAN",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_2.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "TOTAL_DISTURBANCE",
+        "left_case": "CASE_3",
+        "relation": "EQUAL_TO",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_3.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "D6_EXPOSURE",
+        "left_case": "CASE_1",
+        "relation": "LOWER_THAN",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_1.change.cumulative_D6.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "D6_EXPOSURE",
+        "left_case": "CASE_2",
+        "relation": "LOWER_THAN",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_2.change.cumulative_D6.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "D6_EXPOSURE",
+        "left_case": "CASE_3",
+        "relation": "EQUAL_TO",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_3.change.cumulative_D6.absolute_reduction"
+        ]
+      },
+      {
+        "metric": "D8_COMMITTED",
+        "left_case": "CASE_3",
+        "relation": "LOWER_THAN",
+        "right_case": "CASE_0",
+        "cited_ids": [
+          "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction"
+        ]
+      }
+    ],
+    "management_tradeoffs": [
+      {
+        "statement": "While INTERVENTION_1 completely eliminates disturbances, it does not allow for any operational flexibility, unlike INTERVENTION_3, which reduces pre-maturity commitments but retains upstream disturbances.",
+        "cited_ids": [
+          "CASE_1.change.cumulative_total.absolute_reduction",
+          "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction"
+        ]
+      }
+    ],
+    "preferred_intervention_by_objective": [
+      {
+        "objective": "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE",
+        "preferred_case_ids": [
+          "CASE_1"
+        ],
+        "rationale": "INTERVENTION_1 completely eliminates total disturbance, achieving the objective.",
+        "conditions_and_caveats": "This is under the assumption that complete elimination is feasible in practice.",
+        "cited_ids": [
+          "CASE_1.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "objective": "PROTECT_FLIGHT_TEST_EXECUTION",
+        "preferred_case_ids": [
+          "CASE_2"
+        ],
+        "rationale": "INTERVENTION_2 effectively absorbs disturbances, ensuring flight test execution is protected.",
+        "conditions_and_caveats": "This assumes the cumulative capacity is sufficient for the disturbances encountered.",
+        "cited_ids": [
+          "CASE_2.change.cumulative_total.absolute_reduction"
+        ]
+      },
+      {
+        "objective": "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE",
+        "preferred_case_ids": [
+          "CASE_3"
+        ],
+        "rationale": "INTERVENTION_3 reduces the share of production exposure committed before maturity, aligning with the objective.",
+        "conditions_and_caveats": "This does not address upstream disturbances, which remain unchanged.",
+        "cited_ids": [
+          "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction"
+        ]
+      }
+    ],
+    "secondary_options": [
+      {
+        "case_id": "CASE_2",
+        "objective": "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE",
+        "condition": "Useful when upstream disturbances are manageable and flight test execution is prioritized.",
+        "effect_vs_no_action": "REDUCED",
+        "is_minimum_for_objective": false,
+        "cited_ids": [
+          "CASE_2.change.cumulative_total.absolute_reduction"
+        ]
+      }
+    ],
+    "key_assumptions": [
+      {
+        "statement": "The IMP/IMS is a synthetic, evidence-calibrated schedule, not an actual or reconstructed F-35 contractor schedule.",
+        "cited_ids": [
+          "ASSUMPTION.synthetic_baseline"
+        ]
+      },
+      {
+        "statement": "INTERVENTION_2 absorbs D6 disturbance from a cumulative capacity of 1.0 normalized unit that never resets.",
+        "cited_ids": [
+          "ASSUMPTION.resequencing_cumulative_capacity"
+        ]
+      },
+      {
+        "statement": "INTERVENTION_3 commits 40% of D8 exposure before maturity and gates 60%.",
+        "cited_ids": [
+          "ASSUMPTION.staged_commitment_split"
+        ]
+      }
+    ],
+    "uncertainties": [
+      {
+        "statement": "The IMP/IMS and all activity-level links are synthetic, limiting the applicability of results to real-world scenarios.",
+        "cited_ids": [
+          "LIMITATION.synthetic_imp_ims"
+        ]
+      },
+      {
+        "statement": "Weights are ordinal evidence tiers, not calibrated probabilities or rework fractions, affecting the reliability of propagation outcomes.",
+        "cited_ids": [
+          "LIMITATION.ordinal_weights"
+        ]
+      },
+      {
+        "statement": "The 4-day normalization is a synthetic constant, not a calibration, which may impact the interpretation of results.",
+        "cited_ids": [
+          "LIMITATION.normalization_4_day"
+        ]
+      },
+      {
+        "statement": "Only one deterministic initiating scenario is evaluated, limiting the understanding of variability in outcomes.",
+        "cited_ids": [
+          "LIMITATION.single_deterministic_scenario"
+        ]
+      },
+      {
+        "statement": "Recovery days, resequencing capacity and commitment fractions are synthetic policy values, which may not reflect actual operational conditions.",
+        "cited_ids": [
+          "LIMITATION.synthetic_intervention_magnitudes"
+        ]
+      },
+      {
+        "statement": "Cumulative metrics are truncated at t12, meaning that NO ACTION has not fully decayed by this point, potentially skewing results.",
+        "cited_ids": [
+          "LIMITATION.horizon_t12_truncation"
+        ]
+      },
+      {
+        "statement": "Interventions are evaluated one at a time, never in combination, which may overlook synergistic effects.",
+        "cited_ids": [
+          "LIMITATION.no_intervention_combinations"
+        ]
+      },
+      {
+        "statement": "Nothing is calibrated to historical F-35 outcomes; results do not predict them, limiting their applicability.",
+        "cited_ids": [
+          "LIMITATION.no_historical_calibration"
+        ]
+      }
+    ],
+    "human_review_required": true,
+    "human_review_reason": "This is decision support from a synthetic model, and a human program manager must decide.",
+    "overall_recommendation": {
+      "statement": "The choice of intervention depends on the specific management objective: complete elimination of disturbances favors INTERVENTION_1, while protecting flight test execution favors INTERVENTION_2, and limiting pre-maturity production exposure favors INTERVENTION_3.",
+      "cited_ids": [
+        "CASE_1.change.cumulative_total.absolute_reduction",
+        "CASE_2.change.cumulative_total.absolute_reduction",
+        "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction"
+      ]
+    },
+    "confidence_or_support_summary": "The results are derived from a synthetic model and should be interpreted with caution, considering the assumptions and limitations outlined."
+  },
+  "validation": {
+    "result": "FAIL",
+    "errors": [
+      "CASE_1.alters_propagation_upstream_of_D8: claimed False, deterministic True",
+      "CASE_2.alters_propagation_upstream_of_D8: claimed False, deterministic True",
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE: prefers CASE_3, but ['CASE_1', 'CASE_2'] attain(s) a strictly lower cumulative D8 exposure committed before maturity (all of it for cases without staging)",
+      "secondary_options[0] CASE_2: effect claimed REDUCED, deterministic ELIMINATED",
+      "secondary_options[0] CASE_2: is_minimum_for_objective False, deterministic True"
+    ],
+    "errors_by_category": {
+      "structure": [],
+      "citation": [],
+      "numeric": [],
+      "qualitative": [
+        "CASE_1.alters_propagation_upstream_of_D8: claimed False, deterministic True",
+        "CASE_2.alters_propagation_upstream_of_D8: claimed False, deterministic True"
+      ],
+      "objective": [
+        "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE: prefers CASE_3, but ['CASE_1', 'CASE_2'] attain(s) a strictly lower cumulative D8 exposure committed before maturity (all of it for cases without staging)",
+        "secondary_options[0] CASE_2: effect claimed REDUCED, deterministic ELIMINATED",
+        "secondary_options[0] CASE_2: is_minimum_for_objective False, deterministic True"
+      ],
+      "coverage": [],
+      "human_review": []
+    },
+    "error_counts": {
+      "structure": 0,
+      "citation": 0,
+      "numeric": 0,
+      "qualitative": 2,
+      "objective": 3,
+      "coverage": 0,
+      "human_review": 0
+    },
+    "numeric_check": {
+      "numerals_found": [
+        {
+          "field": "key_assumptions[1]",
+          "numeral": "1.0",
+          "supported": true
+        },
+        {
+          "field": "key_assumptions[2]",
+          "numeral": "40%",
+          "supported": true
+        },
+        {
+          "field": "key_assumptions[2]",
+          "numeral": "60%",
+          "supported": true
+        },
+        {
+          "field": "uncertainties[2]",
+          "numeral": "4",
+          "supported": true
+        }
+      ],
+      "unsupported": [],
+      "result": "PASS"
+    },
+    "spelled_number_check": {
+      "spelled_quantities": [],
+      "result": "PASS"
+    },
+    "prose_d8_check": [],
+    "claim_checks": [
+      {
+        "case_id": "CASE_1",
+        "claim": "effect_on_total_disturbance",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_1",
+        "claim": "effect_on_D6_exposure",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_1",
+        "claim": "effect_on_D8_entering",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_1",
+        "claim": "effect_on_D8_committed",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_1",
+        "claim": "disturbance_reaches_D8",
+        "claimed": false,
+        "deterministic": false,
+        "match": true
+      },
+      {
+        "case_id": "CASE_1",
+        "claim": "alters_propagation_upstream_of_D8",
+        "claimed": false,
+        "deterministic": true,
+        "match": false
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "effect_on_total_disturbance",
+        "claimed": "REDUCED",
+        "deterministic": "REDUCED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "effect_on_D6_exposure",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "effect_on_D8_entering",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "effect_on_D8_committed",
+        "claimed": "ELIMINATED",
+        "deterministic": "ELIMINATED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "disturbance_reaches_D8",
+        "claimed": false,
+        "deterministic": false,
+        "match": true
+      },
+      {
+        "case_id": "CASE_2",
+        "claim": "alters_propagation_upstream_of_D8",
+        "claimed": false,
+        "deterministic": true,
+        "match": false
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "effect_on_total_disturbance",
+        "claimed": "UNCHANGED",
+        "deterministic": "UNCHANGED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "effect_on_D6_exposure",
+        "claimed": "UNCHANGED",
+        "deterministic": "UNCHANGED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "effect_on_D8_entering",
+        "claimed": "UNCHANGED",
+        "deterministic": "UNCHANGED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "effect_on_D8_committed",
+        "claimed": "REDUCED",
+        "deterministic": "REDUCED",
+        "match": true
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "disturbance_reaches_D8",
+        "claimed": true,
+        "deterministic": true,
+        "match": true
+      },
+      {
+        "case_id": "CASE_3",
+        "claim": "alters_propagation_upstream_of_D8",
+        "claimed": false,
+        "deterministic": false,
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[0]",
+        "claimed": "CASE_1 LOWER_THAN CASE_0 on TOTAL_DISTURBANCE",
+        "deterministic": "LOWER_THAN",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[1]",
+        "claimed": "CASE_2 LOWER_THAN CASE_0 on TOTAL_DISTURBANCE",
+        "deterministic": "LOWER_THAN",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[2]",
+        "claimed": "CASE_3 EQUAL_TO CASE_0 on TOTAL_DISTURBANCE",
+        "deterministic": "EQUAL_TO",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[3]",
+        "claimed": "CASE_1 LOWER_THAN CASE_0 on D6_EXPOSURE",
+        "deterministic": "LOWER_THAN",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[4]",
+        "claimed": "CASE_2 LOWER_THAN CASE_0 on D6_EXPOSURE",
+        "deterministic": "LOWER_THAN",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[5]",
+        "claimed": "CASE_3 EQUAL_TO CASE_0 on D6_EXPOSURE",
+        "deterministic": "EQUAL_TO",
+        "match": true
+      },
+      {
+        "claim": "comparative_claims[6]",
+        "claimed": "CASE_3 LOWER_THAN CASE_0 on D8_COMMITTED",
+        "deterministic": "LOWER_THAN",
+        "match": true
+      }
+    ],
+    "deterministic_effects": {
+      "CASE_1": {
+        "effect_on_total_disturbance": "ELIMINATED",
+        "effect_on_D6_exposure": "ELIMINATED",
+        "effect_on_D8_entering": "ELIMINATED",
+        "effect_on_D8_committed": "ELIMINATED",
+        "disturbance_reaches_D8": false,
+        "alters_propagation_upstream_of_D8": true
+      },
+      "CASE_2": {
+        "effect_on_total_disturbance": "REDUCED",
+        "effect_on_D6_exposure": "ELIMINATED",
+        "effect_on_D8_entering": "ELIMINATED",
+        "effect_on_D8_committed": "ELIMINATED",
+        "disturbance_reaches_D8": false,
+        "alters_propagation_upstream_of_D8": true
+      },
+      "CASE_3": {
+        "effect_on_total_disturbance": "UNCHANGED",
+        "effect_on_D6_exposure": "UNCHANGED",
+        "effect_on_D8_entering": "UNCHANGED",
+        "effect_on_D8_committed": "REDUCED",
+        "disturbance_reaches_D8": true,
+        "alters_propagation_upstream_of_D8": false
+      }
+    },
+    "objective_alignment": {
+      "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": {
+        "agent_preferred": [
+          "CASE_1"
+        ],
+        "lowest_metric_cases": [
+          "CASE_1"
+        ],
+        "metric": "cumulative total disturbance (t0..t12)",
+        "agreement": "MATCH"
+      },
+      "PROTECT_FLIGHT_TEST_EXECUTION": {
+        "agent_preferred": [
+          "CASE_2"
+        ],
+        "lowest_metric_cases": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "metric": "cumulative effective D6 disturbance (after any absorption)",
+        "agreement": "SUBSET_OF_TIE"
+      },
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": {
+        "agent_preferred": [
+          "CASE_3"
+        ],
+        "lowest_metric_cases": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "metric": "cumulative D8 exposure committed before maturity (all of it for cases without staging)",
+        "agreement": "DIFFERS"
+      }
+    },
+    "objective_facts": {
+      "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": {
+        "metric": "cumulative total disturbance (t0..t12)",
+        "values": {
+          "CASE_0": 10.4140872956,
+          "CASE_1": 0.0,
+          "CASE_2": 1.0,
+          "CASE_3": 10.4140872956
+        },
+        "lowest_cases": [
+          "CASE_1"
+        ]
+      },
+      "PROTECT_FLIGHT_TEST_EXECUTION": {
+        "metric": "cumulative effective D6 disturbance (after any absorption)",
+        "values": {
+          "CASE_0": 4.0824508667,
+          "CASE_1": 0.0,
+          "CASE_2": 0.0,
+          "CASE_3": 4.0824508667
+        },
+        "lowest_cases": [
+          "CASE_1",
+          "CASE_2"
+        ]
+      },
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": {
+        "metric": "cumulative D8 exposure committed before maturity (all of it for cases without staging)",
+        "values": {
+          "CASE_0": 2.4095306398,
+          "CASE_1": 0.0,
+          "CASE_2": 0.0,
+          "CASE_3": 0.9638122559
+        },
+        "lowest_cases": [
+          "CASE_1",
+          "CASE_2"
+        ]
+      }
+    },
+    "cited_fact_values": {
+      "CASE_0.cumulative_total": 10.4140872956,
+      "CASE_1.change.cumulative_D6.absolute_reduction": 4.0824508667,
+      "CASE_1.change.cumulative_total.absolute_reduction": 10.4140872956,
+      "CASE_2.change.cumulative_D6.absolute_reduction": 4.0824508667,
+      "CASE_2.change.cumulative_total.absolute_reduction": 9.4140872956,
+      "CASE_3.change.cumulative_D6.absolute_reduction": 0.0,
+      "CASE_3.change.cumulative_D8_committed_pre_maturity.absolute_reduction": 1.4457183839,
+      "CASE_3.change.cumulative_total.absolute_reduction": 0.0
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "synthetic capstone scenario: decision support only",
+        "qualitative validation failed",
+        "objective validation failed"
+      ]
+    },
+    "usable_downstream": false
+  }
+}

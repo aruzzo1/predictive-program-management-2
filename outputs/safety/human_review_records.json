@@ -1,0 +1,613 @@
+[
+  {
+    "trace_id": "predictive_intervention_agent_20261106_101319",
+    "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_101319.json",
+    "safety_route": "BLOCKED_VALIDATION_FAILURE",
+    "review_required": true,
+    "authorizes_implementation": false,
+    "reasons": [
+      "agent status is not VALIDATED",
+      "citation validation fails",
+      "objective validation fails",
+      "evidence is unresolved",
+      "agent and deterministic validator disagree",
+      "recommendation involves high-impact action",
+      "synthetic assumptions materially influence the recommendation",
+      "recommendation depends on evidence that is not sufficiently grounded",
+      "capstone policy: human review required for every episode (advisory system)"
+    ],
+    "episode_stages": {
+      "1_model_produced_output": true,
+      "2_output_well_formed": true,
+      "2_plausibility": "fluent, schema-conforming output; plausibility is a human judgement and is not used for routing",
+      "3_validation_detected_failures": true,
+      "4_withheld_from_autonomous_downstream_use": true,
+      "5_human_required_before_further_use": true
+    },
+    "validation_summary": {
+      "agent_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "contract_version": 1,
+      "usable_downstream": false,
+      "checks_performed": [
+        "structure",
+        "citation",
+        "numeric",
+        "objective",
+        "coverage"
+      ],
+      "failures_by_category": {
+        "structure": 0,
+        "citation": 6,
+        "numeric": 0,
+        "objective": 1,
+        "coverage": 0
+      },
+      "material_failures": [
+        "citation: 6 failure(s)",
+        "objective: 1 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "supplementary_recheck": {
+        "note": "read-only re-check with later checks; not part of the run-time validation",
+        "spelled_out_quantities": 8,
+        "prose_d8_contradictions": 1,
+        "objective_preferences_strictly_beaten": 1,
+        "unknown_citations": 6
+      }
+    },
+    "guardrails": [
+      {
+        "guardrail_id": "G1",
+        "name": "Provenance",
+        "status": "FAIL",
+        "detail": "6 citation failure(s)"
+      },
+      {
+        "guardrail_id": "G2",
+        "name": "Numerical authority",
+        "status": "PASS",
+        "detail": "no numeric failures"
+      },
+      {
+        "guardrail_id": "G3",
+        "name": "Qualitative consistency",
+        "status": "NOT_CHECKED",
+        "detail": "not checked by agent contract v1"
+      },
+      {
+        "guardrail_id": "G4",
+        "name": "Objective consistency",
+        "status": "FAIL",
+        "detail": "1 objective failure(s); not checked by agent contract v1"
+      },
+      {
+        "guardrail_id": "G5",
+        "name": "Baseline integrity",
+        "status": "PASS",
+        "detail": "22 frozen artifacts match their pinned hashes"
+      },
+      {
+        "guardrail_id": "G6",
+        "name": "Bounded tool access",
+        "status": "PASS",
+        "detail": "no actions requested; the agent schema has read / interpret / recommend only"
+      },
+      {
+        "guardrail_id": "G7",
+        "name": "Uncertainty / coverage",
+        "status": "PASS",
+        "detail": "no coverage failures; unresolved evidence surfaced for review: 3 item(s)"
+      },
+      {
+        "guardrail_id": "G8",
+        "name": "Consequence",
+        "status": "ENFORCED",
+        "detail": "high-impact actions ['EXECUTE_INTERVENTION', 'MATERIAL_POSTURE_CHANGE', 'PRODUCTION_COMMITMENT_CHANGE', 'RESOURCE_OR_CAPACITY_CHANGE', 'SCHEDULE_RESEQUENCING']: human approval required"
+      },
+      {
+        "guardrail_id": "G9",
+        "name": "Failed validation",
+        "status": "ENFORCED",
+        "detail": "blocked: 4 material failure(s)"
+      },
+      {
+        "guardrail_id": "G10",
+        "name": "Confidence",
+        "status": "ENFORCED",
+        "detail": "confidence signal HEDGED logged for evaluation only; not read by routing"
+      }
+    ],
+    "proposed_intervention": {
+      "note": "agent selections as recorded; not authoritative (episode not usable downstream)",
+      "by_objective": {
+        "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": [
+          "CASE_1"
+        ],
+        "PROTECT_FLIGHT_TEST_EXECUTION": [
+          "CASE_2"
+        ],
+        "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": [
+          "CASE_3"
+        ]
+      }
+    },
+    "deterministic_support": {
+      "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": {
+        "agent_selected": [
+          "CASE_1"
+        ],
+        "deterministic_minimum": [
+          "CASE_1"
+        ],
+        "selection_within_minimum": true
+      },
+      "PROTECT_FLIGHT_TEST_EXECUTION": {
+        "agent_selected": [
+          "CASE_2"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": true
+      },
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": {
+        "agent_selected": [
+          "CASE_3"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": false
+      }
+    },
+    "confidence_signal": {
+      "signal": "HEDGED",
+      "text": "The results are based on a synthetic model and should be interpreted with caution, as they do not predict actual outcomes.",
+      "used_for_routing": false,
+      "policy": "Model confidence and correctness are evaluated separately. A confidence statement may inform evaluation but cannot override deterministic evidence, validation failures, or human-review requirements."
+    },
+    "assumptions": [
+      "ASSUMPTION.float_absorbs_first",
+      "ASSUMPTION.normalization_4_days",
+      "ASSUMPTION.ordinal_weights_as_coefficients",
+      "ASSUMPTION.provenance_model",
+      "ASSUMPTION.resequencing_cumulative_capacity",
+      "ASSUMPTION.staged_commitment_split",
+      "ASSUMPTION.synthetic_baseline"
+    ],
+    "limitations": [
+      "LIMITATION.horizon_t12_truncation",
+      "LIMITATION.no_historical_calibration",
+      "LIMITATION.no_intervention_combinations",
+      "LIMITATION.normalization_4_day",
+      "LIMITATION.ordinal_weights",
+      "LIMITATION.single_deterministic_scenario",
+      "LIMITATION.synthetic_imp_ims",
+      "LIMITATION.synthetic_intervention_magnitudes"
+    ],
+    "impact_level": "HIGH",
+    "impact_actions": [
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE",
+      "PRODUCTION_COMMITMENT_CHANGE",
+      "RESOURCE_OR_CAPACITY_CHANGE",
+      "SCHEDULE_RESEQUENCING"
+    ],
+    "reviewer_decision": "PENDING",
+    "reviewer": null,
+    "reviewer_notes": null
+  },
+  {
+    "trace_id": "predictive_intervention_agent_20261106_102300",
+    "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_102300.json",
+    "safety_route": "BLOCKED_VALIDATION_FAILURE",
+    "review_required": true,
+    "authorizes_implementation": false,
+    "reasons": [
+      "agent status is not VALIDATED",
+      "qualitative validation fails",
+      "objective validation fails",
+      "evidence is unresolved",
+      "agent and deterministic validator disagree",
+      "recommendation involves high-impact action",
+      "synthetic assumptions materially influence the recommendation",
+      "recommendation depends on evidence that is not sufficiently grounded",
+      "capstone policy: human review required for every episode (advisory system)"
+    ],
+    "episode_stages": {
+      "1_model_produced_output": true,
+      "2_output_well_formed": true,
+      "2_plausibility": "fluent, schema-conforming output; plausibility is a human judgement and is not used for routing",
+      "3_validation_detected_failures": true,
+      "4_withheld_from_autonomous_downstream_use": true,
+      "5_human_required_before_further_use": true
+    },
+    "validation_summary": {
+      "agent_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "contract_version": 2,
+      "usable_downstream": false,
+      "checks_performed": [
+        "structure",
+        "citation",
+        "numeric",
+        "qualitative",
+        "objective",
+        "coverage",
+        "human_review"
+      ],
+      "failures_by_category": {
+        "structure": 0,
+        "citation": 0,
+        "numeric": 0,
+        "qualitative": 2,
+        "objective": 3,
+        "coverage": 0,
+        "human_review": 0
+      },
+      "material_failures": [
+        "qualitative: 2 failure(s)",
+        "objective: 3 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "supplementary_recheck": {}
+    },
+    "guardrails": [
+      {
+        "guardrail_id": "G1",
+        "name": "Provenance",
+        "status": "PASS",
+        "detail": "no citation failures"
+      },
+      {
+        "guardrail_id": "G2",
+        "name": "Numerical authority",
+        "status": "PASS",
+        "detail": "no numeric failures"
+      },
+      {
+        "guardrail_id": "G3",
+        "name": "Qualitative consistency",
+        "status": "FAIL",
+        "detail": "2 qualitative failure(s)"
+      },
+      {
+        "guardrail_id": "G4",
+        "name": "Objective consistency",
+        "status": "FAIL",
+        "detail": "3 objective failure(s); not checked by agent contract v2"
+      },
+      {
+        "guardrail_id": "G5",
+        "name": "Baseline integrity",
+        "status": "PASS",
+        "detail": "22 frozen artifacts match their pinned hashes"
+      },
+      {
+        "guardrail_id": "G6",
+        "name": "Bounded tool access",
+        "status": "PASS",
+        "detail": "no actions requested; the agent schema has read / interpret / recommend only"
+      },
+      {
+        "guardrail_id": "G7",
+        "name": "Uncertainty / coverage",
+        "status": "PASS",
+        "detail": "no coverage failures; unresolved evidence surfaced for review: 3 item(s)"
+      },
+      {
+        "guardrail_id": "G8",
+        "name": "Consequence",
+        "status": "ENFORCED",
+        "detail": "high-impact actions ['EXECUTE_INTERVENTION', 'MATERIAL_POSTURE_CHANGE', 'PRODUCTION_COMMITMENT_CHANGE', 'RESOURCE_OR_CAPACITY_CHANGE', 'SCHEDULE_RESEQUENCING']: human approval required"
+      },
+      {
+        "guardrail_id": "G9",
+        "name": "Failed validation",
+        "status": "ENFORCED",
+        "detail": "blocked: 4 material failure(s)"
+      },
+      {
+        "guardrail_id": "G10",
+        "name": "Confidence",
+        "status": "ENFORCED",
+        "detail": "confidence signal HEDGED logged for evaluation only; not read by routing"
+      }
+    ],
+    "proposed_intervention": {
+      "note": "agent selections as recorded; not authoritative (episode not usable downstream)",
+      "by_objective": {
+        "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": [
+          "CASE_1"
+        ],
+        "PROTECT_FLIGHT_TEST_EXECUTION": [
+          "CASE_2"
+        ],
+        "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": [
+          "CASE_3"
+        ]
+      }
+    },
+    "deterministic_support": {
+      "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": {
+        "agent_selected": [
+          "CASE_1"
+        ],
+        "deterministic_minimum": [
+          "CASE_1"
+        ],
+        "selection_within_minimum": true
+      },
+      "PROTECT_FLIGHT_TEST_EXECUTION": {
+        "agent_selected": [
+          "CASE_2"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": true
+      },
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": {
+        "agent_selected": [
+          "CASE_3"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": false
+      }
+    },
+    "confidence_signal": {
+      "signal": "HEDGED",
+      "text": "The results are derived from a synthetic model and should be interpreted with caution, considering the assumptions and limitations outlined.",
+      "used_for_routing": false,
+      "policy": "Model confidence and correctness are evaluated separately. A confidence statement may inform evaluation but cannot override deterministic evidence, validation failures, or human-review requirements."
+    },
+    "assumptions": [
+      "ASSUMPTION.float_absorbs_first",
+      "ASSUMPTION.normalization_4_days",
+      "ASSUMPTION.ordinal_weights_as_coefficients",
+      "ASSUMPTION.provenance_model",
+      "ASSUMPTION.resequencing_cumulative_capacity",
+      "ASSUMPTION.staged_commitment_split",
+      "ASSUMPTION.synthetic_baseline"
+    ],
+    "limitations": [
+      "LIMITATION.horizon_t12_truncation",
+      "LIMITATION.no_historical_calibration",
+      "LIMITATION.no_intervention_combinations",
+      "LIMITATION.normalization_4_day",
+      "LIMITATION.ordinal_weights",
+      "LIMITATION.single_deterministic_scenario",
+      "LIMITATION.synthetic_imp_ims",
+      "LIMITATION.synthetic_intervention_magnitudes"
+    ],
+    "impact_level": "HIGH",
+    "impact_actions": [
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE",
+      "PRODUCTION_COMMITMENT_CHANGE",
+      "RESOURCE_OR_CAPACITY_CHANGE",
+      "SCHEDULE_RESEQUENCING"
+    ],
+    "reviewer_decision": "PENDING",
+    "reviewer": null,
+    "reviewer_notes": null
+  },
+  {
+    "trace_id": "predictive_intervention_agent_20261106_104715",
+    "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_104715.json",
+    "safety_route": "BLOCKED_VALIDATION_FAILURE",
+    "review_required": true,
+    "authorizes_implementation": false,
+    "reasons": [
+      "agent status is not VALIDATED",
+      "citation validation fails",
+      "qualitative validation fails",
+      "objective validation fails",
+      "free-text narrative contradicts structured results",
+      "required limitations are missing",
+      "evidence is unresolved",
+      "agent and deterministic validator disagree",
+      "recommendation involves high-impact action",
+      "synthetic assumptions materially influence the recommendation",
+      "recommendation depends on evidence that is not sufficiently grounded",
+      "capstone policy: human review required for every episode (advisory system)"
+    ],
+    "episode_stages": {
+      "1_model_produced_output": true,
+      "2_output_well_formed": true,
+      "2_plausibility": "fluent, schema-conforming output; plausibility is a human judgement and is not used for routing",
+      "3_validation_detected_failures": true,
+      "4_withheld_from_autonomous_downstream_use": true,
+      "5_human_required_before_further_use": true
+    },
+    "validation_summary": {
+      "agent_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "contract_version": 3,
+      "usable_downstream": false,
+      "checks_performed": [
+        "structure",
+        "citation",
+        "numeric",
+        "qualitative",
+        "objective",
+        "narrative",
+        "coverage",
+        "human_review"
+      ],
+      "failures_by_category": {
+        "structure": 0,
+        "citation": 7,
+        "numeric": 0,
+        "qualitative": 1,
+        "objective": 4,
+        "narrative": 1,
+        "coverage": 4,
+        "human_review": 0
+      },
+      "material_failures": [
+        "citation: 7 failure(s)",
+        "qualitative: 1 failure(s)",
+        "objective: 4 failure(s)",
+        "narrative: 1 failure(s)",
+        "coverage: 4 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "supplementary_recheck": {}
+    },
+    "guardrails": [
+      {
+        "guardrail_id": "G1",
+        "name": "Provenance",
+        "status": "FAIL",
+        "detail": "7 citation failure(s)"
+      },
+      {
+        "guardrail_id": "G2",
+        "name": "Numerical authority",
+        "status": "PASS",
+        "detail": "no numeric failures"
+      },
+      {
+        "guardrail_id": "G3",
+        "name": "Qualitative consistency",
+        "status": "FAIL",
+        "detail": "1 qualitative failure(s)"
+      },
+      {
+        "guardrail_id": "G4",
+        "name": "Objective consistency",
+        "status": "FAIL",
+        "detail": "4 objective failure(s); 1 narrative failure(s)"
+      },
+      {
+        "guardrail_id": "G5",
+        "name": "Baseline integrity",
+        "status": "PASS",
+        "detail": "22 frozen artifacts match their pinned hashes"
+      },
+      {
+        "guardrail_id": "G6",
+        "name": "Bounded tool access",
+        "status": "PASS",
+        "detail": "no actions requested; the agent schema has read / interpret / recommend only"
+      },
+      {
+        "guardrail_id": "G7",
+        "name": "Uncertainty / coverage",
+        "status": "FAIL",
+        "detail": "4 coverage failure(s); unresolved evidence surfaced for review: 3 item(s)"
+      },
+      {
+        "guardrail_id": "G8",
+        "name": "Consequence",
+        "status": "ENFORCED",
+        "detail": "high-impact actions ['EXECUTE_INTERVENTION', 'MATERIAL_POSTURE_CHANGE', 'PRODUCTION_COMMITMENT_CHANGE', 'RESOURCE_OR_CAPACITY_CHANGE', 'SCHEDULE_RESEQUENCING']: human approval required"
+      },
+      {
+        "guardrail_id": "G9",
+        "name": "Failed validation",
+        "status": "ENFORCED",
+        "detail": "blocked: 7 material failure(s)"
+      },
+      {
+        "guardrail_id": "G10",
+        "name": "Confidence",
+        "status": "ENFORCED",
+        "detail": "confidence signal HEDGED logged for evaluation only; not read by routing"
+      }
+    ],
+    "proposed_intervention": {
+      "note": "agent selections as recorded; not authoritative (episode not usable downstream)",
+      "by_objective": {
+        "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "PROTECT_FLIGHT_TEST_EXECUTION": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": [
+          "CASE_3"
+        ]
+      }
+    },
+    "deterministic_support": {
+      "MINIMIZE_TOTAL_PROPAGATED_DISTURBANCE": {
+        "agent_selected": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "deterministic_minimum": [
+          "CASE_1"
+        ],
+        "selection_within_minimum": false
+      },
+      "PROTECT_FLIGHT_TEST_EXECUTION": {
+        "agent_selected": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": true
+      },
+      "LIMIT_PRE_MATURITY_PRODUCTION_EXPOSURE": {
+        "agent_selected": [
+          "CASE_3"
+        ],
+        "deterministic_minimum": [
+          "CASE_1",
+          "CASE_2"
+        ],
+        "selection_within_minimum": false
+      }
+    },
+    "confidence_signal": {
+      "signal": "HEDGED",
+      "text": "The results are derived from a synthetic model with defined assumptions and limitations, emphasizing the need for human oversight in decision-making.",
+      "used_for_routing": false,
+      "policy": "Model confidence and correctness are evaluated separately. A confidence statement may inform evaluation but cannot override deterministic evidence, validation failures, or human-review requirements."
+    },
+    "assumptions": [
+      "ASSUMPTION.float_absorbs_first",
+      "ASSUMPTION.normalization_4_days",
+      "ASSUMPTION.ordinal_weights_as_coefficients",
+      "ASSUMPTION.provenance_model",
+      "ASSUMPTION.resequencing_cumulative_capacity",
+      "ASSUMPTION.staged_commitment_split",
+      "ASSUMPTION.synthetic_baseline"
+    ],
+    "limitations": [
+      "LIMITATION.horizon_t12_truncation",
+      "LIMITATION.no_historical_calibration",
+      "LIMITATION.no_intervention_combinations",
+      "LIMITATION.normalization_4_day",
+      "LIMITATION.ordinal_weights",
+      "LIMITATION.single_deterministic_scenario",
+      "LIMITATION.synthetic_imp_ims",
+      "LIMITATION.synthetic_intervention_magnitudes"
+    ],
+    "impact_level": "HIGH",
+    "impact_actions": [
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE",
+      "PRODUCTION_COMMITMENT_CHANGE",
+      "RESOURCE_OR_CAPACITY_CHANGE",
+      "SCHEDULE_RESEQUENCING"
+    ],
+    "reviewer_decision": "PENDING",
+    "reviewer": null,
+    "reviewer_notes": null
+  }
+]

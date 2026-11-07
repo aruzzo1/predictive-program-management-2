@@ -1,0 +1,213 @@
+{
+  "statements": [
+    "The human reviewer did not reject the deterministic simulation results. The reviewer rejected the LLM-generated interpretations because each failed one or more deterministic validation checks.",
+    "The preserved episodes demonstrate bounded autonomy: an LLM may generate interpretations and recommendations, but deterministic validation and human review govern whether those recommendations can be trusted."
+  ],
+  "review_date": "2026-11-06",
+  "reviewer": "Capstone human reviewer (project owner); decision recorded at the reviewer's explicit instruction",
+  "review_scope": "LLM-generated interpretation / recommendation only",
+  "process": {
+    "llm_rerun": false,
+    "prompt_tuned": false,
+    "failed_responses_repaired": false,
+    "original_traces_preserved": true
+  },
+  "episodes_reviewed": 3,
+  "decision_tally": {
+    "PENDING": 0,
+    "APPROVED_AS_ADVISORY": 0,
+    "REJECTED": 3,
+    "REVISE_AND_RERUN": 0,
+    "ESCALATED": 0
+  },
+  "released_downstream": 0,
+  "frozen_artifacts_verified": {
+    "pinned": 22,
+    "unchanged": 22,
+    "discrepancies": []
+  },
+  "frozen_artifact_sha256": {
+    "data/synthetic/synthetic_imp.csv": "6c3d8e2e98193463c71350ef0220d862fa9e8b52b751342dbbb283e54c39ad8d",
+    "data/synthetic/synthetic_ims.csv": "039cf917c642545b484694d99f03dea0ac48528f1ecdc48bffee9df850569127",
+    "data/synthetic/synthetic_dependencies.csv": "791b4fd24b3efd2b2bd5895835d5bd997a8f67c99843230173f7d52a3817f1f5",
+    "data/synthetic/synthetic_scenarios.json": "116bdd81ca5bc108486d5eeeb359d5789f69bb9c3c9e81790a2efd404f718c9d",
+    "data/synthetic/synthetic_provenance.json": "9d1ebc0a38b6896d5bf9d9ea916821d519ff75e71bba29da93fadf60a09db26a",
+    "outputs/dsm/binary_dsm.csv": "cb28379e77d9c9a4926019b34f0ac0d7f6238cd67924b54ef16b6f67998fc7d2",
+    "outputs/dsm/weighted_dsm.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/dsm/dependency_registry.json": "982b5275f593a10597f670bd1913bd6b8c26de60b5ea57d24818030a237e47c4",
+    "outputs/dsm/dsm_provenance.json": "030a1ab1f8468cfb099d1e60efbd2dfa1f1d0bfd320cacacaf9b29b16cfb9c54",
+    "outputs/wtm/wtm_matrix.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/wtm/eigenvalues.json": "c0de722069c4927ba4256974735c5621fa247c0df7e18a2879972081105a1705",
+    "outputs/wtm/structural_analysis.json": "a7a1d63279db897a6eb2f51667b914b148b161e32ed4429c83b6dd231ea6b7f7",
+    "outputs/wtm/software_disturbance_propagation.csv": "7c40b2f94a6e83352b135d2120c3d34e4a0a6dbe92cffb803d39148710a2d8fb",
+    "outputs/simulation/scenario_mapping.json": "0b9ff5a324548940ab78dbb80c61277617585d424fc2d7d51b49fdba1b70759b",
+    "outputs/simulation/intervention_comparison.json": "ebf29876161530f65afd5ca34b15dc65099a8304f2d896256995bc831265ad5f",
+    "outputs/simulation/intervention_comparison.csv": "9822445245b0b3b4bd46330761991380524c77c4ae913d8e4bb998f3d6d89181",
+    "outputs/simulation/predictive_trajectories.csv": "26534f4166712d2d65a4959f3b38824ad1d1e79c1b6feb47a5ec574a74e9a3f3",
+    "src/ppm_agent/models/intervention.py": "e9f33a3efa142ab88ed6effb8daeef8ecae61e429131c130816165882f603ec8",
+    "src/ppm_agent/agents/prompts/predictive_intervention.md": "4bb5e899b4ee5db17cff1c7e02c7e0a0f3a613ec97ad7776b22a8bf0b9500709",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_101319.json": "357ea4155c81dc03ed06f5f948fc529ceedde826d1fff75bdff78998c13e04bf",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_102300.json": "5c3d48c6a5c5f3aec4e14c555614c2da512bf9100df65181a9984563ef1c9703",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_104715.json": "6a820c4e27c044f8f933e80b68058647d54489ab75c41e84313c4b3c82218c6c"
+  },
+  "records": [
+    {
+      "trace_id": "predictive_intervention_agent_20261106_101319",
+      "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_101319.json",
+      "trace_sha256": "357ea4155c81dc03ed06f5f948fc529ceedde826d1fff75bdff78998c13e04bf",
+      "original_record_ref": {
+        "file": "outputs/safety/human_review_records.json",
+        "index": 0,
+        "file_sha256": "674ff76fefea7b2de2bbca902a843b0e9f682c83b5b12c1fba5d462121ac0dd4"
+      },
+      "original_timestamp": "2026-11-06T10:13:19",
+      "original_execution_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "original_contract_version": 1,
+      "original_safety_route": "BLOCKED_VALIDATION_FAILURE",
+      "original_validation_category_counts": {
+        "structure": 0,
+        "citation": 6,
+        "numeric": 0,
+        "objective": 1,
+        "coverage": 0
+      },
+      "original_validator_error_count": 6,
+      "original_material_failures": [
+        "citation: 6 failure(s)",
+        "objective: 1 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "reviewer_decision": "REJECTED",
+      "reviewer": "Capstone human reviewer (project owner); decision recorded at the reviewer's explicit instruction",
+      "review_date": "2026-11-06",
+      "review_scope": "LLM-generated interpretation / recommendation only",
+      "rationale": [
+        "The LLM-generated interpretation contains one or more deterministic validation failures.",
+        "The interpretation / recommendation is therefore not sufficiently trustworthy for downstream use.",
+        "No intervention recommendation from this episode is approved.",
+        "No implementation is authorized."
+      ],
+      "reviewer_notes": "Validation failures reviewed and confirmed: 6 validation errors recorded by the contract-v1 validator (all citation), plus 1 objective-selection disagreement flagged as advisory under contract v1 and counted as a failure by the Module 6 safety layer. The raw trace remains preserved unchanged. The LLM recommendation remains withheld and no downstream implementation is authorized. The deterministic analytical results remain usable independently. Human oversight prevented an invalid agent interpretation from being trusted.",
+      "recommendation_approved": false,
+      "implementation_authorized": false,
+      "released_downstream": false,
+      "deterministic_results_not_affected": [
+        "frozen synthetic baseline v1.1",
+        "DSM",
+        "WTM",
+        "schedule-to-WTM mapping",
+        "deterministic trajectory simulation",
+        "deterministic intervention comparison"
+      ]
+    },
+    {
+      "trace_id": "predictive_intervention_agent_20261106_102300",
+      "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_102300.json",
+      "trace_sha256": "5c3d48c6a5c5f3aec4e14c555614c2da512bf9100df65181a9984563ef1c9703",
+      "original_record_ref": {
+        "file": "outputs/safety/human_review_records.json",
+        "index": 1,
+        "file_sha256": "674ff76fefea7b2de2bbca902a843b0e9f682c83b5b12c1fba5d462121ac0dd4"
+      },
+      "original_timestamp": "2026-11-06T10:23:00",
+      "original_execution_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "original_contract_version": 2,
+      "original_safety_route": "BLOCKED_VALIDATION_FAILURE",
+      "original_validation_category_counts": {
+        "structure": 0,
+        "citation": 0,
+        "numeric": 0,
+        "qualitative": 2,
+        "objective": 3,
+        "coverage": 0,
+        "human_review": 0
+      },
+      "original_validator_error_count": 5,
+      "original_material_failures": [
+        "qualitative: 2 failure(s)",
+        "objective: 3 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "reviewer_decision": "REJECTED",
+      "reviewer": "Capstone human reviewer (project owner); decision recorded at the reviewer's explicit instruction",
+      "review_date": "2026-11-06",
+      "review_scope": "LLM-generated interpretation / recommendation only",
+      "rationale": [
+        "The LLM-generated interpretation contains one or more deterministic validation failures.",
+        "The interpretation / recommendation is therefore not sufficiently trustworthy for downstream use.",
+        "No intervention recommendation from this episode is approved.",
+        "No implementation is authorized."
+      ],
+      "reviewer_notes": "Validation failures reviewed and confirmed: 5 validation errors (2 qualitative, 3 objective) recorded by the contract-v2 validator. The raw trace remains preserved unchanged. The LLM recommendation remains withheld and no downstream implementation is authorized. The deterministic analytical results remain usable independently. Human oversight prevented an invalid agent interpretation from being trusted.",
+      "recommendation_approved": false,
+      "implementation_authorized": false,
+      "released_downstream": false,
+      "deterministic_results_not_affected": [
+        "frozen synthetic baseline v1.1",
+        "DSM",
+        "WTM",
+        "schedule-to-WTM mapping",
+        "deterministic trajectory simulation",
+        "deterministic intervention comparison"
+      ]
+    },
+    {
+      "trace_id": "predictive_intervention_agent_20261106_104715",
+      "trace_path": "outputs/agentic_traces/predictive_intervention_agent_20261106_104715.json",
+      "trace_sha256": "6a820c4e27c044f8f933e80b68058647d54489ab75c41e84313c4b3c82218c6c",
+      "original_record_ref": {
+        "file": "outputs/safety/human_review_records.json",
+        "index": 2,
+        "file_sha256": "674ff76fefea7b2de2bbca902a843b0e9f682c83b5b12c1fba5d462121ac0dd4"
+      },
+      "original_timestamp": "2026-11-06T10:47:15",
+      "original_execution_status": "COMPLETED_WITH_VALIDATION_ERRORS",
+      "original_contract_version": 3,
+      "original_safety_route": "BLOCKED_VALIDATION_FAILURE",
+      "original_validation_category_counts": {
+        "structure": 0,
+        "citation": 7,
+        "numeric": 0,
+        "qualitative": 1,
+        "objective": 4,
+        "narrative": 1,
+        "coverage": 4,
+        "human_review": 0
+      },
+      "original_validator_error_count": 17,
+      "original_material_failures": [
+        "citation: 7 failure(s)",
+        "qualitative: 1 failure(s)",
+        "objective: 4 failure(s)",
+        "narrative: 1 failure(s)",
+        "coverage: 4 failure(s)",
+        "agent status COMPLETED_WITH_VALIDATION_ERRORS",
+        "validator marked the output not usable downstream"
+      ],
+      "reviewer_decision": "REJECTED",
+      "reviewer": "Capstone human reviewer (project owner); decision recorded at the reviewer's explicit instruction",
+      "review_date": "2026-11-06",
+      "review_scope": "LLM-generated interpretation / recommendation only",
+      "rationale": [
+        "The LLM-generated interpretation contains one or more deterministic validation failures.",
+        "The interpretation / recommendation is therefore not sufficiently trustworthy for downstream use.",
+        "No intervention recommendation from this episode is approved.",
+        "No implementation is authorized."
+      ],
+      "reviewer_notes": "Validation failures reviewed and confirmed: 17 validation errors (7 citation, 1 qualitative, 4 objective, 1 narrative, 4 coverage) recorded by the contract-v3 validator. The raw trace remains preserved unchanged. The LLM recommendation remains withheld and no downstream implementation is authorized. The deterministic analytical results remain usable independently. Human oversight prevented an invalid agent interpretation from being trusted.",
+      "recommendation_approved": false,
+      "implementation_authorized": false,
+      "released_downstream": false,
+      "deterministic_results_not_affected": [
+        "frozen synthetic baseline v1.1",
+        "DSM",
+        "WTM",
+        "schedule-to-WTM mapping",
+        "deterministic trajectory simulation",
+        "deterministic intervention comparison"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "agent_mode": "REAL_LLM_MODE",
+  "meta": {
+    "retrieval_strategy": "HYBRID_RERANKED_V2_1",
+    "top_k": 5,
+    "tot_config": {
+      "max_successors": 3,
+      "beam_width": 3,
+      "max_depth": 3,
+      "score_threshold": 70.0,
+      "near_tie": 5.0,
+      "max_model_calls": 20
+    },
+    "orchestration": "langgraph",
+    "case_id": "Q08",
+    "llm": {
+      "provider": "openai-responses",
+      "model": "gpt-4o-mini",
+      "successful_responses": 4,
+      "input_tokens": 9438,
+      "output_tokens": 1066
+    },
+    "elapsed_seconds": 30.87
+  },
+  "state": {
+    "query": "What evidence describes dependencies between F-35 development testing and production decisions (development-test-production concurrency)?",
+    "source_activity": "A5",
+    "target_activity": "A6",
+    "activities": {
+      "A5": {
+        "activity_id": "A5",
+        "name": "Development / Test Maturity",
+        "description": "Design and performance knowledge demonstrated by development testing.",
+        "activity_type": "test"
+      },
+      "A6": {
+        "activity_id": "A6",
+        "name": "Production Commitment / Rework Risk",
+        "description": "Commitment to production quantities and the resulting risk of rework.",
+        "activity_type": "production"
+      }
+    },
+    "candidate": {
+      "source_activity": "A5",
+      "target_activity": "A6",
+      "proposed_relationship": "Development / Test Maturity -> Production Commitment / Rework Risk",
+      "relationship_type": "UNCERTAIN",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    "retrieved_evidence": [
+      {
+        "evidence_id": "E1",
+        "source_document": "GAO-07-360",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 7,
+        "printed_page": "3",
+        "chunk_id": "GAO-07-360-p007-c00",
+        "text": "The degree of concurrency between development and production in the JSF program’s acquisition strategy still includes significant risks for cost and schedule overruns or late delivery of promised capabilities to the warfighter. For example, at the time of the low-rate initial production decision, one aircraft will have flown, less than 1 percent of the test program will have been completed, and none of the three variants will have a production representative prototype built. It will not be until about 2012 that a fully capable, integrated JSF is scheduled to begin flight testing. A 7-year flight test program that includes over 11,000 hours of testing just began in December 2006. Therefore, almost all of critical flight testing remains to confirm that the aircraft will indeed deliver the required performance.",
+        "section_type": null,
+        "publication_date": "2007-03-15",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 1,
+        "retrieval_score": 1.0765
+      },
+      {
+        "evidence_id": "E2",
+        "source_document": "GAO-07-360",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 20,
+        "printed_page": "16",
+        "chunk_id": "GAO-07-360-p020-c02",
+        "text": "Past programs have encountered difficulties in developing software, which delayed flight test schedules.\n\nJSF program officials acknowledged that the software effort will become particularly challenging during 2007 and 2008 when all five software blocks will be in development at the same time.\n\nChallenges Created by Continued Concurrent Development and Production\n\nThe concurrency between development and production in DOD’s acquisition strategy for JSF did not substantially change as a result of the program’s rebaseline in fiscal year 2004. Therefore, the program is entering low-rate initial production without demonstrating through flight testing that (1) the aircraft’s flying qualities function within the parameters of the flight envelope—that is, the set limits for altitude, speed, and angles of attack; (2) the aircraft design is reliable; or (3) a fully integrated and capable aircraft system can perform as intended. Starting production",
+        "section_type": null,
+        "publication_date": "2007-03-15",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 2,
+        "retrieval_score": -0.0869
+      },
+      {
+        "evidence_id": "E3",
+        "source_document": "DOTE-FY2024-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 2,
+        "printed_page": "45",
+        "chunk_id": "DOTE-FY2024-F35-p002-c00",
+        "text": "The F-35 development effort too was facing challenges in delivering reliable, fully functional software to the operational test (OT) teams. In February 2024, the United Operational Test Team (UOTT) called for a “stop test” of the software they were testing (30R08) – intended as the last version of software fielded on the TR-2 aircraft – due to stability problems, shortfalls in capability, and deficiencies they discovered. Quality escapes from the manufacturing and production processes (i.e., problems that should have been identified and corrected during the check-out and acceptance process for new aircraft) are still being identified in the field. The F-35 Joint Program Office (JPO) has not adequately planned for OT of the upgraded TR-3 hardware configuration to be completed prior to delivering multiple TR-3 aircraft to field units.\n\nDOT&E assesses that dedicated operational testing of these aircraft will not occur until mid to late FY26, approximately two years after the configuration began delivery to the field.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 3,
+        "retrieval_score": -0.163
+      },
+      {
+        "evidence_id": "E4",
+        "source_document": "GAO-07-360",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 22,
+        "printed_page": "18",
+        "chunk_id": "GAO-07-360-p022-c00",
+        "text": "While some concurrency may be beneficial to efficiently transition from the development stage of a program to production, the JSF is currently planned to be significantly more concurrent than the F-22A program that failed to deliver the warfighting capability on time and at predicted costs. Table 4 provides a more detailed comparison between the JSF and F-22A development programs and the accomplishments and requirements before starting production in each program.",
+        "section_type": null,
+        "publication_date": "2007-03-15",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 4,
+        "retrieval_score": -0.6047
+      },
+      {
+        "evidence_id": "E5",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 33,
+        "printed_page": "17",
+        "chunk_id": "DOTE-FY2010-F35-p033-c03",
+        "text": "F-35 mission systems software development and test is tending towards familiar historical patterns of extended development, discovery in flight test, and deferrals to later increments.\n\nThe modifications recommended by the TBR (lower fly rates, more regression and re-fly margin, more flights, and other resource additions) that result in completion of SDD flight test for Block 3 in all three variants later than previously estimated are realistic and credible. Completion of STOVL flight sciences in this timeframe is dependent on whether or not the necessary changes to STOVL design can be implemented and tested. It will also depend on whether these changes result in fewer aircraft operating limitations and greater aircraft availability for test. The program will potentially need as much as a year longer than the other two variants to complete this variant’s flight sciences and ship integration testing. The expectations approaching 10 to 12 flight sciences sorties/month/aircraft in previous schedules are not achievable in the flight test program until changes are made to all variants that improve reliability and maintainability in flight test operations.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 5,
+        "retrieval_score": -0.8772
+      }
+    ],
+    "pending_hypotheses": [],
+    "active_hypotheses": [],
+    "rejected_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence indicates that the concurrency between development and production in the JSF program has significant risks, suggesting that the lack of completed testing directly affects the production commitment and associated rework risks.",
+        "supporting_evidence_ids": [
+          "E1"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The risks mentioned in the evidence are directly linked to the production commitment and rework risk."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "Software Development",
+        "reasoning_summary": "The evidence suggests that challenges in software development delayed flight test schedules, which in turn affects the production commitment and increases the risk of rework due to untested systems.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Software development issues are a significant intermediate factor affecting flight testing and subsequently production decisions."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence presents various challenges and risks associated with concurrency but does not definitively establish a clear dependency between development testing and production commitment, leaving the relationship ambiguous.",
+        "supporting_evidence_ids": [
+          "E4",
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The evidence does not provide a clear causal link between development testing outcomes and production commitment."
+        ]
+      }
+    ],
+    "all_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence indicates that the concurrency between development and production in the JSF program has significant risks, suggesting that the lack of completed testing directly affects the production commitment and associated rework risks.",
+        "supporting_evidence_ids": [
+          "E1"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The risks mentioned in the evidence are directly linked to the production commitment and rework risk."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "Software Development",
+        "reasoning_summary": "The evidence suggests that challenges in software development delayed flight test schedules, which in turn affects the production commitment and increases the risk of rework due to untested systems.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Software development issues are a significant intermediate factor affecting flight testing and subsequently production decisions."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A5",
+        "target_activity": "A6",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence presents various challenges and risks associated with concurrency but does not definitively establish a clear dependency between development testing and production commitment, leaving the relationship ambiguous.",
+        "supporting_evidence_ids": [
+          "E4",
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The evidence does not provide a clear causal link between development testing outcomes and production commitment."
+        ]
+      }
+    ],
+    "expanded_ids": [],
+    "assessments": {
+      "D1.root.1": {
+        "hypothesis_id": "D1.root.1",
+        "documentary_evidence_score": 75.0,
+        "engineering_consistency_score": 70.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 60.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "The hypothesis is reasonably supported by the evidence, indicating a strong relationship between development/test maturity and production commitment/rework risk. However, the direct link to rework risk is not explicitly stated, which introduces some uncertainty.",
+        "overall_score": 65.5,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "STRONGLY_SUPPORTED",
+        "evidence_strength_summary": "The evidence indicates significant risks associated with the concurrency between development and production in the JSF program, suggesting that incomplete testing affects production commitment and rework risks. For instance, it states that 'the degree of concurrency... includes significant risks for cost and schedule overruns.' This supports the hypothesis but requires some interpretation regarding the direct impact on production commitment and rework risk.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "The risks mentioned in the evidence are directly linked to the production commitment and rework risk."
+        ],
+        "critic_concerns": [
+          "The evidence does not explicitly link the risks to rework risk, leaving some ambiguity."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      },
+      "D1.root.2": {
+        "hypothesis_id": "D1.root.2",
+        "documentary_evidence_score": 75.0,
+        "engineering_consistency_score": 70.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 60.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "The hypothesis is reasonably supported by the evidence, particularly in terms of the relationship between software development challenges and flight test delays. However, the assumption that these challenges are a significant intermediate factor lacks direct support, which introduces some uncertainty regarding the overall strength of the dependency.",
+        "overall_score": 65.5,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "STRONGLY_SUPPORTED",
+        "evidence_strength_summary": "The evidence indicates that challenges in software development have delayed flight test schedules, which aligns with the hypothesis that these delays affect production commitment and increase rework risk. Specifically, E2 states that past programs faced software development difficulties that delayed flight tests, supporting the indirect relationship proposed in the hypothesis.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "Software development issues are a significant intermediate factor affecting flight testing and subsequently production decisions."
+        ],
+        "critic_concerns": [
+          "The assumption regarding the significance of software development issues as an intermediate factor is not explicitly supported by the evidence, which may limit the strength of the hypothesis."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      },
+      "D1.root.3": {
+        "hypothesis_id": "D1.root.3",
+        "documentary_evidence_score": 40.0,
+        "engineering_consistency_score": 50.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 30.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "Overall, the evidence presents a weak connection between development testing and production commitment, primarily highlighting risks without establishing a clear causal relationship. The assumptions made in the hypothesis are not strongly supported by the evidence.",
+        "overall_score": 43.0,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "WEAKLY_SUPPORTED",
+        "evidence_strength_summary": "The evidence discusses challenges and risks associated with concurrency in development and production but does not explicitly establish a clear dependency between development testing and production commitment. For example, E4 mentions that while some concurrency may be beneficial, the JSF program is significantly more concurrent than previous programs, which raises concerns about timely delivery and capability. This suggests a potential relationship but lacks direct evidence of causation.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "The evidence does not provide a clear causal link between development testing outcomes and production commitment."
+        ],
+        "critic_concerns": [
+          "The hypothesis remains ambiguous due to the lack of definitive evidence linking development testing to production commitment."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      }
+    },
+    "validation_errors": {
+      "D1.root.1": [],
+      "D1.root.2": [],
+      "D1.root.3": []
+    },
+    "critic_disagreements": [],
+    "pruning_log": [
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.1",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (65.5 < 70.0)",
+        "score": 65.5
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.2",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (65.5 < 70.0)",
+        "score": 65.5
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.3",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (43.0 < 70.0)",
+        "score": 43.0
+      }
+    ],
+    "accepted_hypothesis": null,
+    "comparative_review": {
+      "status": "NO_SURVIVORS",
+      "mode": "REAL_LLM_MODE",
+      "reviewed_hypothesis_ids": [],
+      "deterministic_near_tie": null,
+      "preferred_hypothesis_id": null,
+      "near_tie": null,
+      "agrees_with_score_ranking": null,
+      "assumption_comparison": "",
+      "uncertainty_assessment": "",
+      "comparative_reasoning_summary": "",
+      "validation_notes": []
+    },
+    "decision": {
+      "source_activity": "A5",
+      "target_activity": "A6",
+      "decision": "UNRESOLVED",
+      "selected_relationship_type": null,
+      "selected_hypothesis_id": null,
+      "supporting_evidence_ids": [],
+      "critic_score": null,
+      "decision_summary": "No hypothesis survived validation, hard constraints and the score threshold."
+    },
+    "depth": 1,
+    "model_calls": 4,
+    "comparative_model_call_count": 0,
+    "status": "NO_VIABLE_CANDIDATE",
+    "agent_mode": "REAL_LLM_MODE",
+    "events": [
+      "retrieved 5 passages via HYBRID_RERANKED_V2_1",
+      "[graph] retrieve_evidence",
+      "depth 1: generator expanded root -> ['D1.root.1', 'D1.root.2', 'D1.root.3'] (REAL_LLM_MODE)",
+      "[graph] generate_hypotheses (depth 1)",
+      "[graph] route after prune: decide (status NO_VIABLE_CANDIDATE)",
+      "comparative review: NO_SURVIVORS"
+    ]
+  }
+}

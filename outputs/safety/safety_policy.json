@@ -1,0 +1,194 @@
+{
+  "principle": "LLMs may interpret, reason and recommend. Deterministic Python decides whether their output is sufficiently valid and safe to expose downstream. Humans retain authority for consequential program-management decisions.",
+  "statements": [
+    "The safety architecture does not assume that an LLM interpretation is reliable because it is fluent, confident or plausible. Agent outputs must pass deterministic validation, and consequential recommendations remain subject to human review.",
+    "Model confidence and correctness are evaluated separately. A confidence statement may inform evaluation but cannot override deterministic evidence, validation failures, or human-review requirements.",
+    "The three preserved real-model episodes demonstrate the safety mechanism: each produced a plausible interpretation, each contained one or more validation failures, and each was withheld from autonomous downstream use.",
+    "The safety evaluation is multi-metric. Correctness, groundedness, uncertainty, robustness and efficiency are reported separately rather than collapsed into a single reliability score."
+  ],
+  "capstone_policy": "Synthetic capstone demonstration: human review remains required for every episode, including a VALIDATED one. The system is advisory and never authorizes implementation.",
+  "confidence_policy": "Model confidence and correctness are evaluated separately. A confidence statement may inform evaluation but cannot override deterministic evidence, validation failures, or human-review requirements.",
+  "routes": {
+    "SAFE_ADVISORY": "All required validation passes, no high-impact action and no review condition. May be displayed as advisory analysis; never authorizes implementation.",
+    "HUMAN_REVIEW_REQUIRED": "A valid analytical result exists, but uncertainty, synthetic assumptions, unresolved evidence or consequence requires human review before any use.",
+    "BLOCKED_VALIDATION_FAILURE": "One or more material validation or integrity failures: not usable downstream. The raw output is preserved for review; nothing is repaired automatically.",
+    "ESCALATE_HIGH_IMPACT": "The output is otherwise valid but concerns a consequential schedule, production, resource, baseline or intervention action: explicit human approval is required.",
+    "FAILED": "A provider, tool, schema or configuration failure prevented a usable analytical result."
+  },
+  "route_precedence": [
+    "FAILED",
+    "BLOCKED_VALIDATION_FAILURE",
+    "ESCALATE_HIGH_IMPACT",
+    "HUMAN_REVIEW_REQUIRED",
+    "SAFE_ADVISORY"
+  ],
+  "guardrails": {
+    "G1": {
+      "name": "Provenance",
+      "rule": "Consequential claims must cite valid evidence or deterministic fact ids; invalid or invented ids block downstream use."
+    },
+    "G2": {
+      "name": "Numerical authority",
+      "rule": "Only deterministic Python values are authoritative; model-stated numbers may not override them."
+    },
+    "G3": {
+      "name": "Qualitative consistency",
+      "rule": "Structured qualitative claims must agree with deterministic trajectory and intervention results."
+    },
+    "G4": {
+      "name": "Objective consistency",
+      "rule": "A preferred intervention must satisfy the deterministic objective or be labelled a secondary management option; free text may not contradict the structured choice."
+    },
+    "G5": {
+      "name": "Baseline integrity",
+      "rule": "Agents cannot silently modify the frozen DSM, WTM, schedule, scenarios, intervention inputs, weights or dependency structure."
+    },
+    "G6": {
+      "name": "Bounded tool access",
+      "rule": "Agents may read and interpret only; they cannot alter models or baselines, execute interventions, commit resources or approve recommendations."
+    },
+    "G7": {
+      "name": "Uncertainty / coverage",
+      "rule": "Required assumptions, limitations and uncertainty must be present; unresolved or conflicting evidence must be surfaced."
+    },
+    "G8": {
+      "name": "Consequence",
+      "rule": "High-impact recommendations always require human approval."
+    },
+    "G9": {
+      "name": "Failed validation",
+      "rule": "Any material validation failure blocks autonomous downstream use."
+    },
+    "G10": {
+      "name": "Confidence",
+      "rule": "Model confidence never substitutes for evidence, deterministic validation, objective correctness or human approval."
+    }
+  },
+  "high_impact_actions": {
+    "SCHEDULE_RESEQUENCING": "Schedule resequencing",
+    "PRODUCTION_COMMITMENT_CHANGE": "Production commitment changes",
+    "RESOURCE_OR_CAPACITY_CHANGE": "Significant resource or capacity changes",
+    "DSM_WTM_BASELINE_CHANGE": "Changes to the approved DSM / WTM baseline",
+    "SCHEDULE_BASELINE_CHANGE": "Changes to the baseline schedule",
+    "EXECUTE_INTERVENTION": "Execution of an intervention",
+    "ACCEPT_UNSUPPORTED_DEPENDENCY": "Accepting unsupported dependency assumptions",
+    "CHANGE_ANALYTICAL_WEIGHTS": "Changing analytical weights",
+    "MATERIAL_POSTURE_CHANGE": "Accepting a recommendation that materially changes cost, schedule, technical or production posture"
+  },
+  "case_actions": {
+    "CASE_0": [],
+    "CASE_1": [
+      "RESOURCE_OR_CAPACITY_CHANGE",
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE"
+    ],
+    "CASE_2": [
+      "SCHEDULE_RESEQUENCING",
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE"
+    ],
+    "CASE_3": [
+      "PRODUCTION_COMMITMENT_CHANGE",
+      "EXECUTE_INTERVENTION",
+      "MATERIAL_POSTURE_CHANGE"
+    ]
+  },
+  "agent_capabilities": {
+    "allowed": [
+      "READ_DETERMINISTIC_FACTS",
+      "INTERPRET_RESULTS",
+      "RECOMMEND_ADVISORY"
+    ],
+    "prohibited": [
+      "MODIFY_DSM",
+      "MODIFY_WTM",
+      "MODIFY_SCHEDULE_BASELINE",
+      "MODIFY_SCENARIOS",
+      "MODIFY_INTERVENTION_INPUTS",
+      "CHANGE_ANALYTICAL_WEIGHTS",
+      "MODIFY_DEPENDENCY_STRUCTURE",
+      "EXECUTE_INTERVENTION",
+      "COMMIT_PRODUCTION_RESOURCES",
+      "APPROVE_RECOMMENDATION"
+    ]
+  },
+  "human_review_conditions": [
+    "agent status is not VALIDATED",
+    "citation validation fails",
+    "numerical validation fails",
+    "qualitative validation fails",
+    "objective validation fails",
+    "free-text narrative contradicts structured results",
+    "required limitations are missing",
+    "evidence is unresolved",
+    "evidence is conflicting",
+    "confidence/support is inadequate",
+    "agent output is highly confident but deterministic validation disagrees",
+    "recommendation involves high-impact action",
+    "model behavior is outside defined bounds",
+    "agent and deterministic validator disagree",
+    "synthetic assumptions materially influence the recommendation",
+    "recommendation depends on evidence that is not sufficiently grounded"
+  ],
+  "reviewer_decisions": [
+    "PENDING",
+    "APPROVED_AS_ADVISORY",
+    "REJECTED",
+    "REVISE_AND_RERUN",
+    "ESCALATED"
+  ],
+  "reviewer_decision_default": "PENDING",
+  "checks_by_agent_contract": {
+    "1": [
+      "structure",
+      "citation",
+      "numeric",
+      "objective",
+      "coverage"
+    ],
+    "2": [
+      "structure",
+      "citation",
+      "numeric",
+      "qualitative",
+      "objective",
+      "coverage",
+      "human_review"
+    ],
+    "3": [
+      "structure",
+      "citation",
+      "numeric",
+      "qualitative",
+      "objective",
+      "narrative",
+      "coverage",
+      "human_review"
+    ]
+  },
+  "frozen_baseline_sha256": {
+    "data/synthetic/synthetic_imp.csv": "6c3d8e2e98193463c71350ef0220d862fa9e8b52b751342dbbb283e54c39ad8d",
+    "data/synthetic/synthetic_ims.csv": "039cf917c642545b484694d99f03dea0ac48528f1ecdc48bffee9df850569127",
+    "data/synthetic/synthetic_dependencies.csv": "791b4fd24b3efd2b2bd5895835d5bd997a8f67c99843230173f7d52a3817f1f5",
+    "data/synthetic/synthetic_scenarios.json": "116bdd81ca5bc108486d5eeeb359d5789f69bb9c3c9e81790a2efd404f718c9d",
+    "data/synthetic/synthetic_provenance.json": "9d1ebc0a38b6896d5bf9d9ea916821d519ff75e71bba29da93fadf60a09db26a",
+    "outputs/dsm/binary_dsm.csv": "cb28379e77d9c9a4926019b34f0ac0d7f6238cd67924b54ef16b6f67998fc7d2",
+    "outputs/dsm/weighted_dsm.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/dsm/dependency_registry.json": "982b5275f593a10597f670bd1913bd6b8c26de60b5ea57d24818030a237e47c4",
+    "outputs/dsm/dsm_provenance.json": "030a1ab1f8468cfb099d1e60efbd2dfa1f1d0bfd320cacacaf9b29b16cfb9c54",
+    "outputs/wtm/wtm_matrix.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/wtm/eigenvalues.json": "c0de722069c4927ba4256974735c5621fa247c0df7e18a2879972081105a1705",
+    "outputs/wtm/structural_analysis.json": "a7a1d63279db897a6eb2f51667b914b148b161e32ed4429c83b6dd231ea6b7f7",
+    "outputs/wtm/software_disturbance_propagation.csv": "7c40b2f94a6e83352b135d2120c3d34e4a0a6dbe92cffb803d39148710a2d8fb",
+    "outputs/simulation/scenario_mapping.json": "0b9ff5a324548940ab78dbb80c61277617585d424fc2d7d51b49fdba1b70759b",
+    "outputs/simulation/intervention_comparison.json": "ebf29876161530f65afd5ca34b15dc65099a8304f2d896256995bc831265ad5f",
+    "outputs/simulation/intervention_comparison.csv": "9822445245b0b3b4bd46330761991380524c77c4ae913d8e4bb998f3d6d89181",
+    "outputs/simulation/predictive_trajectories.csv": "26534f4166712d2d65a4959f3b38824ad1d1e79c1b6feb47a5ec574a74e9a3f3",
+    "src/ppm_agent/models/intervention.py": "e9f33a3efa142ab88ed6effb8daeef8ecae61e429131c130816165882f603ec8",
+    "src/ppm_agent/agents/prompts/predictive_intervention.md": "4bb5e899b4ee5db17cff1c7e02c7e0a0f3a613ec97ad7776b22a8bf0b9500709",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_101319.json": "357ea4155c81dc03ed06f5f948fc529ceedde826d1fff75bdff78998c13e04bf",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_102300.json": "5c3d48c6a5c5f3aec4e14c555614c2da512bf9100df65181a9984563ef1c9703",
+    "outputs/agentic_traces/predictive_intervention_agent_20261106_104715.json": "6a820c4e27c044f8f933e80b68058647d54489ab75c41e84313c4b3c82218c6c"
+  },
+  "no_composite_score": true
+}

@@ -1,0 +1,28 @@
+# Runtime requirements for the current working prototype only:
+# the five-document semantic retrieval pipeline (ingestion -> embeddings -> Chroma -> retrieval).
+# pyproject.toml reads its dependencies from this file.
+# Minimum versions are the ones installed and tested in .venv (Python 3.12).
+# Future-phase packages are listed in docs/architecture.md ("Planned Future Dependencies"), not here.
+
+# Configuration
+python-dotenv>=1.2
+
+# Document parsing
+pypdf>=6.21
+
+# Embeddings (local; installs torch and numpy as dependencies)
+sentence-transformers>=6.1
+transformers>=5.20  # imported directly for the tokenizer token counter
+
+# Vector store
+chromadb>=1.5
+
+# Agentic layer: structured domain objects and graph orchestration
+pydantic>=2.14
+langgraph>=1.2
+
+# REAL_LLM_MODE provider (Responses API + structured output); without OPENAI_API_KEY the agents run in MOCK_AGENT_MODE
+openai>=3.41
+
+# Testing
+pytest>=9.1

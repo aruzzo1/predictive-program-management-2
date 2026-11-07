@@ -1,0 +1,330 @@
+{
+  "agent_mode": "REAL_LLM_MODE",
+  "meta": {
+    "retrieval_strategy": "HYBRID_RERANKED_V2_1",
+    "top_k": 5,
+    "tot_config": {
+      "max_successors": 3,
+      "beam_width": 3,
+      "max_depth": 3,
+      "score_threshold": 70.0,
+      "near_tie": 5.0,
+      "max_model_calls": 20
+    },
+    "orchestration": "langgraph",
+    "llm": {
+      "provider": "openai-responses",
+      "model": "gpt-4o-mini",
+      "successful_responses": 4,
+      "input_tokens": 6961,
+      "output_tokens": 688
+    },
+    "elapsed_seconds": 59.66
+  },
+  "state": {
+    "query": "What evidence indicates that mission-system software maturity affected F-35 flight-test execution?",
+    "source_activity": "A1",
+    "target_activity": "A2",
+    "activities": {
+      "A1": {
+        "activity_id": "A1",
+        "name": "Mission-System Software Maturity",
+        "description": "Maturity of mission-system software.",
+        "activity_type": "software"
+      },
+      "A2": {
+        "activity_id": "A2",
+        "name": "Flight-Test Execution",
+        "description": "Execution of flight testing.",
+        "activity_type": "test"
+      }
+    },
+    "candidate": {
+      "source_activity": "A1",
+      "target_activity": "A2",
+      "proposed_relationship": "Mission-System Software Maturity -> Flight-Test Execution",
+      "relationship_type": "UNCERTAIN",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    "retrieved_evidence": [
+      {
+        "evidence_id": "E1",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 33,
+        "printed_page": "17",
+        "chunk_id": "DOTE-FY2010-F35-p033-c05",
+        "text": "advanced data link, distributed aperture system, infrared/ electro-optical fused sensor tracks) are risks that affect the ability to accurately predict the conclusion of mission systems flight test.\n\nCompletion by early 2016 is possible provided further delays in delivery of Block 2 and Block 3 software are not incurred, and the program can overcome the helmet mounted display problem before Block 2 flight test must begin. Mission systems labs and CATB are important to software integration and test; use of these assets has enabled the resolution of many problems before flight test. However, F-35 flight test must include integration sorties to demonstrate software performance before performing flight test points for verification of capability. F-35 flight test for the purposes of software and sensor integration has not been, but needs to be, an explicit part of the flight test plan such that integration precedes verification events.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 1,
+        "retrieval_score": 4.6081
+      },
+      {
+        "evidence_id": "E2",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 29,
+        "printed_page": "13",
+        "chunk_id": "DOTE-FY2010-F35-p029-c02",
+        "text": "Development of mission systems software continued to experience delays that affected flight test progress.\n\n• Program leadership began re-planning SDD flight testing at the end of FY10, in conjunction with a restructuring of mission systems software development plans. These efforts followed the recommendations of the Program Executive Office’s (PEO) Technical Baseline Review (TBR) of the program, which was a technical, “bottoms-up,” independent review of the air vehicle platform, sustainment, mission systems software, and test. Finalization of the test schedule and integration into a master program schedule continued into early FY11.\n\nIt is also designed to have improved lethality compared to legacy multi-role aircraft.\n\n• Using an Active Electronically Scanned Array (AESA) radar and other sensors, the F-35 is intended to employ precision-guided bombs such as the Joint Direct Attack Munition and Joint Standoff Weapon, AIM-120C radar-guided air-to-air missiles, and AIM-9 infrared-guided air-to-air missiles.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 2,
+        "retrieval_score": 3.8981
+      },
+      {
+        "evidence_id": "E3",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 33,
+        "printed_page": "17",
+        "chunk_id": "DOTE-FY2010-F35-p033-c03",
+        "text": "F-35 mission systems software development and test is tending towards familiar historical patterns of extended development, discovery in flight test, and deferrals to later increments.\n\nThe modifications recommended by the TBR (lower fly rates, more regression and re-fly margin, more flights, and other resource additions) that result in completion of SDD flight test for Block 3 in all three variants later than previously estimated are realistic and credible. Completion of STOVL flight sciences in this timeframe is dependent on whether or not the necessary changes to STOVL design can be implemented and tested. It will also depend on whether these changes result in fewer aircraft operating limitations and greater aircraft availability for test. The program will potentially need as much as a year longer than the other two variants to complete this variant’s flight sciences and ship integration testing. The expectations approaching 10 to 12 flight sciences sorties/month/aircraft in previous schedules are not achievable in the flight test program until changes are made to all variants that improve reliability and maintainability in flight test operations.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 3,
+        "retrieval_score": 3.1591
+      },
+      {
+        "evidence_id": "E4",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 30,
+        "printed_page": "14",
+        "chunk_id": "DOTE-FY2010-F35-p030-c05",
+        "text": "However, during the months since the last program review, more problems with STOVL design and mission systems software arose.\n\n• The TBR recommended further changes to the parameters used to plan and model flight test schedules, as well as numerous changes in staffing and other resources needed to complete SDD and enter IOT&E. Specific changes to the schedule recommended by the TBR include lower flight rates for test aircraft that are tailored to each variant (lower than prior independent reviews), additional re-fly and regression sorties that are tailored to the type of testing, and more flight test sorties. The TBR also determined more time was needed for completion of all remaining software increments. The result is a completion of developmental flight test in late 2016, with STOVL flight sciences completing later than the other two variants.\n\nF-35 Flight Test STOVL Flight Sciences, Flight Test with BF-1, BF-2, and BF-3 Test Aircraft",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 4,
+        "retrieval_score": 1.8937
+      },
+      {
+        "evidence_id": "E5",
+        "source_document": "GAO-10-382",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 31,
+        "printed_page": "27",
+        "chunk_id": "GAO-10-382-p031-c01",
+        "text": "All other software increments are behind schedule. Mission system software, in particular, is behind schedule, poses significant integration challenges, and its progress is difficult to assess.\n\nFurther delays may affect the already delayed first mission system flight test. Naval Air Systems Command officials predict further delays in providing software capability to flight tests due to competing scarce resources from upcoming blocks to complete or rework current blocks. The joint estimating team projects more time and effort will be needed to complete the fifth software increment, the development and integration of software for achieving full warfighting capability. Team officials project 2015 for completing this work, 2 years later than currently reported by the program office. They also believe that the most complex and troublesome work is still ahead, that dedicated resources to complete software development and integration are inadequate, and that the contractor will not be able to write code as fast and productively as earlier releases. The joint team also predicts that software requirements will continue to grow.",
+        "section_type": null,
+        "publication_date": "2010-03-19",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 5,
+        "retrieval_score": 1.8603
+      }
+    ],
+    "pending_hypotheses": [],
+    "active_hypotheses": [],
+    "rejected_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The maturity of mission-system software directly affects the execution of flight tests, as delays in software development have been shown to impact flight test progress and scheduling.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The evidence indicates a direct correlation between software maturity and flight test execution without other intervening factors."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "software integration and test",
+        "reasoning_summary": "The maturity of mission-system software indirectly affects flight-test execution through the intermediate activity of software integration and test, which must resolve issues before flight tests can proceed.",
+        "supporting_evidence_ids": [
+          "E1",
+          "E4"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Software integration and test is a necessary step that influences the timing and success of flight tests."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence does not definitively establish how mission-system software maturity affects flight-test execution, as it suggests delays and challenges but does not clarify the nature of the dependency.",
+        "supporting_evidence_ids": [
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The relationship between software maturity and flight-test execution is not clearly defined in the evidence provided."
+        ]
+      }
+    ],
+    "all_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The maturity of mission-system software directly affects the execution of flight tests, as delays in software development have been shown to impact flight test progress and scheduling.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The evidence indicates a direct correlation between software maturity and flight test execution without other intervening factors."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "software integration and test",
+        "reasoning_summary": "The maturity of mission-system software indirectly affects flight-test execution through the intermediate activity of software integration and test, which must resolve issues before flight tests can proceed.",
+        "supporting_evidence_ids": [
+          "E1",
+          "E4"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Software integration and test is a necessary step that influences the timing and success of flight tests."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A1",
+        "target_activity": "A2",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence does not definitively establish how mission-system software maturity affects flight-test execution, as it suggests delays and challenges but does not clarify the nature of the dependency.",
+        "supporting_evidence_ids": [
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The relationship between software maturity and flight-test execution is not clearly defined in the evidence provided."
+        ]
+      }
+    ],
+    "expanded_ids": [],
+    "assessments": {
+      "D1.root.1": {
+        "hypothesis_id": "D1.root.1",
+        "documentary_evidence_score": 80.0,
+        "engineering_consistency_score": 70.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 75.0,
+        "hard_constraint_pass": false,
+        "hard_constraint_failures": [
+          "The hypothesis cites no evidence, or cites IDs that are not in the retrieved evidence."
+        ],
+        "critic_summary": "The hypothesis claims a direct relationship between mission-system software maturity and flight-test execution, supported by evidence indicating delays in software development affecting flight test progress. However, the cited evidence does not explicitly confirm a direct correlation as required by the hypothesis, leading to a failure in hard constraints. The assumptions made in the hypothesis are reasonable, but the lack of explicit evidence for a direct relationship diminishes its strength.",
+        "overall_score": 70.0
+      },
+      "D1.root.2": {
+        "hypothesis_id": "D1.root.2",
+        "documentary_evidence_score": 70.0,
+        "engineering_consistency_score": 80.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 75.0,
+        "hard_constraint_pass": false,
+        "hard_constraint_failures": [
+          "The hypothesis cites no evidence that directly supports the indirect relationship claimed between mission-system software maturity and flight-test execution."
+        ],
+        "critic_summary": "The evidence provided does not explicitly support the indirect relationship as stated in the hypothesis. While there are references to software integration and test affecting flight test progress, the specific causal link to maturity is not clearly established. The assumptions made in the hypothesis are reasonable, but the lack of direct evidence weakens its validity.",
+        "overall_score": 70.0
+      },
+      "D1.root.3": {
+        "hypothesis_id": "D1.root.3",
+        "documentary_evidence_score": 0.0,
+        "engineering_consistency_score": 0.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 0.0,
+        "hard_constraint_pass": false,
+        "hard_constraint_failures": [
+          "The hypothesis cites no evidence that definitively establishes how mission-system software maturity affects flight-test execution."
+        ],
+        "critic_summary": "The evidence provided does not clearly define the relationship between mission-system software maturity and flight-test execution, leading to uncertainty about the dependency.",
+        "overall_score": 10.0
+      }
+    },
+    "validation_errors": {
+      "D1.root.1": [],
+      "D1.root.2": [],
+      "D1.root.3": []
+    },
+    "pruning_log": [
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.1",
+        "action": "REJECTED",
+        "reason": "HARD CONSTRAINT: The hypothesis cites no evidence, or cites IDs that are not in the retrieved evidence.",
+        "score": 70.0
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.2",
+        "action": "REJECTED",
+        "reason": "HARD CONSTRAINT: The hypothesis cites no evidence that directly supports the indirect relationship claimed between mission-system software maturity and flight-test execution.",
+        "score": 70.0
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.3",
+        "action": "REJECTED",
+        "reason": "HARD CONSTRAINT: The hypothesis cites no evidence that definitively establishes how mission-system software maturity affects flight-test execution.",
+        "score": 10.0
+      }
+    ],
+    "accepted_hypothesis": null,
+    "decision": {
+      "source_activity": "A1",
+      "target_activity": "A2",
+      "decision": "UNRESOLVED",
+      "selected_relationship_type": null,
+      "selected_hypothesis_id": null,
+      "supporting_evidence_ids": [],
+      "critic_score": null,
+      "decision_summary": "No hypothesis survived validation, hard constraints and the score threshold."
+    },
+    "depth": 1,
+    "model_calls": 4,
+    "status": "NO_VIABLE_CANDIDATE",
+    "agent_mode": "REAL_LLM_MODE",
+    "events": [
+      "retrieved 5 passages via HYBRID_RERANKED_V2_1",
+      "[graph] retrieve_evidence",
+      "depth 1: generator expanded root -> ['D1.root.1', 'D1.root.2', 'D1.root.3'] (REAL_LLM_MODE)",
+      "[graph] generate_hypotheses (depth 1)",
+      "[graph] route after prune: decide (status NO_VIABLE_CANDIDATE)"
+    ]
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "nodes": [
+    {
+      "node_id": "D1",
+      "name": "Requirements / KPP Definition",
+      "concept_classification": "DERIVED",
+      "source_cases": [],
+      "activity_ids": [
+        "A100",
+        "A105",
+        "A110",
+        "A115"
+      ]
+    },
+    {
+      "node_id": "D2",
+      "name": "Air Vehicle Design Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [],
+      "activity_ids": [
+        "A120",
+        "A140",
+        "A145"
+      ]
+    },
+    {
+      "node_id": "D3",
+      "name": "Weight / Structural Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q07"
+      ],
+      "activity_ids": [
+        "A125",
+        "A130",
+        "A135"
+      ]
+    },
+    {
+      "node_id": "D4",
+      "name": "Mission-System Software Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q01"
+      ],
+      "activity_ids": [
+        "A200",
+        "A205",
+        "A210",
+        "A215",
+        "A220",
+        "A225",
+        "A230"
+      ]
+    },
+    {
+      "node_id": "D5",
+      "name": "Test-Aircraft Availability",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q04"
+      ],
+      "activity_ids": [
+        "A300",
+        "A305",
+        "A310",
+        "A315",
+        "A320",
+        "A325"
+      ]
+    },
+    {
+      "node_id": "D6",
+      "name": "Flight-Test Execution",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q01",
+        "Q04"
+      ],
+      "activity_ids": [
+        "A400",
+        "A405",
+        "A410",
+        "A415",
+        "A420",
+        "A425"
+      ]
+    },
+    {
+      "node_id": "D7",
+      "name": "Development / Test Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q08"
+      ],
+      "activity_ids": [
+        "A430",
+        "A510"
+      ]
+    },
+    {
+      "node_id": "D8",
+      "name": "Production Commitment / Rework Exposure",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q07",
+        "Q08"
+      ],
+      "activity_ids": [
+        "A500",
+        "A505",
+        "A515",
+        "A520"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "A100",
+      "activity_name": "Establish Program Requirements Baseline",
+      "workstream": "Requirements / KPPs",
+      "imp_event": "IMP-01",
+      "dsm_node": "D1",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A105",
+      "activity_name": "Identify Critical KPP and Performance Drivers",
+      "workstream": "Requirements / KPPs",
+      "imp_event": "IMP-01",
+      "dsm_node": "D1",
+      "rework_indicator": "NONE",
+      "source_case": "Q07",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A110",
+      "activity_name": "Allocate System and Interface Requirements",
+      "workstream": "Requirements / KPPs",
+      "imp_event": "IMP-01",
+      "dsm_node": "D1",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A115",
+      "activity_name": "Complete Requirements / Interface Review",
+      "workstream": "Requirements / KPPs",
+      "imp_event": "IMP-01",
+      "dsm_node": "D1",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A120",
+      "activity_name": "Develop Air Vehicle Preliminary Design Baseline",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D2",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A125",
+      "activity_name": "Perform Structural and Weight Assessment",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D3",
+      "rework_indicator": "NONE",
+      "source_case": "Q07",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A130",
+      "activity_name": "Evaluate Weight Margin Against Performance Requirements",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D3",
+      "rework_indicator": "NONE",
+      "source_case": "Q07",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A135",
+      "activity_name": "Implement Weight / Structural Design Corrections",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D3",
+      "rework_indicator": "CORRECTIVE",
+      "source_case": "Q07",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A140",
+      "activity_name": "Conduct Air Vehicle Design Maturity Review",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D2",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A145",
+      "activity_name": "Release Controlled Air Vehicle Design Baseline",
+      "workstream": "Air Vehicle Design / Weight",
+      "imp_event": "IMP-02",
+      "dsm_node": "D2",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A200",
+      "activity_name": "Establish Mission-System Software Requirements Baseline",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A205",
+      "activity_name": "Develop Mission-System Software Increment",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A210",
+      "activity_name": "Integrate Mission-System Software Components",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A215",
+      "activity_name": "Conduct Software / Hardware Integration Testing",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A220",
+      "activity_name": "Analyze Integration Deficiencies",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A225",
+      "activity_name": "Correct Critical Software / Integration Deficiencies",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "CORRECTIVE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A230",
+      "activity_name": "Verify Mission-System Integration Baseline",
+      "workstream": "Mission-System Software",
+      "imp_event": "IMP-03",
+      "dsm_node": "D4",
+      "rework_indicator": "NONE",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A300",
+      "activity_name": "Define Development Test-Aircraft Configuration",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A305",
+      "activity_name": "Modify / Configure Development Test Aircraft",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "Q04;Q07",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A310",
+      "activity_name": "Install Flight-Test Instrumentation",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A315",
+      "activity_name": "Verify Instrumentation and Data Systems",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A320",
+      "activity_name": "Conduct Ground Checkout of Test Aircraft",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A325",
+      "activity_name": "Certify Test-Aircraft Readiness and Availability",
+      "workstream": "Test-Aircraft Availability",
+      "imp_event": "IMP-04",
+      "dsm_node": "D5",
+      "rework_indicator": "NONE",
+      "source_case": "Q04",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A400",
+      "activity_name": "Develop Flight-Test Plans and Procedures",
+      "workstream": "Flight-Test Execution",
+      "imp_event": "IMP-05",
+      "dsm_node": "D6",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A405",
+      "activity_name": "Conduct Development Test Readiness Review",
+      "workstream": "Flight-Test Execution",
+      "imp_event": "IMP-05",
+      "dsm_node": "D6",
+      "rework_indicator": "NONE",
+      "source_case": "Q01;Q04",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A410",
+      "activity_name": "Execute Initial Development Flight-Test Block",
+      "workstream": "Flight-Test Execution",
+      "imp_event": "IMP-06",
+      "dsm_node": "D6",
+      "rework_indicator": "LOOP",
+      "source_case": "Q01;Q04",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A415",
+      "activity_name": "Analyze Flight-Test Results and Deficiencies",
+      "workstream": "Flight-Test Execution",
+      "imp_event": "IMP-06",
+      "dsm_node": "D6",
+      "rework_indicator": "LOOP",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A420",
+      "activity_name": "Implement Corrective Engineering / Software Changes",
+      "workstream": "Rework / Cost-Schedule Exposure",
+      "imp_event": "IMP-06",
+      "dsm_node": "D6",
+      "rework_indicator": "LOOP",
+      "source_case": "Q01",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A425",
+      "activity_name": "Execute Regression / Verification Testing",
+      "workstream": "Flight-Test Execution",
+      "imp_event": "IMP-06",
+      "dsm_node": "D6",
+      "rework_indicator": "LOOP",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A430",
+      "activity_name": "Assess Flight-Test Completion and Technical Maturity",
+      "workstream": "Development / Test Maturity",
+      "imp_event": "IMP-06",
+      "dsm_node": "D7",
+      "rework_indicator": "NONE",
+      "source_case": "Q08",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A500",
+      "activity_name": "Establish Initial Production Planning Baseline",
+      "workstream": "Production Commitment",
+      "imp_event": "IMP-07",
+      "dsm_node": "D8",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A505",
+      "activity_name": "Commit Long-Lead Production Resources",
+      "workstream": "Production Commitment",
+      "imp_event": "IMP-07",
+      "dsm_node": "D8",
+      "rework_indicator": "NONE",
+      "source_case": "Q08",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A510",
+      "activity_name": "Conduct Development / Production Readiness Assessment",
+      "workstream": "Development / Test Maturity",
+      "imp_event": "IMP-07",
+      "dsm_node": "D7",
+      "rework_indicator": "NONE",
+      "source_case": "Q08",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A515",
+      "activity_name": "Evaluate Residual Rework and Configuration Risk",
+      "workstream": "Rework / Cost-Schedule Exposure",
+      "imp_event": "IMP-08",
+      "dsm_node": "D8",
+      "rework_indicator": "EXPOSURE",
+      "source_case": "Q07;Q08",
+      "data_classification": "SYNTHETIC"
+    },
+    {
+      "activity_id": "A520",
+      "activity_name": "Release Controlled Production Configuration",
+      "workstream": "Production Commitment",
+      "imp_event": "IMP-08",
+      "dsm_node": "D8",
+      "rework_indicator": "NONE",
+      "source_case": "NONE",
+      "data_classification": "SYNTHETIC"
+    }
+  ]
+}

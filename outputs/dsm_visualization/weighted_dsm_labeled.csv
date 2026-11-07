@@ -1,0 +1,10 @@
+"# row = source / upstream node; column = target / downstream node; cell (Di, Dj) means Di influences / contributes to Dj; values are ordinal evidence / model weights, not probabilities"
+source \ target,D1 Requirements / KPP Definition,D2 Air Vehicle Design Maturity,D3 Weight / Structural Maturity,D4 Mission-System Software Maturity,D5 Test-Aircraft Availability,D6 Flight-Test Execution,D7 Development / Test Maturity,D8 Production Commitment / Rework Exposure
+D1 Requirements / KPP Definition,0.00,0.25,0.50,0.25,0.00,0.25,0.00,0.00
+D2 Air Vehicle Design Maturity,0.00,0.00,0.25,0.00,0.50,0.00,0.00,0.25
+D3 Weight / Structural Maturity,0.00,0.25,0.00,0.00,0.00,0.00,0.00,0.75
+D4 Mission-System Software Maturity,0.00,0.00,0.00,0.00,0.00,0.75,0.00,0.00
+D5 Test-Aircraft Availability,0.00,0.00,0.00,0.00,0.00,0.50,0.00,0.00
+D6 Flight-Test Execution,0.00,0.00,0.00,0.50,0.00,0.50,0.25,0.50
+D7 Development / Test Maturity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.50
+D8 Production Commitment / Rework Exposure,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00

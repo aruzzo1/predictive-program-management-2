@@ -1,0 +1,385 @@
+{
+  "statement": "This synthetic IMP/IMS is an evidence-calibrated experimental model created for the Predictive Program Management 2.0 capstone. It is not an actual or reconstructed F-35 contractor schedule.",
+  "dataset": "Evidence-Calibrated Synthetic F-35 Development Baseline",
+  "version": "1.0",
+  "freeze": {
+    "status": "FROZEN",
+    "scope": "Capstone MVP",
+    "frozen_on": "2026-11-01",
+    "preserved": {
+      "imp_events": 8,
+      "ims_activities": 35,
+      "dsm_nodes": 8,
+      "dependencies": 42,
+      "scenarios": 6,
+      "A230_total_float": 4,
+      "A325_total_float": 0,
+      "baseline_program_duration_workdays": 355
+    },
+    "change_policy": "No further changes to durations, float, scenario magnitudes, predecessor logic or policy values unless a genuine implementation defect is found; any such fix must be recorded here.",
+    "decisions": [
+      "INTERVENTION_2 stays based on DISTURBANCE_1 (mission-system software delay): resequencing lets test content that does not need the delayed mission-system capability proceed after the A405 readiness gate."
+    ]
+  },
+  "purpose": "Provides a structured, inspectable program schedule for the later DSM, WTM and forward-simulation stages. The public JSF corpus contains no contractor IMP/IMS, so a synthetic one is needed to demonstrate those methods; its dependency themes are calibrated against evidence retrieved from that corpus.",
+  "not_a_reconstruction": "Not an actual, leaked or reconstructed F-35 contractor IMP/IMS. No historical accuracy is claimed for any activity, duration, sequence, date or outcome.",
+  "separation_from_corpus": "Stored in data/synthetic/ only. Not placed in data/raw/jsf, not ingested, not embedded and not in the vector store; RAG ingestion is manifest-driven and no manifest references these files.",
+  "provenance_classes": {
+    "OBSERVED": "Directly supported by public F-35 source documentation. Used only in observed_evidence below.",
+    "DERIVED": "An analytical dependency or relationship inferred from observed evidence. Used for dependency concepts and DSM node groupings.",
+    "SYNTHETIC": "A duration, schedule position, activity structure, disturbance, intervention or simulated outcome created for the capstone demonstration. Every IMS activity, IMP event, scenario and dependency implementation is SYNTHETIC."
+  },
+  "classification_rules": [
+    "IMS activities and IMP events: data_classification SYNTHETIC; evidence_basis names the observed theme, if any.",
+    "Dependencies: data_classification is DERIVED (concept inferred from Q01/Q04/Q07/Q08 evidence) or SYNTHETIC (generic sequencing); implementation_classification is always SYNTHETIC because the exact activity-to-activity link is invented.",
+    "No dependency or activity is OBSERVED: the corpus states relationships between program themes, not between these activities.",
+    "Scenarios and all their magnitudes: SYNTHETIC."
+  ],
+  "support_labels": {
+    "EXPLICIT_PASSAGE": "At least one passage recorded in the project's evaluation outputs states the relationship concept directly.",
+    "FRAGMENTARY": "The concept is assembled from separate fragments across passages or documents; no single passage states it.",
+    "NOT_APPLICABLE": "Synthetic sequencing; no corpus support is claimed."
+  },
+  "rework_indicators": {
+    "NONE": "Not a rework activity.",
+    "CORRECTIVE": "Planned correction of deficiencies found upstream (outside the explicit loop).",
+    "LOOP": "Member of the explicit flight-test rework loop A410 -> A415 -> A420 -> A425 (-> A410).",
+    "EXPOSURE": "Assesses accumulated rework / cost-schedule exposure."
+  },
+  "conventions": {
+    "time": "Relative workdays from synthetic day 0; finish = start + duration. No calendar dates.",
+    "total_float": "baseline_total_float = latest start - earliest start against the network finish (backward pass).",
+    "status": "Planned baseline only: percent_complete 0 and forecast equals baseline.",
+    "risk_state": "Synthetic qualitative label (LOW / MEDIUM / HIGH).",
+    "rework_loop": "A410 -> A415 -> A420 -> A425 are finish-to-start links; A425 -> A410 is recorded once as FEEDBACK_REWORK and excluded from predecessor_ids, so the baseline validates as acyclic.",
+    "agentic_activity_mapping": "Agentic Phase 1 MVP pairs map to DSM nodes: A1 -> D4, A2 / A4 -> D6, A3 -> D5, A5 -> D7, A6 -> D8."
+  },
+  "dsm_nodes": [
+    {
+      "node_id": "D1",
+      "name": "Requirements / KPP Definition",
+      "concept_classification": "DERIVED",
+      "source_cases": [],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D2",
+      "name": "Air Vehicle Design Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D3",
+      "name": "Weight / Structural Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q07"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D4",
+      "name": "Mission-System Software Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q01"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D5",
+      "name": "Test-Aircraft Availability",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q04"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D6",
+      "name": "Flight-Test Execution",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q01",
+        "Q04"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D7",
+      "name": "Development / Test Maturity",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q08"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    },
+    {
+      "node_id": "D8",
+      "name": "Production Commitment / Rework Exposure",
+      "concept_classification": "DERIVED",
+      "source_cases": [
+        "Q07",
+        "Q08"
+      ],
+      "note": "Node definition only; the DSM matrix is not built."
+    }
+  ],
+  "observed_evidence": [
+    {
+      "evidence_id": "OBS-01",
+      "data_classification": "OBSERVED",
+      "source_case": "Q01",
+      "source_document": "DOT&E FY2010",
+      "page": "p.29",
+      "summary": "Mission-system software experienced delays that affected flight-test progress.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-02",
+      "data_classification": "OBSERVED",
+      "source_case": "Q01",
+      "source_document": "DOT&E FY2010",
+      "page": "p.33",
+      "summary": "Mission-systems software tending towards familiar historical patterns of extended development, discovery in flight test, and deferrals to later increments.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-03",
+      "data_classification": "OBSERVED",
+      "source_case": "Q01",
+      "source_document": "GAO-10-382",
+      "page": "p.31",
+      "summary": "Software behind schedule; may delay first mission-system flight test.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-04",
+      "data_classification": "OBSERVED",
+      "source_case": "Q04",
+      "source_document": "GAO-11-325",
+      "page": "p.17",
+      "summary": "Flight tests hampered, as in prior years, by the late delivery of test aircraft.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-05",
+      "data_classification": "OBSERVED",
+      "source_case": "Q04",
+      "source_document": "GAO-11-325",
+      "page": "p.31",
+      "summary": "Continuing effects from late delivery of test aircraft substantially reduced accomplishments.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-06",
+      "data_classification": "OBSERVED",
+      "source_case": "Q04",
+      "source_document": "GAO-09-303",
+      "page": "p.11",
+      "summary": "Delays in delivering test aircraft are expected to hamper and further compress test schedules.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-07",
+      "data_classification": "OBSERVED",
+      "source_case": "Q07",
+      "source_document": "GAO-08-388",
+      "page": "p.34",
+      "summary": "Redesign efforts to address weight growth was the single largest factor causing the $10 billion cost increase and 18-month extension in the development schedule.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-08",
+      "data_classification": "OBSERVED",
+      "source_case": "Q07",
+      "source_document": "GAO-10-382; GAO-11-325",
+      "page": "p.7; p.5",
+      "summary": "Weight problems found during system integration and design review led to the 2004 rebaseline and schedule extension.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-09",
+      "data_classification": "OBSERVED",
+      "source_case": "Q07",
+      "source_document": "GAO-05-271",
+      "page": "p.10",
+      "summary": "STOVL weight-driven design changes affected key performance parameters; the other variants' designs were affected as well.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-10",
+      "data_classification": "OBSERVED",
+      "source_case": "Q07",
+      "source_document": "GAO-06-356",
+      "page": "p.14",
+      "summary": "The first flight-test aircraft would not include the weight-reduction design changes and so would not represent the production configuration.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-11",
+      "data_classification": "OBSERVED",
+      "source_case": "Q07",
+      "source_document": "GAO-11-325",
+      "page": "p.40",
+      "summary": "The re-plan to address weight added $7 billion and 18 months (differs from GAO-08-388's $10 billion; not reconciled).",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-12",
+      "data_classification": "OBSERVED",
+      "source_case": "Q08",
+      "source_document": "GAO-07-360",
+      "page": "p.7",
+      "summary": "Concurrency risks: at the LRIP decision less than 1 percent of the test program will have been completed.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-13",
+      "data_classification": "OBSERVED",
+      "source_case": "Q08",
+      "source_document": "GAO-07-360",
+      "page": "p.22",
+      "summary": "The JSF was planned to be significantly more concurrent than the F-22A.",
+      "recorded_in": "outputs/evaluation/agentic_phase1_three_case_summary.md"
+    },
+    {
+      "evidence_id": "OBS-14",
+      "data_classification": "OBSERVED",
+      "source_case": "Q08",
+      "source_document": "GAO-06-356",
+      "page": "p.6",
+      "summary": "A highly concurrent approach that makes significant investments in manufacturing capabilities and production aircraft before flight testing demonstrates performance.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    },
+    {
+      "evidence_id": "OBS-15",
+      "data_classification": "OBSERVED",
+      "source_case": "Q08",
+      "source_document": "GAO-08-388",
+      "page": "p.23",
+      "summary": "Problems found may require redesign, production-line changes, and retrofit expenses for aircraft already built.",
+      "recorded_in": "outputs/evaluation/rag_v1_v2_comparison.md"
+    }
+  ],
+  "source_cases": {
+    "Q01": {
+      "question": "What evidence indicates that mission-system software maturity affected F-35 flight-test execution?",
+      "derived_concept": "Mission-System Software Maturity -> Flight-Test Execution (D4 -> D6)",
+      "agentic_phase1_result": "PARTIALLY_SUPPORTED (DIRECT 70.5, near-tied with INDIRECT; single REAL_LLM_MODE run)",
+      "how_it_informed": "Software integration activities (A205-A230) gate the flight-test readiness review (A230 -> A405); discovery in flight test motivates the explicit rework loop; DISTURBANCE_1, INTERVENTION_1 and INTERVENTION_2 act on this path."
+    },
+    "Q04": {
+      "question": "What evidence describes how late delivery or limited availability of F-35 test aircraft constrained the sequence or pace of flight testing?",
+      "derived_concept": "Test-Aircraft Availability -> Flight-Test Execution (D5 -> D6)",
+      "agentic_phase1_result": "UNRESOLVED (best DIRECT 69.5, 0.5 below threshold; single run)",
+      "how_it_informed": "A dedicated test-aircraft chain (A300-A325) gates the readiness review (A325 -> A405); this chain controls A405 at baseline; motivates DISTURBANCE_2."
+    },
+    "Q07": {
+      "question": "What evidence shows that F-35 aircraft weight growth caused redesign or schedule consequences?",
+      "derived_concept": "Weight / redesign -> downstream cost / schedule exposure (D3 -> D8; also D3 -> D2 -> D5)",
+      "agentic_phase1_result": "Not run as an agentic case. Retrieval found one explicit passage; the rest of the chain is fragmentary.",
+      "how_it_informed": "Weight assessment, margin evaluation and correction (A125-A135) sit on the design path; the redesign feeds test-aircraft configuration (A145 -> A305) and residual rework exposure (A135 -> A515)."
+    },
+    "Q08": {
+      "question": "What evidence describes dependencies between F-35 development testing and production decisions (development-test-production concurrency)?",
+      "derived_concept": "Development / Test Maturity -> Production Commitment / Rework Exposure (D7 -> D8)",
+      "agentic_phase1_result": "UNRESOLVED (best 65.5; single run)",
+      "how_it_informed": "Long-lead commitment (A505) deliberately precedes flight-test maturity (concurrency); the readiness assessment waits for A430 (A430 -> A510); late corrections feed rework exposure (A420 -> A515); INTERVENTION_3 stages the commitment (40% before / 60% after A430) without removing concurrency."
+    }
+  },
+  "derived_relationships": [
+    {
+      "dependency_id": "DEP-007",
+      "source_activity": "A105",
+      "target_activity": "A130",
+      "source_case": "Q07",
+      "confidence_or_support": "FRAGMENTARY"
+    },
+    {
+      "dependency_id": "DEP-008",
+      "source_activity": "A130",
+      "target_activity": "A135",
+      "source_case": "Q07",
+      "confidence_or_support": "EXPLICIT_PASSAGE"
+    },
+    {
+      "dependency_id": "DEP-020",
+      "source_activity": "A145",
+      "target_activity": "A305",
+      "source_case": "Q07",
+      "confidence_or_support": "FRAGMENTARY"
+    },
+    {
+      "dependency_id": "DEP-027",
+      "source_activity": "A230",
+      "target_activity": "A405",
+      "source_case": "Q01",
+      "confidence_or_support": "EXPLICIT_PASSAGE"
+    },
+    {
+      "dependency_id": "DEP-028",
+      "source_activity": "A325",
+      "target_activity": "A405",
+      "source_case": "Q04",
+      "confidence_or_support": "EXPLICIT_PASSAGE"
+    },
+    {
+      "dependency_id": "DEP-031",
+      "source_activity": "A415",
+      "target_activity": "A420",
+      "source_case": "Q01",
+      "confidence_or_support": "FRAGMENTARY"
+    },
+    {
+      "dependency_id": "DEP-037",
+      "source_activity": "A430",
+      "target_activity": "A510",
+      "source_case": "Q08",
+      "confidence_or_support": "EXPLICIT_PASSAGE"
+    },
+    {
+      "dependency_id": "DEP-039",
+      "source_activity": "A420",
+      "target_activity": "A515",
+      "source_case": "Q08",
+      "confidence_or_support": "FRAGMENTARY"
+    },
+    {
+      "dependency_id": "DEP-040",
+      "source_activity": "A135",
+      "target_activity": "A515",
+      "source_case": "Q07",
+      "confidence_or_support": "EXPLICIT_PASSAGE"
+    },
+    {
+      "dependency_id": "DEP-042",
+      "source_activity": "A425",
+      "target_activity": "A410",
+      "source_case": "Q01",
+      "confidence_or_support": "FRAGMENTARY"
+    }
+  ],
+  "synthetic_values": [
+    "All 35 activities: their definitions, workstream / IMP / DSM assignment, durations, predecessors and risk states",
+    "All 8 IMP event definitions and completion criteria",
+    "Every baseline / forecast start and finish (computed from synthetic durations)",
+    "Every activity-to-activity dependency link, type and lag",
+    "All scenario disturbances and intervention values (A210 +8, A305 +4, A210 -4, delay_absorption_days 4, commitment fractions 0.40 / 0.60)",
+    "The software-path float calibration (A205 duration 66, giving A230 total float 4)"
+  ],
+  "design_calibrations": {
+    "data_classification": "SYNTHETIC",
+    "software_path_float": "A205 was lengthened from 40 to 66 workdays so the software chain reaches the A405 readiness gate with 4 workdays of total float instead of 30. The path is near-critical but does not control the baseline finish; an 8-workday A210 disturbance consumes the float and then propagates, so the 4-workday recovery is decision-relevant. Selected for the proof of concept, not to reproduce F-35 schedule performance. No evidence-derived relationship was changed.",
+    "resequencing_after_readiness": "INTERVENTION_2 keeps every A405 predecessor. Readiness is a gate: resequencing only reorders flight-test content after A405, absorbing up to 4 workdays (delay_absorption_days) of the delay reaching A410.",
+    "staged_production_commitment": "INTERVENTION_3 keeps the baseline concurrency (A505 is not gated on A430). It limits pre-maturity commitment to 40% and gates the remaining 60% on A430, to compare full concurrent commitment with reduced pre-maturity exposure. The 40/60 split is a synthetic policy assumption, not historically derived."
+  },
+  "limitations": [
+    "Observed evidence is summarized from the project's evaluation outputs; page numbers are as recorded there and were not re-checked against the PDFs.",
+    "Support labels are the author's reading of retrieved passages, not human-annotated ground truth.",
+    "Agentic Phase 1 verdicts for Q01 / Q04 / Q08 were single runs within about 0.5 points of the threshold.",
+    "Cost figures for the weight re-plan differ between GAO-08-388 and GAO-11-325 and are not used quantitatively.",
+    "Durations are illustrative and not calibrated to any real program data."
+  ]
+}

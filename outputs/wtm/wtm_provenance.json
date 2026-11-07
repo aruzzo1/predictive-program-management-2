@@ -1,0 +1,39 @@
+{
+  "term": "Illustrative Work Transformation / Weighted Propagation Matrix",
+  "statement": "The WTM/propagation model is an illustrative test harness for evaluating the Predictive Program Management 2.0 architecture. Its weights are evidence-calibrated ordinal values and synthetic assumptions, not historically calibrated probabilities.",
+  "computed_by": "ppm_agent.tools.wtm_tools (deterministic Python / numpy; no LLM involvement)",
+  "inputs_sha256": {
+    "outputs/dsm/weighted_dsm.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/dsm/binary_dsm.csv": "cb28379e77d9c9a4926019b34f0ac0d7f6238cd67924b54ef16b6f67998fc7d2",
+    "outputs/dsm/dsm_provenance.json": "030a1ab1f8468cfb099d1e60efbd2dfa1f1d0bfd320cacacaf9b29b16cfb9c54"
+  },
+  "source_matrix": "outputs/dsm/weighted_dsm.csv (frozen DSM v1.1)",
+  "orientation": "W[i, j]: row i = source / upstream node, column j = target / downstream node (DSM convention, unchanged)",
+  "equation": "x(t+1) = W^T x(t), i.e. x_j(t+1) = sum_i W[i, j] * x_i(t)",
+  "transformations": [
+    "W is the frozen weighted DSM (outputs/dsm/weighted_dsm.csv), read element by element with no scaling, normalization, thresholding or reordering.",
+    "W^T is used only inside the state update x(t+1) = W^T x(t), so that each target column sums its sources. It is not written to any file."
+  ],
+  "modelling_assumption": "Ordinal DSM weights are used directly as multiplicative propagation coefficients.",
+  "initial_state": {
+    "D1": 0.0,
+    "D2": 0.0,
+    "D3": 0.0,
+    "D4": 1.0,
+    "D5": 0.0,
+    "D6": 0.0,
+    "D7": 0.0,
+    "D8": 0.0
+  },
+  "initial_state_note": "Normalized analytical disturbance; not a probability or a historical measurement.",
+  "stopping_rule": "Fixed horizon: iterate from t0 to t6 as specified, with no early stopping. The long-run behaviour beyond the horizon is characterised analytically by the spectral radius and, because it is below 1, by the closed-form cumulative total (I - W^T)^-1 x(0).",
+  "behaviour_tolerance": 0.05,
+  "behaviour_rule": "step ratio = total(t) / total(t-1); > 1 + 0.05 AMPLIFYING, < 1 - 0.05 DECAYING, otherwise PERSISTENT.",
+  "numeric_precision": "values rounded to 10 decimals in outputs",
+  "not_done": [
+    "A210 +8 disturbance",
+    "A305 +4 disturbance",
+    "intervention comparison",
+    "calibration"
+  ]
+}

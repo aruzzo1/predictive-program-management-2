@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="906" height="896" viewBox="0 0 906 896">
+<rect width="906" height="896" fill="#fcfcfb"/>
+<text x="24" y="34" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600" >Weighted DSM: ordinal evidence / model weights (not probabilities)</text>
+<text x="24" y="58" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >Row = SOURCE / upstream node.  Column = TARGET / downstream node.  Cell [Di, Dj] means Di influences / contributes to Dj.</text>
+<text x="578.0" y="98" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="middle" font-weight="600" >TARGET / downstream (column)  →</text>
+<text x="24" y="136" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="600" >SOURCE / upstream (row)  ↓</text>
+<text x="361.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D1</text>
+<text x="423.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D2</text>
+<text x="485.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D3</text>
+<text x="547.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D4</text>
+<text x="609.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D5</text>
+<text x="671.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D6</text>
+<text x="733.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D7</text>
+<text x="795.0" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >D8</text>
+<text x="320" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D1  Requirements / KPP Definition</text>
+<g><title>D1 → D1: 0.00 (absent / excluded)</title><rect x="331" y="151" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D1 → D2: 0.25 (purely synthetic sequencing) | DEP-004 A115→A120</title><rect x="393" y="151" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="423.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<g><title>D1 → D3: 0.50 (unresolved or fragment-supported relationship) | DEP-007 A105→A130</title><rect x="455" y="151" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="485.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<g><title>D1 → D4: 0.25 (purely synthetic sequencing) | DEP-011 A115→A200</title><rect x="517" y="151" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="547.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<g><title>D1 → D5: 0.00 (absent / excluded)</title><rect x="579" y="151" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D1 → D6: 0.25 (purely synthetic sequencing) | DEP-025 A115→A400</title><rect x="641" y="151" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="671.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<g><title>D1 → D7: 0.00 (absent / excluded)</title><rect x="703" y="151" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D1 → D8: 0.00 (absent / excluded)</title><rect x="765" y="151" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="795.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<text x="320" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D2  Air Vehicle Design Maturity</text>
+<g><title>D2 → D1: 0.00 (absent / excluded)</title><rect x="331" y="213" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D2 → D2: 0.00 (absent / excluded)</title><rect x="393" y="213" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D2 → D3: 0.25 (purely synthetic sequencing) | DEP-005 A120→A125</title><rect x="455" y="213" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="485.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<rect x="457" y="215" width="56" height="56" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<g><title>D2 → D4: 0.00 (absent / excluded)</title><rect x="517" y="213" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D2 → D5: 0.50 (unresolved or fragment-supported relationship) | DEP-018 A120→A300; DEP-020 A145→A305</title><rect x="579" y="213" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="609.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<g><title>D2 → D6: 0.00 (absent / excluded)</title><rect x="641" y="213" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="671.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D2 → D7: 0.00 (absent / excluded)</title><rect x="703" y="213" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D2 → D8: 0.25 (purely synthetic sequencing) | DEP-034 A145→A500</title><rect x="765" y="213" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="795.0" y="248.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<text x="320" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D3  Weight / Structural Maturity</text>
+<g><title>D3 → D1: 0.00 (absent / excluded)</title><rect x="331" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D2: 0.25 (purely synthetic sequencing) | DEP-009 A135→A140</title><rect x="393" y="275" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="423.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<rect x="395" y="277" width="56" height="56" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<g><title>D3 → D3: 0.00 (absent / excluded)</title><rect x="455" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D4: 0.00 (absent / excluded)</title><rect x="517" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D5: 0.00 (absent / excluded)</title><rect x="579" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D6: 0.00 (absent / excluded)</title><rect x="641" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="671.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D7: 0.00 (absent / excluded)</title><rect x="703" y="275" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D3 → D8: 0.75 (partially supported or directly stated relationship) | DEP-040 A135→A515</title><rect x="765" y="275" width="60" height="60" rx="4" fill="#1c5cab"/>
+<text x="795.0" y="310.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600" >0.75</text></g>
+<text x="320" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D4  Mission-System Software Maturity</text>
+<g><title>D4 → D1: 0.00 (absent / excluded)</title><rect x="331" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D2: 0.00 (absent / excluded)</title><rect x="393" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D3: 0.00 (absent / excluded)</title><rect x="455" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D4: 0.00 (absent / excluded)</title><rect x="517" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D5: 0.00 (absent / excluded)</title><rect x="579" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D6: 0.75 (partially supported or directly stated relationship) | DEP-027 A230→A405</title><rect x="641" y="337" width="60" height="60" rx="4" fill="#1c5cab"/>
+<text x="671.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600" >0.75</text></g>
+<rect x="643" y="339" width="56" height="56" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<g><title>D4 → D7: 0.00 (absent / excluded)</title><rect x="703" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D4 → D8: 0.00 (absent / excluded)</title><rect x="765" y="337" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="795.0" y="372.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<text x="320" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D5  Test-Aircraft Availability</text>
+<g><title>D5 → D1: 0.00 (absent / excluded)</title><rect x="331" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D2: 0.00 (absent / excluded)</title><rect x="393" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D3: 0.00 (absent / excluded)</title><rect x="455" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D4: 0.00 (absent / excluded)</title><rect x="517" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D5: 0.00 (absent / excluded)</title><rect x="579" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D6: 0.50 (unresolved or fragment-supported relationship) | DEP-028 A325→A405</title><rect x="641" y="399" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="671.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<g><title>D5 → D7: 0.00 (absent / excluded)</title><rect x="703" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D5 → D8: 0.00 (absent / excluded)</title><rect x="765" y="399" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="795.0" y="434.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<text x="320" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D6  Flight-Test Execution</text>
+<g><title>D6 → D1: 0.00 (absent / excluded)</title><rect x="331" y="461" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D6 → D2: 0.00 (absent / excluded)</title><rect x="393" y="461" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D6 → D3: 0.00 (absent / excluded)</title><rect x="455" y="461" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D6 → D4: 0.50 (unresolved or fragment-supported relationship) | DEP-043 A415→A225</title><rect x="517" y="461" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="547.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<rect x="519" y="463" width="56" height="56" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<g><title>D6 → D5: 0.00 (absent / excluded)</title><rect x="579" y="461" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D6 → D6: 0.50 (unresolved or fragment-supported relationship) | DEP-042 A425→A410</title><rect x="641" y="461" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="671.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<rect x="643" y="463" width="56" height="56" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<g><title>D6 → D7: 0.25 (purely synthetic sequencing) | DEP-033 A425→A430</title><rect x="703" y="461" width="60" height="60" rx="4" fill="#86b6ef"/>
+<text x="733.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.25</text></g>
+<g><title>D6 → D8: 0.50 (unresolved or fragment-supported relationship) | DEP-039 A420→A515</title><rect x="765" y="461" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="795.0" y="496.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<text x="320" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D7  Development / Test Maturity</text>
+<g><title>D7 → D1: 0.00 (absent / excluded)</title><rect x="331" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D2: 0.00 (absent / excluded)</title><rect x="393" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D3: 0.00 (absent / excluded)</title><rect x="455" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D4: 0.00 (absent / excluded)</title><rect x="517" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D5: 0.00 (absent / excluded)</title><rect x="579" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D6: 0.00 (absent / excluded)</title><rect x="641" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="671.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D7: 0.00 (absent / excluded)</title><rect x="703" y="523" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D7 → D8: 0.50 (unresolved or fragment-supported relationship) | DEP-037 A430→A510</title><rect x="765" y="523" width="60" height="60" rx="4" fill="#3987e5"/>
+<text x="795.0" y="558.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600" >0.50</text></g>
+<text x="320" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="normal" >D8  Production Commitment / Rework Exposure  (sink)</text>
+<g><title>D8 → D1: 0.00 (absent / excluded)</title><rect x="331" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="361.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D2: 0.00 (absent / excluded)</title><rect x="393" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="423.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D3: 0.00 (absent / excluded)</title><rect x="455" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="485.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D4: 0.00 (absent / excluded)</title><rect x="517" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="547.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D5: 0.00 (absent / excluded)</title><rect x="579" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="609.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D6: 0.00 (absent / excluded)</title><rect x="641" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="671.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D7: 0.00 (absent / excluded)</title><rect x="703" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="733.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<g><title>D8 → D8: 0.00 (absent / excluded)</title><rect x="765" y="585" width="60" height="60" rx="4" fill="#f0efec"/>
+<text x="795.0" y="620.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" >0</text></g>
+<text x="24" y="682" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="600" >Legend</text>
+<rect x="24" y="696" width="18" height="18" rx="3" fill="#f0efec"/>
+<text x="50" y="710" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >0.00  absent / excluded</text>
+<rect x="24" y="720" width="18" height="18" rx="3" fill="#86b6ef"/>
+<text x="50" y="734" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >0.25  purely synthetic sequencing</text>
+<rect x="24" y="744" width="18" height="18" rx="3" fill="#3987e5"/>
+<text x="50" y="758" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >0.50  unresolved or fragment-supported relationship</text>
+<rect x="24" y="768" width="18" height="18" rx="3" fill="#1c5cab"/>
+<text x="50" y="782" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >0.75  partially supported or directly stated relationship</text>
+<rect x="24" y="792" width="18" height="18" rx="3" fill="#0d366b"/>
+<text x="50" y="806" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >1.00  supported relationship</text>
+<rect x="520" y="696" width="18" height="18" rx="3" fill="none" stroke="#0b0b0b" stroke-width="3" stroke-dasharray="7 4"/>
+<text x="546" y="710" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >dashed outline = cell inside a coupled block</text>
+<text x="520" y="740" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >Coupled blocks (strongly connected): {D2, D3}, {D4, D6}</text>
+<text x="520" y="760" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >D2 ↔ D3: design and weight iterate.</text>
+<text x="520" y="780" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >D4 ↔ D6: software and flight test iterate.</text>
+<text x="520" y="800" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >D6 → D6: rework inside flight test (diagonal exception).</text>
+<text x="520" y="820" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" >D8 is a terminal sink: its row is all zero.</text>
+</svg>

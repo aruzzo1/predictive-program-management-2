@@ -1,0 +1,388 @@
+{
+  "agent_mode": "REAL_LLM_MODE",
+  "meta": {
+    "retrieval_strategy": "HYBRID_RERANKED_V2_1",
+    "top_k": 5,
+    "tot_config": {
+      "max_successors": 3,
+      "beam_width": 3,
+      "max_depth": 3,
+      "score_threshold": 70.0,
+      "near_tie": 5.0,
+      "max_model_calls": 20
+    },
+    "orchestration": "langgraph",
+    "case_id": "Q04",
+    "llm": {
+      "provider": "openai-responses",
+      "model": "gpt-4o-mini",
+      "successful_responses": 4,
+      "input_tokens": 9695,
+      "output_tokens": 1181
+    },
+    "elapsed_seconds": 35.1
+  },
+  "state": {
+    "query": "What evidence describes how late delivery or limited availability of F-35 test aircraft constrained the sequence or pace of flight testing?",
+    "source_activity": "A3",
+    "target_activity": "A4",
+    "activities": {
+      "A3": {
+        "activity_id": "A3",
+        "name": "Test-Aircraft Availability",
+        "description": "Delivery and availability of developmental test aircraft.",
+        "activity_type": "test"
+      },
+      "A4": {
+        "activity_id": "A4",
+        "name": "Flight-Test Execution / Schedule",
+        "description": "Sequence and pace of developmental flight testing.",
+        "activity_type": "test"
+      }
+    },
+    "candidate": {
+      "source_activity": "A3",
+      "target_activity": "A4",
+      "proposed_relationship": "Test-Aircraft Availability -> Flight-Test Execution / Schedule",
+      "relationship_type": "UNCERTAIN",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    "retrieved_evidence": [
+      {
+        "evidence_id": "E1",
+        "source_document": "GAO-11-325",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 17,
+        "printed_page": null,
+        "chunk_id": "GAO-11-325-p017-c00",
+        "text": "Although still hampered as in prior years by the late delivery of test aircraft, flight tests substantially increased in volume and pace at the two main government test sites--Edwards Air Force Base, California, for CTOL tests and Patuxent River Naval Air Station for STOVL and CV testing. The CTOL variant significantly exceeded plans while initial testing of the carrier variant was judged satisfactory, below plans for the number and hours of flight but ahead on test points flown. The STOVL, however, substantially under-performed in flight tests and experienced significant technical issues unique to this variant that could add to its weight and cost. The STOVL's test problems were a major factor in the heightened scrutiny and two-year probation period directed by the Secretary to engineer solutions, assess impacts, and inform a future decision as to whether and how to proceed with this variant.",
+        "section_type": null,
+        "publication_date": "2011-04-07",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 1,
+        "retrieval_score": 0.7653
+      },
+      {
+        "evidence_id": "E2",
+        "source_document": "DOTE-FY2010-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 33,
+        "printed_page": "17",
+        "chunk_id": "DOTE-FY2010-F35-p033-c04",
+        "text": "in previous schedules are not achievable in the flight test program until changes are made to all variants that improve reliability and maintainability in flight test operations.\n\nAdditionally, the process must begin to reduce the aircraft operating limitations, which inhibit flight test progress particularly in vertical lift STOVL testing.\n\n• Mission Systems flight test still contains significant uncertainty, which will affect any estimate of a Block 3 completion date. This is primarily due to the delays incurred in development thus far and the fact that only the Block 0.5 flight test plan has actually been completed and approved. A test plan for Block 1 is currently in review by test center authorities, and the Block 2 test plan is in an initial draft state. Additionally, technical issues in the helmet mounted display and sensor fusion, along with uncertainties pertaining to new capabilities with which the program has limited experience on the F-35 aircraft (multi-function advanced data link, distributed aperture system, infrared/ electro-optical fused sensor tracks) are risks that affect the ability to accurately predict the conclusion of mission systems flight test.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 2,
+        "retrieval_score": 0.6023
+      },
+      {
+        "evidence_id": "E3",
+        "source_document": "GAO-11-325",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 31,
+        "printed_page": null,
+        "chunk_id": "GAO-11-325-p031-c03",
+        "text": "programs have failed to demonstrate that the system works as intended before entering production, discovering costly design problems late in development when the more complex software and advanced capabilities are integrated and tested.\n\nDevelopment Flight Testing Is Progressing but Behind Plans: Development flight testing was much more active in 2010 than prior years and had some notable successes, but overall still lagged behind expectations. The continuing effects from late delivery of test aircraft and an inability to achieve the planned flying rates per aircraft substantially reduced the amount and pace of testing planned previously. Consequently, even though the flight test program accelerated its pace last year, the total number of flights",
+        "section_type": null,
+        "publication_date": "2011-04-07",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 3,
+        "retrieval_score": 0.4998
+      },
+      {
+        "evidence_id": "E4",
+        "source_document": "GAO-09-303",
+        "source_organization": "U.S. Government Accountability Office (GAO)",
+        "pdf_page": 11,
+        "printed_page": null,
+        "chunk_id": "GAO-09-303-p011-c02",
+        "text": "Continuing delays in delivering test aircraft are expected to hamper and further compress test schedules.\n\nIn particular, the joint team projects that the two aircraft dedicated to carrier suitability tests will be late off the production line, thereby delaying test activities. It also projected that the JSF will require about 2,700 hours of flight testing for mission systems, significantly more than the 1,700 hours that the program office currently estimates. * Manufacturing production hours. The joint estimating team projects that production span times for the JSF will be longer than the program office estimates based on the program's performance to date and experience of recent programs, such as the F/A-18 E/F and the F-22A. The span time is an indicator of how long the manufacturing effort takes and when flight testing can begin. The program office assumes that span times will decrease over the course of the development contract.\n\nWe note that span times typically increase during development, as was the case for both the B-2 bomber and F-22A programs.",
+        "section_type": null,
+        "publication_date": "2009-03-12",
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 4,
+        "retrieval_score": -0.3014
+      },
+      {
+        "evidence_id": "E5",
+        "source_document": "DOTE-FY2024-F35",
+        "source_organization": "Director, Operational Test & Evaluation (DOT&E)",
+        "pdf_page": 2,
+        "printed_page": "45",
+        "chunk_id": "DOTE-FY2024-F35-p002-c01",
+        "text": "DOT&E assesses that dedicated operational testing of these aircraft will not occur until mid to late FY26, approximately two years after the configuration began delivery to the field.\n\nDESCRIPTION The F-35 Joint Strike Fighter (JSF) is a tri-Service, multinational, single seat, single-engine strike fighter aircraft. It is replacing legacy strike fighter aircraft in the U.S. Air Force, Marine Corps, and Navy and is being produced in three variants:\n\n• F-35A Conventional Take-Off and Landing for the Air Force\n\n• F-35B Short Take-Off/Vertical Landing for the Marine Corps\n\n• F-35C Aircraft Carrier Variant for the Navy and the Marine Corps The F-35 modernization plan, as defined in the Block 4 Modernization Capability Development Document (CDD), specifies required capabilities and associated capability gaps that drive incremental improvements under an agile acquisition framework.",
+        "section_type": null,
+        "publication_date": null,
+        "retrieval_method": "HYBRID_RERANKED_V2_1",
+        "retrieval_rank": 5,
+        "retrieval_score": -0.3358
+      }
+    ],
+    "pending_hypotheses": [],
+    "active_hypotheses": [],
+    "rejected_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The late delivery of test aircraft directly hampered the pace of flight testing, as evidenced by the substantial increase in flight tests despite the ongoing delays. This indicates a direct dependency where the availability of aircraft affects the execution of flight tests.",
+        "supporting_evidence_ids": [
+          "E1",
+          "E3"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The increase in flight tests is solely attributed to the availability of test aircraft and not other factors."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "Reliability and maintainability improvements",
+        "reasoning_summary": "The late delivery of test aircraft indirectly affected the flight-test execution by necessitating changes to improve reliability and maintainability, which are prerequisites for effective flight testing. This suggests that the delivery issues led to intermediate activities that ultimately constrained the flight-test schedule.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Improvements in reliability and maintainability are necessary for the flight tests to proceed effectively."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence presents conflicting information regarding the extent to which late delivery of test aircraft affects flight testing. While some passages indicate a direct impact, others suggest that other factors, such as technical issues and uncertainties, also play significant roles, leading to uncertainty about the dependency.",
+        "supporting_evidence_ids": [
+          "E4",
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The relationship between aircraft delivery and flight testing is influenced by multiple factors, making it difficult to ascertain a clear dependency."
+        ]
+      }
+    ],
+    "all_hypotheses": [
+      {
+        "hypothesis_id": "D1.root.1",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "DIRECT",
+        "intermediate_activity": null,
+        "reasoning_summary": "The late delivery of test aircraft directly hampered the pace of flight testing, as evidenced by the substantial increase in flight tests despite the ongoing delays. This indicates a direct dependency where the availability of aircraft affects the execution of flight tests.",
+        "supporting_evidence_ids": [
+          "E1",
+          "E3"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The increase in flight tests is solely attributed to the availability of test aircraft and not other factors."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.2",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "INDIRECT",
+        "intermediate_activity": "Reliability and maintainability improvements",
+        "reasoning_summary": "The late delivery of test aircraft indirectly affected the flight-test execution by necessitating changes to improve reliability and maintainability, which are prerequisites for effective flight testing. This suggests that the delivery issues led to intermediate activities that ultimately constrained the flight-test schedule.",
+        "supporting_evidence_ids": [
+          "E2"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "Improvements in reliability and maintainability are necessary for the flight tests to proceed effectively."
+        ]
+      },
+      {
+        "hypothesis_id": "D1.root.3",
+        "parent_id": null,
+        "depth": 1,
+        "source_activity": "A3",
+        "target_activity": "A4",
+        "relationship_type": "UNCERTAIN",
+        "intermediate_activity": null,
+        "reasoning_summary": "The evidence presents conflicting information regarding the extent to which late delivery of test aircraft affects flight testing. While some passages indicate a direct impact, others suggest that other factors, such as technical issues and uncertainties, also play significant roles, leading to uncertainty about the dependency.",
+        "supporting_evidence_ids": [
+          "E4",
+          "E5"
+        ],
+        "contradicting_evidence_ids": [],
+        "assumptions": [
+          "The relationship between aircraft delivery and flight testing is influenced by multiple factors, making it difficult to ascertain a clear dependency."
+        ]
+      }
+    ],
+    "expanded_ids": [],
+    "assessments": {
+      "D1.root.1": {
+        "hypothesis_id": "D1.root.1",
+        "documentary_evidence_score": 75.0,
+        "engineering_consistency_score": 70.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 80.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "The hypothesis is reasonably supported by the evidence, indicating a strong relationship between aircraft availability and flight test execution. However, the assumption that the increase in flight tests is solely due to aircraft availability is not fully supported, introducing some uncertainty.",
+        "overall_score": 69.5,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "STRONGLY_SUPPORTED",
+        "evidence_strength_summary": "The evidence indicates that late delivery of test aircraft has hampered flight testing, with E1 stating that flight tests increased despite ongoing delays, suggesting a direct relationship. However, the evidence does not explicitly state that the increase in flight tests is solely due to aircraft availability, requiring some inference.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "The increase in flight tests is solely attributed to the availability of test aircraft and not other factors."
+        ],
+        "critic_concerns": [
+          "The evidence does not clarify the extent to which other factors may have influenced the pace of flight testing."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      },
+      "D1.root.2": {
+        "hypothesis_id": "D1.root.2",
+        "documentary_evidence_score": 60.0,
+        "engineering_consistency_score": 70.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 60.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "The hypothesis presents a plausible indirect relationship between late delivery of test aircraft and flight-test execution through the lens of reliability and maintainability improvements. However, the evidence does not directly confirm this causal pathway, leading to a moderate score for documentary evidence. The assumptions made in the hypothesis are not fully supported by the evidence, raising concerns about its overall validity.",
+        "overall_score": 61.0,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "INFERRED",
+        "evidence_strength_summary": "The evidence suggests that improvements in reliability and maintainability are necessary for effective flight testing, as indicated in E2, which states that changes must be made to improve these aspects before previous schedules can be achieved. However, it does not explicitly state that the late delivery of test aircraft directly caused these improvements, requiring inference. Thus, the support is plausible but not definitive.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "Improvements in reliability and maintainability are necessary for the flight tests to proceed effectively."
+        ],
+        "critic_concerns": [
+          "The hypothesis relies on the assumption that reliability and maintainability improvements are directly linked to the late delivery of test aircraft, which is not explicitly supported by the evidence."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      },
+      "D1.root.3": {
+        "hypothesis_id": "D1.root.3",
+        "documentary_evidence_score": 60.0,
+        "engineering_consistency_score": 50.0,
+        "model_consistency_score": 50.0,
+        "predictive_usefulness_score": 40.0,
+        "hard_constraint_pass": true,
+        "hard_constraint_failures": [],
+        "critic_summary": "The hypothesis presents an uncertain dependency between test aircraft availability and flight-test execution/schedule. While there is some evidence suggesting a relationship, it is not definitively established due to the influence of other factors. This uncertainty affects the overall strength of the hypothesis.",
+        "overall_score": 51.0,
+        "deterministic_validation_result": "PASS",
+        "deterministic_validation_errors": [],
+        "evidence_support_label": "INFERRED",
+        "evidence_strength_summary": "The evidence suggests that late delivery of test aircraft has an impact on flight testing, but it also indicates that other factors, such as technical issues and uncertainties, play significant roles. For example, E4 states that delays in delivering test aircraft are expected to hamper test schedules, which implies a dependency, but it does not establish it as a direct cause. Thus, the support is inferred rather than explicitly stated.",
+        "contradictions": [],
+        "unsupported_assumptions": [
+          "The relationship between aircraft delivery and flight testing is influenced by multiple factors, making it difficult to ascertain a clear dependency."
+        ],
+        "critic_concerns": [
+          "The evidence presents conflicting information regarding the extent of the impact of late aircraft delivery on flight testing, leading to uncertainty about the dependency."
+        ],
+        "critic_claimed_hard_failure": false,
+        "critic_claimed_hard_failure_reasons": [],
+        "critic_validation_disagreement": false,
+        "disagreement_reason": null
+      }
+    },
+    "validation_errors": {
+      "D1.root.1": [],
+      "D1.root.2": [],
+      "D1.root.3": []
+    },
+    "critic_disagreements": [],
+    "pruning_log": [
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.1",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (69.5 < 70.0)",
+        "score": 69.5
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.2",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (61.0 < 70.0)",
+        "score": 61.0
+      },
+      {
+        "depth": 1,
+        "hypothesis_id": "D1.root.3",
+        "action": "REJECTED",
+        "reason": "BELOW THRESHOLD (51.0 < 70.0)",
+        "score": 51.0
+      }
+    ],
+    "accepted_hypothesis": null,
+    "comparative_review": {
+      "status": "NO_SURVIVORS",
+      "mode": "REAL_LLM_MODE",
+      "reviewed_hypothesis_ids": [],
+      "deterministic_near_tie": null,
+      "preferred_hypothesis_id": null,
+      "near_tie": null,
+      "agrees_with_score_ranking": null,
+      "assumption_comparison": "",
+      "uncertainty_assessment": "",
+      "comparative_reasoning_summary": "",
+      "validation_notes": []
+    },
+    "decision": {
+      "source_activity": "A3",
+      "target_activity": "A4",
+      "decision": "UNRESOLVED",
+      "selected_relationship_type": null,
+      "selected_hypothesis_id": null,
+      "supporting_evidence_ids": [],
+      "critic_score": null,
+      "decision_summary": "No hypothesis survived validation, hard constraints and the score threshold."
+    },
+    "depth": 1,
+    "model_calls": 4,
+    "comparative_model_call_count": 0,
+    "status": "NO_VIABLE_CANDIDATE",
+    "agent_mode": "REAL_LLM_MODE",
+    "events": [
+      "retrieved 5 passages via HYBRID_RERANKED_V2_1",
+      "[graph] retrieve_evidence",
+      "depth 1: generator expanded root -> ['D1.root.1', 'D1.root.2', 'D1.root.3'] (REAL_LLM_MODE)",
+      "[graph] generate_hypotheses (depth 1)",
+      "[graph] route after prune: decide (status NO_VIABLE_CANDIDATE)",
+      "comparative review: NO_SURVIVORS"
+    ]
+  }
+}

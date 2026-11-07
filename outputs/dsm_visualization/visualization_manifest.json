@@ -1,0 +1,29 @@
+{
+  "purpose": "Read-only visualization of the frozen v1.1 DSM; no DSM data is recomputed or altered.",
+  "inputs_sha256": {
+    "outputs/dsm/binary_dsm.csv": "cb28379e77d9c9a4926019b34f0ac0d7f6238cd67924b54ef16b6f67998fc7d2",
+    "outputs/dsm/weighted_dsm.csv": "733e3597e1f6899d519be6979a99450ae73ea1e0599a8fc1c60d93d2e9328c93",
+    "outputs/dsm/dsm_provenance.json": "030a1ab1f8468cfb099d1e60efbd2dfa1f1d0bfd320cacacaf9b29b16cfb9c54",
+    "outputs/dsm/activity_registry.json": "bcc6d866f98e744a28d0922f61eb2a595e2fb9bcc3a377b09e44c9f0fb07bfaa",
+    "outputs/dsm/dependency_registry.json": "982b5275f593a10597f670bd1913bd6b8c26de60b5ea57d24818030a237e47c4"
+  },
+  "generated_files": [
+    "binary_dsm_heatmap.svg",
+    "binary_dsm_labeled.csv",
+    "dsm_dependency_network.svg",
+    "dsm_explained.md",
+    "weighted_dsm_heatmap.svg",
+    "weighted_dsm_labeled.csv"
+  ],
+  "png_copies": [
+    "binary_dsm_heatmap.png",
+    "weighted_dsm_heatmap.png",
+    "dsm_dependency_network.png"
+  ],
+  "not_computed": [
+    "eigenvalues",
+    "spectral radius",
+    "propagation iterations",
+    "scenario simulations"
+  ]
+}

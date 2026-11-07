@@ -1,0 +1,421 @@
+{
+  "statement": "Illustrative capstone DSM derived from the Evidence-Calibrated Synthetic F-35 Development Baseline v1.0. It is not a historical F-35 DSM. This synthetic IMP/IMS is an evidence-calibrated experimental model created for the Predictive Program Management 2.0 capstone. It is not an actual or reconstructed F-35 contractor schedule.",
+  "dsm_version": "1.0",
+  "computed_by": "ppm_agent.tools.dsm_tools (deterministic Python; no LLM involvement)",
+  "inputs": {
+    "data/synthetic/synthetic_imp.csv": "6c3d8e2e98193463c71350ef0220d862fa9e8b52b751342dbbb283e54c39ad8d",
+    "data/synthetic/synthetic_ims.csv": "8f030be5a999cca70b1388479f5ce81c31e919d6f28a7fc89561019e3e3d86ac",
+    "data/synthetic/synthetic_dependencies.csv": "c327c16425f3f3120980b2423d3447939587dcfd1922edd4eca47bd8308a8cca",
+    "data/synthetic/synthetic_scenarios.json": "b7c49795c89e0408bf1e6028e59ca425359858e2b18ff98d1a0caf4121a0b743",
+    "data/synthetic/synthetic_provenance.json": "6e5ce36af2979c86f2d8f50feb30cc0d2e21238aa142388544dcaf252e183fed"
+  },
+  "orientation": "row = source / upstream node, column = target / downstream node; entry (i, j) != 0 means node i feeds node j",
+  "diagonal_policy": "0, except where the cell is produced only by an approved FEEDBACK_REWORK dependency.",
+  "intra_node_policy": "Intra-node precedence links are not shown in the matrix; they stay in dependency_registry.json.",
+  "aggregation": "Binary: 1 if any included dependency maps to the cell. Weighted: max weight of those dependencies.",
+  "weight_policy": {
+    "STRONG": {
+      "weight": 1.0,
+      "rule": "Evidence-derived and SUPPORTED by an agentic decision."
+    },
+    "MODERATE": {
+      "weight": 0.75,
+      "rule": "Evidence-derived and PARTIALLY_SUPPORTED by an agentic decision, or (no agentic decision) stated directly by a recorded passage (EXPLICIT_PASSAGE)."
+    },
+    "UNRESOLVED_RETAINED": {
+      "weight": 0.5,
+      "rule": "Evidence-derived but UNRESOLVED by an agentic decision, or (no agentic decision) assembled only from fragments (FRAGMENTARY). Retained in the experimental model."
+    },
+    "SYNTHETIC_SEQUENCING": {
+      "weight": 0.25,
+      "rule": "Purely synthetic sequencing dependency (data_classification SYNTHETIC)."
+    },
+    "EXCLUDED": {
+      "weight": 0.0,
+      "rule": "Evidence-derived but NOT_SUPPORTED by an agentic decision. Kept in the registry, not in the matrix."
+    }
+  },
+  "weight_precedence": "Agentic decision if one exists for the dependency, else the passage support label for DERIVED dependencies, else SYNTHETIC_SEQUENCING.",
+  "weights_are_not_probabilities": true,
+  "agentic_decisions_used": [
+    {
+      "source_activity": "A230",
+      "target_activity": "A405",
+      "source_case": "Q01",
+      "mvp_pair": "A1 -> A2",
+      "decision": "PARTIALLY_SUPPORTED",
+      "trace": "outputs/agentic_traces/episode_20261030_140841_A1_A2.json"
+    },
+    {
+      "source_activity": "A325",
+      "target_activity": "A405",
+      "source_case": "Q04",
+      "mvp_pair": "A3 -> A4",
+      "decision": "UNRESOLVED",
+      "trace": "outputs/agentic_traces/episode_20261030_141449_Q04_REAL_LLM_MODE_A3_A4.json"
+    },
+    {
+      "source_activity": "A430",
+      "target_activity": "A510",
+      "source_case": "Q08",
+      "mvp_pair": "A5 -> A6",
+      "decision": "UNRESOLVED",
+      "trace": "outputs/agentic_traces/episode_20261030_141531_Q08_REAL_LLM_MODE_A5_A6.json"
+    }
+  ],
+  "dependency_scope_counts": {
+    "FEEDBACK": 1,
+    "INTER_NODE": 16,
+    "INTRA_NODE": 25
+  },
+  "nonzero_entries": 16,
+  "coupled_blocks": [
+    [
+      "D2",
+      "D3"
+    ],
+    [
+      "D6"
+    ],
+    [
+      "D7",
+      "D8"
+    ]
+  ],
+  "cells": [
+    {
+      "cell": "D1->D2",
+      "row": "D1",
+      "column": "D2",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-004",
+          "source_activity": "A115",
+          "target_activity": "A120",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D1->D3",
+      "row": "D1",
+      "column": "D3",
+      "binary": 1,
+      "weight": 0.5,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-007",
+          "source_activity": "A105",
+          "target_activity": "A130",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q07",
+          "weight_tier": "UNRESOLVED_RETAINED",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "cell": "D1->D4",
+      "row": "D1",
+      "column": "D4",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-011",
+          "source_activity": "A115",
+          "target_activity": "A200",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D1->D6",
+      "row": "D1",
+      "column": "D6",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-025",
+          "source_activity": "A115",
+          "target_activity": "A400",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D2->D3",
+      "row": "D2",
+      "column": "D3",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-005",
+          "source_activity": "A120",
+          "target_activity": "A125",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D2->D5",
+      "row": "D2",
+      "column": "D5",
+      "binary": 1,
+      "weight": 0.5,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-018",
+          "source_activity": "A120",
+          "target_activity": "A300",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        },
+        {
+          "dependency_id": "DEP-020",
+          "source_activity": "A145",
+          "target_activity": "A305",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q07",
+          "weight_tier": "UNRESOLVED_RETAINED",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "cell": "D2->D8",
+      "row": "D2",
+      "column": "D8",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-034",
+          "source_activity": "A145",
+          "target_activity": "A500",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D3->D2",
+      "row": "D3",
+      "column": "D2",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-009",
+          "source_activity": "A135",
+          "target_activity": "A140",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D3->D8",
+      "row": "D3",
+      "column": "D8",
+      "binary": 1,
+      "weight": 0.75,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-040",
+          "source_activity": "A135",
+          "target_activity": "A515",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q07",
+          "weight_tier": "MODERATE",
+          "weight": 0.75
+        }
+      ]
+    },
+    {
+      "cell": "D4->D6",
+      "row": "D4",
+      "column": "D6",
+      "binary": 1,
+      "weight": 0.75,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-027",
+          "source_activity": "A230",
+          "target_activity": "A405",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q01",
+          "weight_tier": "MODERATE",
+          "weight": 0.75
+        }
+      ]
+    },
+    {
+      "cell": "D5->D6",
+      "row": "D5",
+      "column": "D6",
+      "binary": 1,
+      "weight": 0.5,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-028",
+          "source_activity": "A325",
+          "target_activity": "A405",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q04",
+          "weight_tier": "UNRESOLVED_RETAINED",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "cell": "D6->D6",
+      "row": "D6",
+      "column": "D6",
+      "binary": 1,
+      "weight": 0.5,
+      "aggregation": "max",
+      "entry_type": "FEEDBACK",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-042",
+          "source_activity": "A425",
+          "target_activity": "A410",
+          "relationship_type": "FEEDBACK_REWORK",
+          "source_case": "Q01",
+          "weight_tier": "UNRESOLVED_RETAINED",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "cell": "D6->D7",
+      "row": "D6",
+      "column": "D7",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-033",
+          "source_activity": "A425",
+          "target_activity": "A430",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D6->D8",
+      "row": "D6",
+      "column": "D8",
+      "binary": 1,
+      "weight": 0.5,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-039",
+          "source_activity": "A420",
+          "target_activity": "A515",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "Q08",
+          "weight_tier": "UNRESOLVED_RETAINED",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "cell": "D7->D8",
+      "row": "D7",
+      "column": "D8",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-038",
+          "source_activity": "A510",
+          "target_activity": "A515",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "cell": "D8->D7",
+      "row": "D8",
+      "column": "D7",
+      "binary": 1,
+      "weight": 0.25,
+      "aggregation": "max",
+      "entry_type": "FORWARD",
+      "contributing_dependencies": [
+        {
+          "dependency_id": "DEP-036",
+          "source_activity": "A505",
+          "target_activity": "A510",
+          "relationship_type": "FINISH_TO_START",
+          "source_case": "NONE",
+          "weight_tier": "SYNTHETIC_SEQUENCING",
+          "weight": 0.25
+        }
+      ]
+    }
+  ],
+  "not_built": [
+    "WTM",
+    "propagation simulation",
+    "intervention simulation"
+  ]
+}

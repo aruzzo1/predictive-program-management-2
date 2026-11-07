@@ -1,0 +1,118 @@
+{
+  "dataset": "Evidence-Calibrated Synthetic F-35 Development Baseline",
+  "version": "1.0",
+  "statement": "This synthetic IMP/IMS is an evidence-calibrated experimental model created for the Predictive Program Management 2.0 capstone. It is not an actual or reconstructed F-35 contractor schedule.",
+  "data_classification": "SYNTHETIC",
+  "time_unit": "workdays (relative)",
+  "note": "Scenario definitions only. Every magnitude, policy value and effect is SYNTHETIC (an experimental assumption, not historically derived). Outcomes are NOT_COMPUTED: forward simulation is not yet implemented. Changes apply on top of base_scenario. DURATION_DELTA changes a synthetic duration; POLICY changes are parameters for the later deterministic simulator and never alter baseline predecessor logic.",
+  "scenarios": [
+    {
+      "scenario_id": "BASELINE",
+      "scenario_type": "BASELINE",
+      "name": "Synthetic planned baseline",
+      "base_scenario": null,
+      "related_source_case": "NONE",
+      "description": "The frozen v1.0 network with no disturbance or intervention.",
+      "changes": [],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    },
+    {
+      "scenario_id": "DISTURBANCE_1",
+      "scenario_type": "DISTURBANCE",
+      "base_scenario": "BASELINE",
+      "name": "Mission-system software integration late",
+      "related_source_case": "Q01",
+      "description": "A210 Integrate Mission-System Software Components is projected to finish 8 workdays late.",
+      "changes": [
+        {
+          "change_type": "DURATION_DELTA",
+          "activity_id": "A210",
+          "delta_workdays": 8,
+          "data_classification": "SYNTHETIC"
+        }
+      ],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    },
+    {
+      "scenario_id": "DISTURBANCE_2",
+      "scenario_type": "DISTURBANCE",
+      "base_scenario": "BASELINE",
+      "name": "Test-aircraft configuration late",
+      "related_source_case": "Q04",
+      "description": "A305 Modify / Configure Development Test Aircraft is projected to finish 4 workdays late.",
+      "changes": [
+        {
+          "change_type": "DURATION_DELTA",
+          "activity_id": "A305",
+          "delta_workdays": 4,
+          "data_classification": "SYNTHETIC"
+        }
+      ],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    },
+    {
+      "scenario_id": "INTERVENTION_1",
+      "scenario_type": "INTERVENTION",
+      "base_scenario": "DISTURBANCE_1",
+      "name": "Software recovery action",
+      "related_source_case": "Q01",
+      "description": "A software recovery action on A210 recovers 4 of the 8 late workdays.",
+      "changes": [
+        {
+          "change_type": "DURATION_DELTA",
+          "activity_id": "A210",
+          "delta_workdays": -4,
+          "data_classification": "SYNTHETIC"
+        }
+      ],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    },
+    {
+      "scenario_id": "INTERVENTION_2",
+      "scenario_type": "INTERVENTION",
+      "base_scenario": "DISTURBANCE_1",
+      "name": "Flight-test resequencing after readiness",
+      "related_source_case": "Q01",
+      "description": "A405 keeps all its predecessors; readiness is never bypassed. After A405 is satisfied, flight-test content that does not need the delayed mission-system capability is flown first while the affected content waits, absorbing up to 4 workdays of the delay that reaches the A410 flight-test block.",
+      "changes": [
+        {
+          "change_type": "POLICY",
+          "policy": "FLIGHT_TEST_RESEQUENCING_AFTER_READINESS",
+          "readiness_gate_activity": "A405",
+          "applies_to_activity": "A410",
+          "delay_absorption_days": 4,
+          "intended_simulator_semantics": "Let d = delay of A410's start versus baseline. A410 finish = baseline finish + max(0, d - delay_absorption_days). A405 and A410 start are unchanged by the policy; no predecessor is removed.",
+          "data_classification": "SYNTHETIC"
+        }
+      ],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    },
+    {
+      "scenario_id": "INTERVENTION_3",
+      "scenario_type": "INTERVENTION",
+      "base_scenario": "BASELINE",
+      "name": "Staged production commitment",
+      "related_source_case": "Q08",
+      "description": "Concurrency is retained: A505 still starts without waiting for A430. Only 40% of the modeled long-lead commitment is made before A430 Development / Test Maturity; the remaining 60% is gated on A430. Compares full concurrent commitment with reduced pre-maturity exposure.",
+      "changes": [
+        {
+          "change_type": "POLICY",
+          "policy": "STAGED_PRODUCTION_COMMITMENT",
+          "commitment_activity": "A505",
+          "maturity_gate_activity": "A430",
+          "pre_maturity_commitment_fraction": 0.4,
+          "post_maturity_commitment_fraction": 0.6,
+          "intended_simulator_semantics": "Exposure to rework found before A430 applies to pre_maturity_commitment_fraction of the A505 commitment; post_maturity_commitment_fraction is committed only once A430 finishes. No baseline predecessor is added. Rework and cost effects are not modeled yet.",
+          "data_classification": "SYNTHETIC"
+        }
+      ],
+      "data_classification": "SYNTHETIC",
+      "outcome": "NOT_COMPUTED"
+    }
+  ]
+}

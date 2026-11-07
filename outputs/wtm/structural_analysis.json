@@ -1,0 +1,103 @@
+{
+  "term": "Illustrative Work Transformation / Weighted Propagation Matrix",
+  "statement": "The WTM/propagation model is an illustrative test harness for evaluating the Predictive Program Management 2.0 architecture. Its weights are evidence-calibrated ordinal values and synthetic assumptions, not historically calibrated probabilities.",
+  "orientation": "W[i, j]: row i = source / upstream node, column j = target / downstream node (DSM convention, unchanged)",
+  "equation": "x(t+1) = W^T x(t), i.e. x_j(t+1) = sum_i W[i, j] * x_i(t)",
+  "spectral_radius": 0.9114378278,
+  "dominant_eigenvalue": 0.9114378278,
+  "raw_behaviour": "DECAY",
+  "raw_behaviour_explanation": "Spectral radius < 1: under repeated application of W^T, any initial disturbance eventually decays geometrically, at a long-run rate of about the spectral radius per step. Short-run growth is still possible, because the largest out-strength (row sum of W) exceeds 1.",
+  "max_out_strength": 1.75,
+  "max_out_strength_note": "= ||W^T||_1, the largest possible one-step growth of the total (L1) disturbance.",
+  "out_strength": {
+    "D1": 1.25,
+    "D2": 1.0,
+    "D3": 1.0,
+    "D4": 0.75,
+    "D5": 0.5,
+    "D6": 1.75,
+    "D7": 0.5,
+    "D8": 0.0
+  },
+  "in_strength": {
+    "D1": 0.0,
+    "D2": 0.5,
+    "D3": 0.75,
+    "D4": 0.75,
+    "D5": 0.5,
+    "D6": 2.0,
+    "D7": 0.25,
+    "D8": 2.0
+  },
+  "strongly_connected_components": [
+    [
+      "D1"
+    ],
+    [
+      "D2",
+      "D3"
+    ],
+    [
+      "D4",
+      "D6"
+    ],
+    [
+      "D5"
+    ],
+    [
+      "D7"
+    ],
+    [
+      "D8"
+    ]
+  ],
+  "coupled_blocks": [
+    [
+      "D2",
+      "D3"
+    ],
+    [
+      "D4",
+      "D6"
+    ]
+  ],
+  "coupled_block_eigenvalues": {
+    "D2,D3": [
+      0.25,
+      -0.25
+    ],
+    "D4,D6": [
+      0.9114378278,
+      -0.4114378278
+    ]
+  },
+  "d4_d6_block": {
+    "w44": 0.0,
+    "w46": 0.75,
+    "w64": 0.5,
+    "w66": 0.5,
+    "loop_gain_w46_x_w64": 0.375,
+    "characteristic_polynomial": "lambda^2 - 0.5 lambda + (-0.375) = 0",
+    "eigenvalues": [
+      0.9114378278,
+      -0.4114378278
+    ]
+  },
+  "dominant_mode_shape": {
+    "D1": 0.0,
+    "D2": 0.0,
+    "D3": 0.0,
+    "D4": 0.217525246,
+    "D5": 0.0,
+    "D6": 0.3965214753,
+    "D7": 0.108762623,
+    "D8": 0.2771906557
+  },
+  "dominant_mode_note": "Eigenvector of W^T for the dominant eigenvalue, scaled to sum to 1: the long-run shape of a decaying disturbance that reaches the D4/D6 loop.",
+  "sink_nodes": [
+    "D8"
+  ],
+  "source_nodes": [
+    "D1"
+  ]
+}
