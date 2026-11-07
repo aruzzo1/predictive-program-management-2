@@ -44,7 +44,7 @@ See `docs/technical_freeze.md` for the frozen state.
 | Auditability / traces | JSON and Markdown traces for every real agent episode; raw responses preserved, never repaired; hash-pinned | `outputs/agentic_traces/`, `outputs/evaluation/` | COMPLETE | TBD |
 | Reproducibility | Deterministic builds with byte-identical `--check`; pinned environment (Python 3.12, `requirements.txt`) | `scripts/*.py --check`, `pyproject.toml`, `requirements.txt` | COMPLETE | TBD |
 | Automated testing | 327 pytest tests, no live API calls | `tests/` | COMPLETE | TBD |
-| Public GitHub deliverable | Repository prepared but not yet published: README rewritten, `.gitignore` curated, public manifest written; the folder is not yet a git repository | `README.md`, `.gitignore`, `docs/public_repository_manifest.md`, `docs/repository_cleanup_report.md` | PACKAGING REMAINS | TBD |
+| Public GitHub deliverable | Published as a public GitHub repository (initial release commit `1e0a840` on `main`). Verified with a clean clone: 235 files, local-only data absent, 22 / 22 frozen artifacts byte-identical, all 8 deterministic `--check` rebuilds pass, 324 tests pass and 3 skip by design | https://github.com/aruzzo1/predictive-program-management-2, `README.md`, `docs/public_repository_manifest.md`, `docs/repository_cleanup_report.md` | COMPLETE | TBD |
 | Final video / presentation | Not yet produced | (none yet) | PACKAGING REMAINS | TBD |
 
 ## Capstone requirement coverage check
@@ -58,7 +58,8 @@ See `docs/technical_freeze.md` for the frozen state.
   verification / convergence.
 - **Safety and evaluation:** guardrails, correctness / groundedness, calibration / uncertainty, robustness and
   efficiency evaluation, human intervention, bounded autonomy, safety escalation.
-- **Engineering practice:** synthetic-data transparency, auditability / traces, reproducibility, automated testing.
+- **Engineering practice:** synthetic-data transparency, auditability / traces, reproducibility, automated testing,
+  public GitHub deliverable (https://github.com/aruzzo1/predictive-program-management-2).
 
 **Satisfied technically, but needing clearer documentation in the write-up:**
 - **Tool use.** Agents invoke deterministic Python tools (retrieval and the frozen analytical outputs); the LLM does
@@ -73,8 +74,6 @@ See `docs/technical_freeze.md` for the frozen state.
   F-35 forecast.
 
 **Dependent on final packaging:**
-- the public GitHub repository: the folder is not yet under git; repository contents are prepared (README rewritten,
-  `.gitignore` curated, cleanup done; see `docs/repository_cleanup_report.md`);
 - the final write-up, with every TBD column above to be filled in;
 - the final video / presentation.
 
